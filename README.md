@@ -1,4 +1,5 @@
-#Nuestra pasión: el buen trato a los animales
+Nuestra pasión: el buen trato a los animales
+============================================
 
 Este sitio contiene una propuesta de tienda de ventas de todo aquello para nuestras mascotas: alimentos, productos y consejos para hacer de la vida de nuestros compañeros una existencia hermosa y agradable.
 
