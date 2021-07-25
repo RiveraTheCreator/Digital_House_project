@@ -5,14 +5,16 @@ Nuestra pasión: el buen trato a los animales
 <!--- Ver punto 2, viñeta 1, p. 4 del sprint 1 -->
 Este sitio contiene una propuesta de tienda de ventas de todo aquello para  mascotas: alimentos, productos y consejos para hacer de la vida de nuestros compañeros una existencia hermosa y agradable.
 
-##Descripción de los integrantes del equipo
-<!--- Descripción de los integrantes del . Ver punto 2, viñeta 2, p. 4 del sprint 1 -->
+## Descripción de los integrantes del equipo
+<!--- Ver punto 2, viñeta 2, p. 4 del sprint 1 -->
 
-* Cereceres Vidales Diana: {Agregar descripción de Diana}
-* Rivera Barrón Isaac Alejandro: {Agregar descripción de Isaac}
-* García Soria Mondragón Josué Raúl: Me gustan los animales a quienes percibo como seres vivos con tantos derechos a una vida digna y feliz como los seres humanos poseen. Soy amante y respetuoso de la naturaleza.
+* __Cereceres Vidales Diana:__ _{Agregar descripción de Diana}_
+* __Rivera Barrón Isaac Alejandro:__ _{Agregar descripción de Isaac}_
+* __García Soria Mondragón Josué Raúl:__ Me gustan los animales a quienes percibo como seres vivos con tantos derechos a una vida digna y feliz como los seres humanos poseen. Soy amante y respetuoso de la naturaleza.
 
-El diseño de este sitio está inspirado en los siguientes sitios:
+## Fuentes de inspiración
+<!--- Ver punto 3, p. 4 del sprint 1 -->
+El diseño de este sitio está inspirado en los siguientes sitios y por los siguientes motivos:
 
 * [Fender](https://www.fender.com/es/null)
    * Este sitio —que no vende productos para mascotas— tiene un diseño minimalista
