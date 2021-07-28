@@ -9,7 +9,7 @@ Este sitio contiene una propuesta de tienda de ventas de todo aquello para  masc
 <!--- Ver punto 2, viñeta 2, p. 4 del sprint 1 -->
 
 * __Cereceres Vidales Diana:__ _{Agregar descripción de Diana}_
-* __Rivera Barrón Isaac Alejandro:__ _{Agregar descripción de Isaac}_
+* __Rivera Barrón Isaac Alejandro:__ Estudiante de la ingeniería en sistemas computacionales en el instituto politécnico nacional , apasionado por el mundo de la computación, programación y los gatos. 
 * __García Soria Mondragón Josué Raúl:__ Me gustan los animales a quienes percibo como seres vivos con tantos derechos a una vida digna y feliz como los seres humanos poseen. Soy amante y respetuoso de la naturaleza.
 
 ## Fuentes de inspiración
