@@ -8,7 +8,7 @@ Este sitio contiene una propuesta de tienda de ventas de todo aquello para  masc
 ## Descripción de los integrantes del equipo
 <!--- Ver punto 2, viñeta 2, p. 4 del sprint 1 -->
 
-* __Cereceres Vidales Diana:__ Estudiante del último semestre de la carrera en Ingeniería en Automatización de la Universidad Autónoma de Querétaro. Durante el último año me he enfocado en ampliar mis conocimientos en diferentes lenguajes de programación porque creo que hay que estar preparados para las demandas del futuro. Desde siempre he sido amante de los animales y la música., por lo tanto mis hobbyes son tocar guitarra/bajo/piano y jugar con mi perro. __
+* __Cereceres Vidales Diana:__ Estudiante del último semestre de la carrera en Ingeniería en Automatización de la Universidad Autónoma de Querétaro. Durante el último año me he enfocado en ampliar mis conocimientos en diferentes lenguajes de programación porque creo que hay que estar preparados para las demandas del futuro. Desde siempre he sido amante de los animales y la música., por lo tanto mis hobbyes son tocar guitarra/bajo/piano y jugar con mi perro.
 * __Rivera Barrón Isaac Alejandro:__ Estudiante de la ingeniería en sistemas computacionales en el instituto politécnico nacional , apasionado por el mundo de la computación, programación y los gatos. 
 * __García Soria Mondragón Josué Raúl:__ Me gustan los animales a quienes percibo como seres vivos con tantos derechos a una vida digna y feliz como los seres humanos poseen. Soy amante y respetuoso de la naturaleza.
 
