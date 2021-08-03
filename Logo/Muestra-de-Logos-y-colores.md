@@ -1,2 +1,2 @@
-  ## Colores 1
-![Logo 1](https://raw.githubusercontent.com/DianaCV182/grupo_44_Animalandia/main/logo.png)
+ ## Colores 1
+ ![Logo 1](https://github.com/RiveraTheCreator/grupo_44_Animalandia/blob/main/Logo/logo.png)
