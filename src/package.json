@@ -1,0 +1,28 @@
+{
+  "name": "animalandia",
+  "version": "1.0.0",
+  "description": "Página web de la tienda de mascotas animalandia",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiveraTheCreator/grupo_4_Animalandia.git"
+  },
+  "keywords": [
+    "animalandia",
+    "tienda",
+    "mascota"
+  ],
+  "author": "Cereceres Vidales Diana, Rivera Barrón Isaac Alejandro, García Soria Mondragón Josué Raúl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RiveraTheCreator/grupo_4_Animalandia/issues"
+  },
+  "homepage": "https://github.com/RiveraTheCreator/grupo_4_Animalandia#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
