@@ -1,1 +1,96 @@
-<h1> Login </h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Animalandia</title>
+</head>
+
+<body>
+    <header>
+        <section>
+            <img src="../images/logo.png" class="logo">
+        </section>
+        <section>
+            <ul>
+                <li>Login</li>
+                <li>Carrito</li>
+                <li>Registro</li>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+        <h1>
+            Login
+        </h1>
+
+        <div>
+            <form method="GET" action="/">
+            <!-- Campo para recopilar el correo del usuario-->  
+                <p>
+                    <label for="user"> Usuario:</label>
+                </p>
+                <p>
+                    <input type="text" id="user" name="user" placeholder="email">
+                </p>
+            
+            <!-- Campo para recopilar la contraseña del usuario-->
+                <p>
+                    <label for="password">Constraseña</label>
+                </p>
+                <p>
+                    <input type="password" id="password" name="password">
+                </p>
+
+            <!-- CheckBox para recordarme-->
+                <p>
+                    <input type="checkbox" name="rememberMe" value="recuerdame">
+                    <label for="rememberMe"> Recuérdame </label>
+                </p>
+
+                <p>
+                    <button type="submit">Ingresar</button>
+                    <button type="submit">Recuperar contraseña</button>
+                </p>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <section>
+            <h3>Categorías</h3>
+            <ul>
+                <li>Perros</li>
+                <li>Gatos</li>
+                <li>Aves</li>
+                <li>Reptiles</li>
+                <li>Roedores</li>
+                <li>Peces</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Nosotros</h3>
+            <ul>
+                <li>Contacto</li>
+                <li>Quienes somos?</li>
+                <li>Servicios</li>
+                <li>Nuestro blog</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Redes sociales</h3>
+            <ul>
+                <li>...</li>
+            </ul>
+        </section>        
+    </footer>
+</body>
+</html>
