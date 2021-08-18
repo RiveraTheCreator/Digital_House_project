@@ -67,5 +67,5 @@ El diseño de este sitio está inspirado en los siguientes sitios y por los sigu
    * El sitio ofrece funciones que enganchan al visitante más allá de la compra de alimentos para sus mascotas: Servicios de estética, pasteles de cumpleaños, desparasitación, vacunación, lavado de dientes de canes, etc.
 
 # Tablero Sprints
-* [Tablero de Miro](https://miro.com/welcomeonboard/aDQ2RHhLN1VsSVdaTUZQckNITTZJS0p0ZE5EcEJOOGxtWkszc3ZwWTczZDdIOGl1UHJHUFMyb1cxVXJ2VnAwanwzMDc0NDU3MzYxNjA2NDQ3MzUx)
+* [Tablero de Miro](https://miro.com/welcomeonboard/WDRpdlZBNjZ2SEVLdE9wZ3lENTdmSGo3ZXFVamlXR3U5amFhZ24wTDVIVEhEYTlXeEhpZk9LckpjWm5WbmtVUXwzMDc0NDU3MzYxNjA2NDQ3MzUx)
    *  En este tablero se muestra los avances que el equipo fue relizando durante el sprint.
