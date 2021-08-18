@@ -1,34 +1,195 @@
+/* ESTILOS BACKGROUNDS */
+.fondoRojoClaro {
+	background-color: #cc1f08;}
+.fondoRojoOscuro {
+	background-color: #9b0800;}
+.fondoAzulClaro {
+	background-color: #2239b8;}
+.fondoAzulOscuro {
+	background-color: rgb(2, 0, 119);}
+.fondoGrisClaro {
+	background-color: rgba(42,43,46,0.2)} 
+
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+	text-align: center;
 }
 
-header, footer{
-    background-color: rgb(2, 0, 119); 
-    color: #fff;
-    padding: 15px;
+.logoCentrado{
+	width: 50%;
+	height: 50%;
+	padding: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
-li{
-    list-style: none;
+
+.headerCentrado{
+	text-align: center;
+	margin: 0;
+	box-sizing: border-box;
 }
-ul {
-    margin-left: 0;
-    padding-left: 0;
-    
+
+header nav {
+	margin:0;
+	padding: 0;
 }
-.logo {
-    max-width: 200px;
+
+header nav ul{
+	width: 100%;
+	display: block;
+    font-size: 17px;
+	background-color: #cc1f08;
+	line-height: 200%;	
+	margin-block: auto;
 }
-.options {
-    display: none;
+
+header nav ul li {
+	list-style-type: none;
+	font-weight:bolder;
+	color: white;
+	margin-left: -15%;
+	
 }
-footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+header nav ul li a{
+	text-decoration: none;
+	font-weight: bolder;
+	color: white;
 }
-.color2 {color: #9b0800;}
-.color3 {color: #2239b8;}
-.color6{color: rgb(2, 0, 119);}
-.color4 {color: #6b6e75;}
-.color5 {color: #e4e4e4;}
+
+header nav ul li a:hover{
+	font-size: 22px;
+}
+
+
+/*Controles de formulario*/
+main div form input[type="text"]:hover,
+main div form input[type="password"]:hover{
+	border-color: #9b0800;
+}
+
+main div form button{
+	padding: 5px;
+	border-radius: 5px;
+}
+
+main div form button:hover{
+	background-color: #9b0800;
+	color: white;
+	font-weight: bold;
+	border-radius: 10px;
+
+}
+
+/* Footer */
+
+footer section{
+	text-align: center;
+	width: 100%;
+	margin: 0;
+
+}
+
+footer section ul li {
+	list-style-type: none;
+	font-weight:bolder;
+	color: white;
+	text-align: center;
+	width: 100%;
+	margin-left: -5%;	
+}
+
+footer section ul li a{
+	text-decoration: none;
+	font-weight: bolder;
+	color:white;
+}
+
+footer section ul li a:hover{
+	font-size: 22px;
+}
+
+.titulosHeader {
+	display: inline-block;
+	font-size: 120%;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+/*Media query para tablets vertical */
+@media (min-width: 481px) {
+	header nav ul{
+		display:  flex;
+		flex-wrap: nowrap;
+		font-size: 17px;
+		justify-content: space-around;
+		margin-left: 0;
+	}
+	
+	header nav ul li {
+		justify-content: space-around;
+		font-weight:bolder;
+		color: white;
+		margin-left: -15%;
+	}
+
+	footer {
+		display:flex;
+		flex-wrap: wrap;
+	}
+	
+	footer section h1{
+		font-size: medium;
+		font-weight:bolder;
+		color: white;
+	}
+
+	footer section{
+		flex-grow: 33%;
+		justify-content: center;
+		align-items: center;
+		width: 33%;
+	}
+	
+	
+	footer section ul li {
+		list-style-type: none;
+		justify-content: space-around;
+		font-weight:bolder;
+		font-size: small;
+		margin-left: -10%;
+	}
+	
+	footer section ul li a{
+		text-decoration: none;
+		font-weight: bolder;
+	}
+}
+
+/*Media query para table apaisada */
+@media (min-width: 769px){
+	footer {
+		display:flex;
+		flex-wrap: wrap;
+	}
+	
+	footer section{
+		flex-grow: 33%;
+		justify-content: center;
+		align-items: center;
+		width: 33%;
+	}
+	
+	
+	footer section ul li {
+		list-style-type: none;
+		justify-content: space-around;
+		font-weight:bolder;
+	}
+	
+	footer section ul li a{
+		text-decoration: none;
+		font-weight: bolder;
+	}
+}
