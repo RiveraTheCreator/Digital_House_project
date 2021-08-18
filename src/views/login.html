@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/normalize.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,16 +14,17 @@
 
 <body>
     <header>
-        <section>
-            <img src="../images/logo.png" class="logo">
+        <section class="headerCentrado fondoGrisClaro">
+            <img src="../images/imagen1.png" class="logoCentrado">
         </section>
-        <section>
+        <nav>
             <ul>
-                <li>Login</li>
-                <li>Carrito</li>
-                <li>Registro</li>
+                <li><a href="/">Home  </a> </li>
+                <li><a href="/carrito"> Carrito</a>  </li>
+                <li><a href = "/detalle"> Detalles de productos</a> </li>
+                <li><a href="/registro"> Registro</a> </li>
             </ul>
-        </section>
+        </nav>
     </header>
 
     <main>
@@ -43,7 +44,7 @@
             
             <!-- Campo para recopilar la contraseña del usuario-->
                 <p>
-                    <label for="password">Constraseña</label>
+                    <label for="password">Contraseña</label>
                 </p>
                 <p>
                     <input type="password" id="password" name="password">
@@ -64,31 +65,35 @@
         </div>
     </main>
 
-    <footer>
-        <section>
-            <h3>Categorías</h3>
+    <footer class="fondoAzulOscuro">
+        <section>  
+            <h1 class="titulosHeader">Categorías</h1>
             <ul>
-                <li>Perros</li>
-                <li>Gatos</li>
-                <li>Aves</li>
-                <li>Reptiles</li>
-                <li>Roedores</li>
-                <li>Peces</li>
+                <li><a href="#">Perros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Aves</a></li>
+                <li><a href="#">Reptiles</a></li>
+                <li><a href="#">Roedores</a></li>
+                <li><a href="#">Peces</a></li>
             </ul>
         </section>
+        
         <section>
-            <h3>Nosotros</h3>
+            <h1 class="titulosHeader">Nosotros</h1>
             <ul>
-                <li>Contacto</li>
-                <li>Quienes somos?</li>
-                <li>Servicios</li>
-                <li>Nuestro blog</li>
+                <li><a href="#">Contacto</li>
+                <li><a href="#">Quienes somos?</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nuestro blog</a></li>
             </ul>
         </section>
+        
         <section>
-            <h3>Redes sociales</h3>
+            <h1 class="titulosHeader">Redes sociales</h1>
             <ul>
-                <li>...</li>
+                <li><a href="www.facebook.com">Facebook</a></li>
+                <li><a href="www.ywitter.com">Twitter</a></li>
+                <li><a href="web.whatsapp.com">WhatsApp</WhatsApp:w></a></li>
             </ul>
         </section>        
     </footer>
