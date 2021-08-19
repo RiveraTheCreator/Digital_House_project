@@ -15,6 +15,13 @@ body {
 	text-align: center;
 }
 
+.parrafo{
+	padding: 10px;
+}
+section article h1{
+	color:#9b0800
+}
+
 .logoCentrado{
 	width: 50%;
 	height: 50%;
@@ -25,7 +32,7 @@ body {
 
 .headerCentrado{
 	text-align: center;
-	margin: 0;
+	padding-right: 0;
 	box-sizing: border-box;
 }
 
@@ -34,6 +41,7 @@ main section nav form{
 	padding-top: 15px;
 }
 
+div nav ul,
 header nav ul{
 	width: 100%;
 	display: block;
@@ -43,6 +51,7 @@ header nav ul{
 	margin-block: auto;
 }
 
+div nav ul li,
 header nav ul li {
 	list-style-type: none;
 	font-weight:bolder;
@@ -71,29 +80,44 @@ main section nav form input[type="text"]:hover
 	border-color: #9b0800;
 }
 
-main section nav form button{
+.boton{
 	padding: 5px;
 	border-radius: 5px;
+	margin-top: 5px;
 }
 
-main div form button:hover,
-main section nav form button:hover
+.boton:hover
 {
 	background-color: #9b0800;
 	color: white;
 	font-weight: bold;
 	border-radius: 10px;
+}
 
+.botonesMasMenos{
+	height: 16px;
+}
+
+.imagenesOcultas{
+	display: none;
+}
+
+.imagenProducto{
+	width: 200px;
+}
+
+.imagenesSecundarias{
+	height: 50px;
 }
 
 /* Footer */
-
+div nav ul li,
 footer section{
 	text-align: center;
 	width: 100%;
 	margin: 0;
-
 }
+
 
 footer section ul li {
 	list-style-type: none;
@@ -129,6 +153,7 @@ footer ul li img{
 
 /*Media query para tablets vertical */
 @media (min-width: 481px) {
+	div nav ul,
 	header nav ul{
 		display:  flex;
 		flex-wrap: nowrap;
@@ -137,11 +162,16 @@ footer ul li img{
 		margin-left: 0;
 	}
 	
+	div nav ul li,
 	header nav ul li {
 		justify-content: space-around;
 		font-weight:bolder;
 		color: white;
 		margin-left: -15%;
+	}
+
+	.imagenesOcultas{
+		display: block;
 	}
 
 	footer {

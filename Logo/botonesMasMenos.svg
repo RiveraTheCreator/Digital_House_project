@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="botonesMasMenos.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="5.2208447"
+     inkscape:cx="506.23992"
+     inkscape:cy="167.11855"
+     inkscape:window-width="1366"
+     inkscape:window-height="703"
+     inkscape:window-x="0"
+     inkscape:window-y="40"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <filter
+       inkscape:label="Bloom"
+       inkscape:menu="Bevels"
+       inkscape:menu-tooltip="Soft, cushion-like bevel with matte highlights"
+       style="color-interpolation-filters:sRGB;"
+       id="filter2943"
+       x="-0.21204602"
+       y="-0.21204602"
+       width="1.424092"
+       height="1.424092">
+      <feGaussianBlur
+         result="result1"
+         in="SourceAlpha"
+         stdDeviation="2.2"
+         id="feGaussianBlur2919" />
+      <feSpecularLighting
+         result="result0"
+         specularExponent="18.1"
+         specularConstant="2"
+         surfaceScale="5"
+         id="feSpecularLighting2923">
+        <feDistantLight
+           azimuth="225"
+           elevation="24"
+           id="feDistantLight2921" />
+      </feSpecularLighting>
+      <feComposite
+         result="result6"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite2925" />
+      <feMorphology
+         radius="5.7"
+         operator="dilate"
+         id="feMorphology2927" />
+      <feGaussianBlur
+         result="result11"
+         stdDeviation="5.7"
+         id="feGaussianBlur2929" />
+      <feDiffuseLighting
+         surfaceScale="5"
+         result="result3"
+         diffuseConstant="2"
+         in="result1"
+         id="feDiffuseLighting2933">
+        <feDistantLight
+           elevation="25"
+           azimuth="225"
+           id="feDistantLight2931" />
+      </feDiffuseLighting>
+      <feBlend
+         result="result7"
+         mode="multiply"
+         in="result3"
+         in2="SourceGraphic"
+         id="feBlend2935" />
+      <feComposite
+         in="result7"
+         operator="in"
+         in2="SourceAlpha"
+         result="result91"
+         id="feComposite2937" />
+      <feBlend
+         result="result9"
+         mode="lighten"
+         in="result6"
+         in2="result91"
+         id="feBlend2939" />
+      <feComposite
+         in="result11"
+         in2="result9"
+         id="feComposite2941" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#ff0000;stroke:none;stroke-width:0.79375;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter2943)"
+       id="path862"
+       cx="5.9282527"
+       cy="128.64783"
+       r="44.707275"
+       transform="matrix(0.04711997,0,0,0.04711997,128.68767,40.982353)"
+       inkscape:export-filename="/home/josue/pCloudDrive/cursos/digitalHouseSantander/webFullStack/tienda/grupo_44_NAME/src/public/images/detalles/minusButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="rect930"
+       style="fill:#ffffff;stroke:none;stroke-width:0.0249343;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 127.77483,46.700799 v 2.82e-4 a 0.3660588,0.3660588 0 0 0 -0.35875,0.365809 0.3660588,0.3660588 0 0 0 0.35875,0.365785 v 0.006 h 2.45222 v -0.0064 a 0.3660588,0.3660588 0 0 0 0.3499,-0.365437 0.3660588,0.3660588 0 0 0 -0.3499,-0.365687 v -3.72e-4 h -0.0162 z"
+       inkscape:export-filename="/home/josue/pCloudDrive/cursos/digitalHouseSantander/webFullStack/tienda/grupo_44_NAME/src/public/images/detalles/minusButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <circle
+       style="fill:#ff0000;stroke:none;stroke-width:0.79375;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter2943)"
+       id="circle2963"
+       cx="178.82399"
+       cy="128.64783"
+       r="44.707275"
+       transform="matrix(0.04711997,0,0,0.04711997,131.85462,41.240144)"
+       inkscape:export-filename="/home/josue/pCloudDrive/cursos/digitalHouseSantander/webFullStack/tienda/grupo_44_NAME/src/public/images/detalles/plusButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="path2965"
+       style="fill:#ffffff;stroke:none;stroke-width:0.0249344;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 139.08862,46.958591 v 2.87e-4 a 0.36605879,0.36605879 0 0 0 -0.35875,0.365809 0.36605879,0.36605879 0 0 0 0.35875,0.365785 v 0.006 h 2.4522 v -0.0064 a 0.36605879,0.36605879 0 0 0 0.34991,-0.365444 0.36605879,0.36605879 0 0 0 -0.34991,-0.365687 v -3.78e-4 h -0.0161 z"
+       inkscape:export-filename="/home/josue/pCloudDrive/cursos/digitalHouseSantander/webFullStack/tienda/grupo_44_NAME/src/public/images/detalles/plusButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="path2967"
+       style="fill:#ffffff;stroke:none;stroke-width:0.0249344;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 139.94134,48.549233 h 2.7e-4 a 0.36605879,0.36605879 0 0 0 0.36581,0.358747 0.36605879,0.36605879 0 0 0 0.36578,-0.358747 h 0.006 v -2.452209 h -0.006 a 0.36605879,0.36605879 0 0 0 -0.36545,-0.349908 0.36605879,0.36605879 0 0 0 -0.36569,0.349908 h -3.8e-4 v 0.01614 z"
+       inkscape:export-filename="/home/josue/pCloudDrive/cursos/digitalHouseSantander/webFullStack/tienda/grupo_44_NAME/src/public/images/detalles/plusButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

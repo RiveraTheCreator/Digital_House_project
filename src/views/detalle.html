@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head></head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/css/normalize.css" rel="stylesheet">
-        <link href="/css/stylesDetalle.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <title>Animalandia</title>
-        <script src="https://kit.fontawesome.com/e3af4c66c5.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/stylesDetalle.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Animalandia</title>
+    <script src="https://kit.fontawesome.com/e3af4c66c5.js" crossorigin="anonymous"></script>
+</head>
 
+<body>
     <header>
         <section class="headerCentrado fondoGrisClaro">
             <img src="../images/imagen1.png" class="logoCentrado">
         </section>
+
         <nav>
             <ul>
                 <li><a href="/">Home  </a> </li>
@@ -42,33 +45,28 @@
             <article>
                 <h1>Comida para gato</h1>
                 <div>
-                    <img src="../images/detalles/comidaParaGato1.jpeg" alt="Producto 1 vista 1"><br>
-                    <img src="../images/detalles/comidaParaGato2.jpeg" alt="Producto 1 vista 2 miniatura"><br>
-                    <img src="../images/detalles/comidaParaGato3.jpeg" alt="Producto 1 vista 3 miniatura">
+                    <img class="imagenProducto" src="../images/detalles/comidaParaGato1.jpeg" alt="Producto 1 vista 1"><br>
+                    <div class="imagenesOcultas">
+                        <img class="imagenesSecundarias" src="../images/detalles/comidaParaGato2.jpeg" alt="Producto 1 vista 2 miniatura" ><br>
+                        <img class="imagenesSecundarias" src="../images/detalles/comidaParaGato3.jpeg" alt="Producto 1 vista 3 miniatura">
+                    </div>
                 </div>
                 <h2>Precio:</h2>
                 <p> $1010 MXN</p>
-                <p>Opciones</p>
-                <form>
-                    <p>
-                        <select name="option01">
-                            <option value="a">Opción A</option>
-                            <option value="b">Opción B</option>
-                        </select>
-                    </p>
 
-                    <p>Cantidad</p>
-                    <p>
-                        'Imagen -' 
-                        <input type="number" name="qty01" value="qty01">
-                        'Imagen +'
-                    </p>
-                    <button type="submit">Agregar al carrito</button>
+                <form>
+                    <p>Cantidad del producto 1</p>
+                    <div class="quantity">
+                        <img class="botonesMasMenos" src="../images/detalles/minusButton.png"> 
+                        <input type="number" name="qty01" value="qty01" min="1" step="1" value="1">
+                        <img class="botonesMasMenos" src="../images/detalles/plusButton.png">
+                    </div>
+                    <button class="boton" type="submit">Agregar al carrito</button>
                 </form>
 
                 <div>
                     <h2>Descripción</h2>
-                    <p>Anotar la descripción del producto</p>
+                    <p class="parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea alias sit aspernatur omnis eaque repellendus iusto esse odit fugit rerum asperiores sed placeat, inventore quam obcaecati, totam minus vitae quibusdam!</p>
                     <nav>
                         <ul>
                             <li> Características </li>
@@ -77,7 +75,7 @@
                             <li> Ayuda </li>
                         </ul>
                     </nav>
-                    <p>Pormenores</p>
+                    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vitae mollitia ut error distinctio in quos aliquid, animi amet id nemo, aperiam laborum natus hic consequuntur, sequi reiciendis recusandae iure?</p>
                 </div>
             </article>
             <!-- Fin del producto 1-->
@@ -86,33 +84,30 @@
             <article>
                 <h1>Comida para perro</h1>
                 <div>
-                    <img src="../images/detalles/comidaParaPerro1.jpeg" alt="Producto 1 vista 1">
-                    <img src="../images/detalles/comidaParaPerro2.jpeg" alt="Producto 1 vista 2 miniatura">
-                    <img src="../images/detalles/comidaParaPerro3.jpeg" alt="Producto 1 vista 3 miniatura">
+                    <img src="../images/detalles/comidaParaPerro1.jpeg" alt="Producto 1 vista 1" class="imagenProducto">
+                    <div class="imagenesOcultas">
+                        <img class="imagenesSecundarias" src="../images/detalles/comidaParaPerro2.jpeg" alt="Producto 1 vista 2 miniatura">
+                        <img class="imagenesSecundarias" src="../images/detalles/comidaParaPerro3.jpeg" alt="Producto 1 vista 3 miniatura">
+                    </div>
                 </div>
                 <h2>Precio:</h2>
-                <p> $$$$$ MXN</p>
-                <p>Opciones</p>
-                <form>
-                    <p>
-                        <select name="option01">
-                            <option value="a">Opción A</option>
-                            <option value="b">Opción B</option>
-                        </select>
-                    </p>
+                <p> $560.00 MXN 
+                </p>
 
+
+                <form>
                     <p>Cantidad</p>
-                    <p>
-                        'Imagen -' 
-                        <input type="number" name="qty01" value="qty01">
-                        'Imagen +'
-                    </p>
-                    <button type="submit">Agregar al carrito</button>
+                    <img class="botonesMasMenos" src="../images/detalles/minusButton.png">
+                    <input type="number" name="qty02" value="qty02" min="1" step="1" value="1">
+                    <img class="botonesMasMenos" src="../images/detalles/plusButton.png">
+                    <br>                    
+               
+                    <button class ="boton" type="submit">Agregar al carrito</button>
                 </form>
 
                 <div>
                     <h2>Descripción</h2>
-                    <p>Anotar la descripción del producto</p>
+                    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestias eos possimus qui ad rerum, ipsum recusandae repellendus nostrum porro, fuga corrupti minus excepturi dolores consectetur, consequuntur voluptate quod praesentium.</p>
                     <nav>
                         <ul>
                             <li> Características </li>
@@ -121,7 +116,7 @@
                             <li> Ayuda </li>
                         </ul>
                     </nav>
-                    <p>Pormenores</p>
+                    <p class="parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum perferendis distinctio odio repudiandae similique esse necessitatibus consequuntur assumenda? Laborum accusamus eius odio recusandae perferendis vel aliquam laboriosam totam asperiores deleniti.</p>
                 </div>
             </article>
             <!-- Fin del producto 2-->
@@ -166,5 +161,5 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
-
+</body>
 </html>
