@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head></head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/normalize.css" rel="stylesheet">
+        <link href="/css/stylesDetalle.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <title>Animalandia</title>
+        <script src="https://kit.fontawesome.com/e3af4c66c5.js" crossorigin="anonymous"></script>
+
     <header>
-        <section>
-            <img src="../images/logo.png" class="logo">
+        <section class="headerCentrado fondoGrisClaro">
+            <img src="../images/imagen1.png" class="logoCentrado">
         </section>
-        <section>
-            <nav>
-                <ul>
-                    <li>Login</li>
-                    <li>Carrito</li>
-                    <li>Registro</li>
-                </ul>
-            </nav>
-        </section>
+        <nav>
+            <ul>
+                <li><a href="/">Home  </a> </li>
+                <li><a href="/carrito"> Carrito</a>  </li>
+                <li><a href = "/detalle"> Detalles de productos</a> </li>
+                <li><a href="/registro"> Registro</a> </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section>
-            <nav>
+            <!--Barra de búsqueda -->
+            <nav> 
                 <form>
-                    <select name="categories">
-                        <option value="dogs"> Perros</option>
-                        <option value="cats"> Gatos </option>
-                        <option value="birds"> Aves </option>
-                        <option value="reptiles"> Reptiles </option>
-                        <option value="rodents"> Roedores </option>
-                        <option value="fishes" >Peces</option>
-                    </select>
-
+                    <input  type="text" id="search" placeholder="Busca tu producto">
                     <button type="submit">Buscar</button>
                 </form>
             </nav>
@@ -36,14 +40,14 @@
         <section>
             <!-- Producto 1-->
             <article>
-                <h1>Producto</h1>
+                <h1>Comida para gato</h1>
                 <div>
-                    <img src="" alt="Producto 1 vista 1">
-                    <img src="" alt="Producto 1 vista 2 miniatura">
-                    <img src="" alt="Producto 1 vista 3 miniatura">
+                    <img src="../images/detalles/comidaParaGato1.jpeg" alt="Producto 1 vista 1"><br>
+                    <img src="../images/detalles/comidaParaGato2.jpeg" alt="Producto 1 vista 2 miniatura"><br>
+                    <img src="../images/detalles/comidaParaGato3.jpeg" alt="Producto 1 vista 3 miniatura">
                 </div>
                 <h2>Precio:</h2>
-                <p> $$$$$ MXN</p>
+                <p> $1010 MXN</p>
                 <p>Opciones</p>
                 <form>
                     <p>
@@ -80,11 +84,11 @@
             
             <!-- Producto 2-->
             <article>
-                <h1>Producto</h1>
+                <h1>Comida para perro</h1>
                 <div>
-                    <img src="" alt="Producto 1 vista 1">
-                    <img src="" alt="Producto 1 vista 2 miniatura">
-                    <img src="" alt="Producto 1 vista 3 miniatura">
+                    <img src="../images/detalles/comidaParaPerro1.jpeg" alt="Producto 1 vista 1">
+                    <img src="../images/detalles/comidaParaPerro2.jpeg" alt="Producto 1 vista 2 miniatura">
+                    <img src="../images/detalles/comidaParaPerro3.jpeg" alt="Producto 1 vista 3 miniatura">
                 </div>
                 <h2>Precio:</h2>
                 <p> $$$$$ MXN</p>
@@ -127,5 +131,40 @@
 
         
     </main>
+
+    <footer class="fondoAzulOscuro">
+        <section>  
+            <h1 class="titulosHeader">Categorías</h1>
+            <ul>
+                <li><a href="#"><i class="fas fa-dog"></i>&nbsp; Perros</a></li>
+                <li><a href="#"><i class="fas fa-cat"></i>&nbsp;Gatos</a></li>
+                <li><a href="#"><i class="fas fa-crow"></i>&nbsp;Aves</a></li>
+                <li><a href="#"><img src="../images/tortugaIcono.svg">&nbsp;Reptiles </a></li>
+                <li><a href="#"><img src="../images/ardillaIcono.svg">&nbsp;Roedores </a></li>
+                <li><a href="#"><i class="fas fa-fish"></i>&nbsp;Peces</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1 class="titulosHeader">Nosotros</h1>
+            <ul>
+                <li><a href="#"><i class="fas fa-file-signature"></i> &nbsp;Contacto</li>
+                <li><a href="#"><ion-icon name="people-circle-outline"></ion-icon> &nbsp;¿Quiénes somos?</a></li>
+                <li><a href="#"><ion-icon name="medical-outline"></ion-icon> &nbsp;Servicios</a></li>
+                <li><a href="#"><i class="fas fa-rss-square"></i> &nbsp;Nuestro blog</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1 class="titulosHeader">Redes sociales</h1>
+            <ul>
+                <li><a href="www.facebook.com"> <ion-icon name="logo-facebook"></ion-icon> &nbsp; Facebook</a></li>
+                <li><a href="www.twitter.com"><ion-icon name="logo-twitter"></ion-icon> &nbsp; Twitter</a></li>
+                <li><a href="web.whatsapp.com"><ion-icon name="logo-whatsapp"></ion-icon>WhatsApp</WhatsApp></a></li>
+            </ul>
+        </section>        
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
 
 </html>
