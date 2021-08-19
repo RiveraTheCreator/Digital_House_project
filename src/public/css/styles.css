@@ -393,6 +393,13 @@ header .header-registro{
 	margin: 0%;
 }
 
+main .datos-personales,
+main .datos-mascota,
+main .terminos{
+	display: flex;
+	justify-content: center;
+}
+
 /*Estilos carrito*/
 ul{
     list-style-type: none;

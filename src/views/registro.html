@@ -24,9 +24,9 @@
     </header>
     
     <main>
-        <section class="datos-personales">
+        <section>
             <h3>Datos Personales</h3>
-            <div>
+            <div class="datos-personales">
                 <form action="/" method="POST">
                     <p>
                         <label for="nombre">Nombre (s):</label>
@@ -165,14 +165,14 @@
                             <option value="toliman">Tolimán</option>
                         </select>
                     </p>
-                
                 </form>
             </div>
+            
         </section>
 
-        <section class="datos-mascota">
+        <section>
             <h3>Datos de tu Mascota</h3>
-            <div>
+            <div class="datos-mascota">
                 <form>
                     <p>
                         <label>Especie:</label>
@@ -213,25 +213,31 @@
                         <br>
                         <input type="date" id="nacimiento-mascota" name="nacimiento-mascota">
                     </p>
-
-                    <p>
-                        <label>
-                            <input type="radio" name="terminos" value="acepta-terminos" required>
-                            Acepto los términos y condiciones
-                        </label>
-                    </p>
-
-                    <p>
-                        <label>
-                            <input type="checkbox" name="publicidad" value="acepta-publicidad">
-                            Deseo recibir ofertas y publicidad a mi correo electrónico
-                        </label>
-                    </p>
-                    
-                    <input type="submit" value="Enviar">
                 </form>
             </div>
         </section>
+
+        <section>
+            <div class="terminos">
+            <form>
+                <p>
+                    <label>
+                        <input type="radio" name="terminos" value="acepta-terminos" required>
+                        Acepto los términos y condiciones
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        <input type="checkbox" name="publicidad" value="acepta-publicidad">
+                        Deseo recibir ofertas y publicidad a mi correo electrónico
+                    </label>
+                </p>
+                <input type="submit" value="Enviar">
+            </div> 
+            </form>
+        </section>
+        
     </main>
 
     <footer class="fondoAzulOscuro">
