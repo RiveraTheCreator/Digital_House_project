@@ -226,7 +226,7 @@ header .header-top{
 	color:#fff;
 	padding-bottom: 10px;
 }
-/*-------H-E-A-D-E-R---T-O-P------------------------*/
+/*-------H-E-A-D-E-R---T-O-P----H-O-M-E----------------*/
 header .alimentos {background-color: rgb(2, 0, 119);}
 div .alimentos a {
   text-decoration: none;
@@ -347,5 +347,31 @@ header .header-top div{
 	display: flex;
 	align-items: center;	
 }
+/*--------------------------------------------*/
+main .top-main {
+	display: flex;
+}
+main .top-main img {
+	width: 100%;
+}
+main section img{
+	width: 100%;
+}
+main .articulos {
+	display: flex;
+}
+main .info-gral {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+main .info-gral p{
+	background-color: rgb(230, 0, 0);
+	color: white;
+	display: inline-block;
+	padding: 30px;
+	margin: 10px;
+	border-radius: 15%;
 
-  /*--------------------------------------------*/
+}
+/*--------------------------------------------*/
