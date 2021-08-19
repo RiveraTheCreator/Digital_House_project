@@ -4,35 +4,91 @@
         <meta charset="UTF-8">
         <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link href="..public/css/normalize.css" rel="stylesheet">-->
-        <link href="../public/css/carro.css" rel="stylesheet">
+        <link href="/css/normalize.css" rel="stylesheet">
+        <link href="/css/styles.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <title>Registro</title>
+        <script src="https://kit.fontawesome.com/e3af4c66c5.js" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <title>Carrito</title>
     </head>
 
     
-
-    <header>
-        <div class="nav-bar">
-            <img src="../public/images/Imagen1.png" class="logo-carrito">
-          </div>
-          <div class="enlaces">
-            <ul>
-                <li><a href="../views/login.html">Login |</a></li>
-                <li><a href="../views/registro.html">Register |</a></li>
-                <li><a href="../views/carrito.html">Cart</a></li>
-            </ul>
-          </div>
-    </header>
-
     <body>
-        <h2>Carrito</h2>
+        <header>
+            <div class="header-top">
+                <section class="logo-container">
+                    <img src="/images/logo.png" class="logo" alt="Logo">
+                </section>
+                <div class="alimentos">
+                    <ul>
+                      <li>
+                        <a href="#">Alimentos   <i class="fas fa-caret-up"></i></a>
+                        <ul>
+                          <li><a href="#">Link 1</a></li>
+                          <li><a href="#">Link 2</a></li>
+                          <li><a href="#">Link 3</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="accesorios">
+                    <ul>
+                      <li>
+                        <a href="#">Accesorios   <i class="fas fa-caret-up"></i></a>
+                        <ul>
+                          <li><a href="#">Link 1</a></li>
+                          <li><a href="#">Link 2</a></li>
+                          <li><a href="#">Link 3</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="viviendas">
+                    <ul>
+                      <li>
+                        <a href="#">Viviendas   <i class="fas fa-caret-up"></i></a>
+                        <ul>
+                          <li><a href="#">Link 1</a></li>
+                          <li><a href="#">Link 2</a></li>
+                          <li><a href="#">Link 3</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="otros">
+                    <ul>
+                      <li>
+                        <a href="#">Otros   <i class="fas fa-caret-up"></i></a>
+                        <ul>
+                          <li><a href="#">Link 1</a></li>
+                          <li><a href="#">Link 2</a></li>
+                          <li><a href="#">Link 3</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                        
+            </div>
+                
+    
+            <nav>
+                <ul>
+                    <li><a href="/">Home </a> </li>
+                    <li><a href="/carrito"> Carrito</a>  </li>
+                    <li><a href = "/login"> Login</a> </li>
+                    <li><a href="/registro"> Registro</a> </li>
+                </ul>
+            </nav>
+        </header>
+
+    <h2>Carrito</h2>
     <main>
-        <section clas="bolsa">
+        <section class="bolsa">
             <article class="producto">
-                <img src="../public/images/producto_1.jpg" alt="Chamarra negra Bad2Bone" class="product_img">
+                <img src="/images/producto_1.jpg" alt="Chamarra negra Bad2Bone" class="product_img">
                 <div class="descripcion-producto">
                     <p class="descripcion">Bootique Chamarra Negra Bad2Bone</p>
                     <label class="talla">Talla:</label>
@@ -53,7 +109,7 @@
             </article>
 
             <article class="producto">
-                <img src="../public/images/producto_2.jpg" alt="Collar Good2Go Rosa Neon" class="product_img">
+                <img src="/images/producto_2.jpg" alt="Collar Good2Go Rosa Neon" class="product_img">
                 <div class="descripcion-producto">
                     <p class="descripcion">Collar Acojinado Reflejante Rosa Neon Good2Go</p>
                     <label class="talla">Talla:</label>
@@ -74,7 +130,7 @@
             </article>
 
             <article class="producto">
-                <img src="../public/images/producto_3.jpg" alt="Correa Good2Go Rosa Neon" class="product_img">
+                <img src="/images/producto_3.jpg" alt="Correa Good2Go Rosa Neon" class="product_img">
                 <div class="descripcion-producto">
                     <p class="descripcion">Correa Acojinada Reflejante Rosa Neon Good2Go</p>
                     <label class="talla">Talla:</label>
@@ -103,8 +159,38 @@
             <input type="submit" value="Comprar">
         </section>
     </main>
-    <footer>
 
+    <footer class="fondoAzulOscuro">
+        <section>  
+            <h1 class="titulosHeader">Categorías</h1>
+            <ul>
+                <li><a href="#"><i class="fas fa-dog"></i>&nbsp; Perros</a></li>
+                <li><a href="#"><i class="fas fa-cat"></i>&nbsp;Gatos</a></li>
+                <li><a href="#"><i class="fas fa-crow"></i>&nbsp;Aves</a></li>
+                <li><a href="#"><img src="../images/tortugaIcono.svg">&nbsp;Reptiles </a></li>
+                <li><a href="#"><img src="../images/ardillaIcono.svg">&nbsp;Roedores </a></li>
+                <li><a href="#"><i class="fas fa-fish"></i>&nbsp;Peces</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1 class="titulosHeader">Nosotros</h1>
+            <ul>
+                <li><a href="#"><i class="fas fa-file-signature"></i> &nbsp;Contacto</li>
+                <li><a href="#"><ion-icon name="people-circle-outline"></ion-icon> &nbsp;¿Quiénes somos?</a></li>
+                <li><a href="#"><ion-icon name="medical-outline"></ion-icon> &nbsp;Servicios</a></li>
+                <li><a href="#"><i class="fas fa-rss-square"></i> &nbsp;Nuestro blog</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1 class="titulosHeader">Redes sociales</h1>
+            <ul>
+                <li><a href="www.facebook.com"> <ion-icon name="logo-facebook"></ion-icon> &nbsp; Facebook</a></li>
+                <li><a href="www.twitter.com"><ion-icon name="logo-twitter"></ion-icon> &nbsp; Twitter</a></li>
+                <li><a href="web.whatsapp.com"><ion-icon name="logo-whatsapp"></ion-icon>WhatsApp</WhatsApp></a></li>
+            </ul>
+        </section>        
     </footer>
     </body>
 </html>
