@@ -377,10 +377,20 @@ main .info-gral p{
 }
 /*--------------------------------------------*/
   /*Estilos del registro*/
-  .logo-centrado{
-    width: 20vw;
-    height: 20vh;
-    margin: 0px, 0px, 30px;
+.logo-centrado{
+    width: 40%;
+    height: 30%;
+}
+
+header .header-registro{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	text-decoration: underline;
+	padding: 5px;
+	margin: 0%;
 }
 
 /*Estilos carrito*/
