@@ -198,3 +198,16 @@ footer ul li img{
 		font-weight: bolder;
 	}
 }
+
+/*Estilos del registro*/
+.logo-centrado{
+    width: 20vw;
+    height: 20vh;
+    margin: 0px, 0px, 30px;
+}
+
+/*Estilos carrito*/
+ul{
+    list-style-type: none;
+}
+

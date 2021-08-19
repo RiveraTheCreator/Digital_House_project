@@ -4,24 +4,28 @@
         <meta charset="UTF-8">
         <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="..public/css/normalize.css" rel="stylesheet">
-        <link href="../public/css/styles.css" rel="stylesheet">
+        <link href="/css/normalize.css" rel="stylesheet">
+        <link href="/css/styles.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e3af4c66c5.js" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
         <title>Registro</title>
     </head>
     
+    <body>
     <header class="header-registro">
-        <img src="../public/images/Imagen1.png" alt="Logo" class="logo-centrado">
+        <img src="/images/Imagen1.png" alt="Logo" class="logo-centrado">
         <h2>Crear Cuenta</h2>
     </header>
     
-    <body>
+    <main>
         <section class="datos-personales">
             <h3>Datos Personales</h3>
             <div>
-                <form action="../public/temp/formulario.txt" method="POST">
+                <form action="/" method="POST">
                     <p>
                         <label for="nombre">Nombre (s):</label>
                         <br>
@@ -226,6 +230,40 @@
                 </form>
             </div>
         </section>
+    </main>
+
+    <footer class="fondoAzulOscuro">
+        <section>  
+            <h1 class="titulosHeader">Categorías</h1>
+            <ul>
+                <li><a href="#"><i class="fas fa-dog"></i>&nbsp; Perros</a></li>
+                <li><a href="#"><i class="fas fa-cat"></i>&nbsp;Gatos</a></li>
+                <li><a href="#"><i class="fas fa-crow"></i>&nbsp;Aves</a></li>
+                <li><a href="#"><img src="../images/tortugaIcono.svg">&nbsp;Reptiles </a></li>
+                <li><a href="#"><img src="../images/ardillaIcono.svg">&nbsp;Roedores </a></li>
+                <li><a href="#"><i class="fas fa-fish"></i>&nbsp;Peces</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1 class="titulosHeader">Nosotros</h1>
+            <ul>
+                <li><a href="#"><i class="fas fa-file-signature"></i> &nbsp;Contacto</li>
+                <li><a href="#"><ion-icon name="people-circle-outline"></ion-icon> &nbsp;¿Quiénes somos?</a></li>
+                <li><a href="#"><ion-icon name="medical-outline"></ion-icon> &nbsp;Servicios</a></li>
+                <li><a href="#"><i class="fas fa-rss-square"></i> &nbsp;Nuestro blog</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1 class="titulosHeader">Redes sociales</h1>
+            <ul>
+                <li><a href="www.facebook.com"> <ion-icon name="logo-facebook"></ion-icon> &nbsp; Facebook</a></li>
+                <li><a href="www.twitter.com"><ion-icon name="logo-twitter"></ion-icon> &nbsp; Twitter</a></li>
+                <li><a href="web.whatsapp.com"><ion-icon name="logo-whatsapp"></ion-icon>WhatsApp</WhatsApp></a></li>
+            </ul>
+        </section>        
+    </footer>
     </body>
 
 </html>
