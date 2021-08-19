@@ -8,11 +8,18 @@
 .fondoAzulOscuro {
 	background-color: rgb(2, 0, 119);}
 .fondoGrisClaro {
-	background-color: rgba(42,43,46,0.2)} 
+	background-color: rgb(74, 76, 80)} 
+ /*General*/
+ * {
+     box-sizing: border-box;
+ }
 
 body {
     font-family: 'Roboto', sans-serif;
-	text-align: center;
+}
+
+header .logo{
+    max-width: 180px;
 }
 
 .logoCentrado{
@@ -59,6 +66,7 @@ header nav ul li a{
 
 header nav ul li a:hover{
 	font-size: 22px;
+	transition: 70ms;
 }
 
 
@@ -82,14 +90,20 @@ main div form button:hover{
 }
 
 /* Footer */
-
+footer {
+    background-color: rgb(2, 0, 119);
+	padding-bottom: 40px;
+}
 footer section{
 	text-align: center;
 	width: 100%;
 	margin: 0;
 
 }
-
+footer section h3{
+    color: white;
+    font-weight: bolder;
+}
 footer section ul li {
 	list-style-type: none;
 	font-weight:bolder;
@@ -137,6 +151,7 @@ footer section ul li a:hover{
 	footer {
 		display:flex;
 		flex-wrap: wrap;
+        background-color: rgb(2, 0, 119);
 	}
 	
 	footer section h1{
@@ -181,7 +196,6 @@ footer section ul li a:hover{
 		width: 33%;
 	}
 	
-	
 	footer section ul li {
 		list-style-type: none;
 		justify-content: space-around;
@@ -193,3 +207,140 @@ footer section ul li a:hover{
 		font-weight: bolder;
 	}
 }
+/* Header */
+header  {
+    background-color: rgb(2, 0, 119);
+}
+.logo {
+	width: 100%;
+}
+header .header-top{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	color:#fff;
+	padding-bottom: 10px;
+}
+/*-------H-E-A-D-E-R---T-O-P------------------------*/
+header .alimentos {background-color: rgb(2, 0, 119);}
+div .alimentos a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  display:inline-block;
+}
+.alimentos ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.alimentos ul li {display: inline-block;}
+.alimentos ul li:hover {background: #2239b8;}
+.alimentos ul li:hover ul {display: block;}
+.alimentos ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+.alimentos ul li ul li { 
+  background: #555; 
+  display: block; 
+}
+.alimentos ul li ul li a {display:block !important;} 
+.alimentos ul li ul li:hover {background: rgb(74, 76, 80);}
+/*+++++++++++++++++++++++++++*/
+header .accesorios {background-color: rgb(2, 0, 119);}
+div .accesorios a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  display:inline-block;
+}
+.accesorios ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.accesorios ul li {display: inline-block;}
+.accesorios ul li:hover {background: #2239b8;}
+.accesorios ul li:hover ul {display: block;}
+.accesorios ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+.accesorios ul li ul li { 
+  background: #555; 
+  display: block; 
+}
+.accesorios ul li ul li a {display:block !important;} 
+.accesorios ul li ul li:hover {background: rgb(74, 76, 80);}
+/*+++++++++++++++++++++++++++*/
+header .viviendas {background-color: rgb(2, 0, 119);}
+div .viviendas a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  display:inline-block;
+}
+.viviendas ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.viviendas ul li {display: inline-block;}
+.viviendas ul li:hover {background: #2239b8;}
+.viviendas ul li:hover ul {display: block;}
+.viviendas ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+.viviendas ul li ul li { 
+  background: #555; 
+  display: block; 
+}
+.viviendas ul li ul li a {display:block !important;} 
+.viviendas ul li ul li:hover {background: rgb(74, 76, 80);}
+/*+++++++++++++++++++++++++++*/
+header .otros {background-color: rgb(2, 0, 119);}
+div .otros a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  display:inline-block;
+}
+.otros ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.otros ul li {display: inline-block;}
+.otros ul li:hover {background: #2239b8;}
+.otros ul li:hover ul {display: block;}
+.otros ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+.otros ul li ul li { 
+  background: #555; 
+  display: block; 
+}
+.otros ul li ul li a {display:block !important;} 
+.otros ul li ul li:hover {background: rgb(74, 76, 80);}
+/*+++++++++++++++++++++++++++*/
+header .header-top div:hover i{
+    transform: rotate(-90deg);
+	transition: 500ms;
+}
+header .header-top div{
+	display: flex;
+	align-items: center;	
+}
+
+  /*--------------------------------------------*/
