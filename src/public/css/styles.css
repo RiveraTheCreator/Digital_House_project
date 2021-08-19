@@ -401,6 +401,20 @@ main .terminos{
 }
 
 /*Estilos carrito*/
-ul{
-    list-style-type: none;
+main .carrito h2{
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.img-producto{
+	width: 200px;
+    height: 200px;
+}
+
+main section.bolsa article{
+    background-color: rgb(197, 197, 197);    
+    margin: 3% 5%;
+	border-radius: 20px;
 }
