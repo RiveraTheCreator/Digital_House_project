@@ -1,5 +1,7 @@
-# Retroalimentacion primer sprint
-## Comenzar a hacer:
+# Retroalimentacion 
+## Sprint 1
+### Comenzar a hacer:
+
 - Asignar nuevas tareas en el tablero de miro
 - Hacer la retroalimentación 
 - Aplicación de express + Node
@@ -29,3 +31,22 @@
 ## Dejar de hacer
 - Revisar los archivos a entregar el ultimo día
 - Establecer la hora de las reuniones al ultimo
+
+## Retroalimentacion 19-08-2021
+
+* __¿Qué problemas tuvimos?__
+	- Definir estilos genéricos o responsable para revisar la homogeneidad de las paginas
+	- Poca coordinación
+	-  Gestión y medición de tiempos de trabajos
+	- Tablero poco especifico en la fecha
+	- Actualización de GitHub
+* __¿Qué hicimos bien?__
+	- Se involucraron todos los miembros del equipo para colaborar
+	- Buena comunicación entre los miembros del equipo
+	- Tratamos de documentarnos y experimentando con las tecnologías web
+* __¿Qué queremos mejorar?__
+	-  Gestión y medición de tiempos de trabajos
+	- Comunicar acerca de percances personales y técnicos
+	- Expresar con claridad las dudas que surjan en el camino para corregir errores a tiempo.
+
+
