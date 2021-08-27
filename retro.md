@@ -1,18 +1,21 @@
-# Retroalimentacion 
+# Retroalimentacion
+
 ## Sprint 1
+
 ### Comenzar a hacer:
 
 - Asignar nuevas tareas en el tablero de miro
-- Hacer la retroalimentación 
+- Hacer la retroalimentación
 - Aplicación de express + Node
-- Home (index.html) 
+- Home (index.html)
 - Detalle del producto(productoDetail.html)
-- Carrito de compras	
+- Carrito de compras
 - Formulario de registro(register.html)
 - Formulario de login (login.html)
-- Enlace a tablero miro 
+- Enlace a tablero miro
 
 ## Hacer mas
+
 - Hacer mas reuniones
 - Agendar las reuniones con antelación
 - Estar al pendiente del slack
@@ -20,33 +23,65 @@
 - Conocer más al equipo para organizar los tiempos de trabajo de manera más eficiente
 - Estar más al pendiente del repo de gitHub
 - Planear rigurosamente las reuniones al inicio de cada sprint
+
 ## Continuar haciendo
+
 - Continuar con una comunicación directa y respetuosa
 - Continuar apoyándonos mutuamente en dudas
 - Continuar utilizando miro, zoom y Slack para la buena organización
 - Continuar asistiendo a las sesiones semanales
+
 ## Hacer menos
+
 - Uso de dispositivos locales y más de la nube de git
 - Reuniones muy largas
+
 ## Dejar de hacer
+
 - Revisar los archivos a entregar el ultimo día
 - Establecer la hora de las reuniones al ultimo
 
 ## Retroalimentacion 19-08-2021
 
-* __¿Qué problemas tuvimos?__
-	- Definir estilos genéricos o responsable para revisar la homogeneidad de las paginas
-	- Poca coordinación
-	-  Gestión y medición de tiempos de trabajos
-	- Tablero poco especifico en la fecha
-	- Actualización de GitHub
-* __¿Qué hicimos bien?__
-	- Se involucraron todos los miembros del equipo para colaborar
-	- Buena comunicación entre los miembros del equipo
-	- Tratamos de documentarnos y experimentando con las tecnologías web
-* __¿Qué queremos mejorar?__
-	-  Gestión y medición de tiempos de trabajos
-	- Comunicar acerca de percances personales y técnicos
-	- Expresar con claridad las dudas que surjan en el camino para corregir errores a tiempo.
+- **¿Qué problemas tuvimos?**
+    - Definir estilos genéricos o responsable para revisar la homogeneidad de las paginas
+    - Poca coordinación
+    - Gestión y medición de tiempos de trabajos
+    - Tablero poco especifico en la fecha
+    - Actualización de GitHub
+- **¿Qué hicimos bien?**
+    - Se involucraron todos los miembros del equipo para colaborar
+    - Buena comunicación entre los miembros del equipo
+    - Tratamos de documentarnos y experimentando con las tecnologías web
+- **¿Qué queremos mejorar?**
+    - Gestión y medición de tiempos de trabajos
+    - Comunicar acerca de percances personales y técnicos
+    - Expresar con claridad las dudas que surjan en el camino para corregir errores a tiempo.
 
+## Sprint 2
 
+### Comenzar a hacer:
+
+- hacer .gitignore
+- retroalimentación
+- Actrualizar las tareas en nuestro tablero
+- Aplicación Node.js + express + ejs
+- Buscar otra plantilla que se adapte mejor a las necesidades del sprint
+
+## Hacer mas
+
+- Organizar nuestros
+- Definir bien las fechas de entregas en el tablero
+
+## Continuar haciendo
+
+- Seguir teniendo una comunicación respetuosa y brindarnos apoyo en las dudas que surjan
+- Consultar entre el equipo antes de actualizar el repositorio
+
+## Hacer menos
+
+- Hacer muchos archivos con el mismo propósito
+
+## Dejar de hacer
+
+- Dejar las cosas para el ultimo
