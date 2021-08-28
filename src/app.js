@@ -5,6 +5,9 @@ const app = express();
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
+//Declaración de uso de EJS
+app.set("view engine","ejs");
+
 app.listen(3000, ()=>{
     console.log('Server Arriba');
 });
