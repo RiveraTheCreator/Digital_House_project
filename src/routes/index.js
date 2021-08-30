@@ -4,8 +4,8 @@ const path = require('path');
 
 router.get('/', function (req,res) {
 	let htmlPath = path.resolve(__dirname,
-		'../views/index.html');
-	res.sendFile(htmlPath);
+		'../views/index.ejs');
+	res.render(htmlPath);
 });
 
 module.exports = router;

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ed17535c69.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Animalandia</title>
+</head>
+<body> 
+    <%- include('./partials/header') %>
+    <main>
+        <p class="titulo">La mejor tienda de mascotas</p>
+        <section class="top-main">
+            <div class="mascotas-img">
+                <img src="../images/PortadaMascotas.png" alt="PortadaMascotas">
+            </div>
+            <div class="contenido-intro">
+                <div class="container-intro">
+                    <i class="fas fa-heartbeat fa-6x"></i>
+                    <p class="subtittle">Nuestra preocupación</p>
+                    <p class="info">La salud de tu mascota es primero</p>
+                </div>
+                <div class="container-intro">
+                    <i class="fas fa-cat fa-6x"></i>
+                    <p class="subtittle">Nuestra pasión</p>
+                    <p class="info">El buen trato a los animales</p>
+                </div>
+                <div class="container-intro">
+                    <i class="fab fa-hotjar fa-6x"></i>
+                    <p class="subtittle">Los mejores precios</p>
+                    <p class="info">Nos esforzamos por mantenernos. actualizados con las nuevas tendencias.</p>
+                </div>
+                <div class="container-intro">
+                    <i class="fas fa-medal fa-6x"></i>
+                    <p class="subtittle">Productos de primera calidad</p>
+                    <p class="info">La calidad de los productos es primordial para tu satisfacción y la de tu mascota.</p>
+                </div>
+            </div>
+        </section>
+        <section class="info-gral">
+            <div class="separador">
+                <p> Principales productos</p>
+            </div>
+        </section>
+        <section class="articulos">
+            <article>
+                <img src="../images/croquetas.jfif"alt="producto-1">
+                <p class="product-detail">Alimento Pro Plan OptiDerma Sensitive Skin Adult para perro adulto de raza mediana/grande 13kg</p>
+            </article>
+            <article>
+                <img src="../images/croquetas2.jfif" alt="producto 2">
+                <p>Alimento Pro Plan OptiDerma Sensitive Skin Adult para perro adulto de raza mediana/grande 13kg</p>
+            </article>
+            <article>
+
+            </article>
+            <article>
+
+            </article>
+        </section>
+
+        <section class="new-products">
+
+        </section>
+    </main>
+    <%- include('./partials/footer')  %> 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>

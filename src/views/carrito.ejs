@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/normalize.css" rel="stylesheet">
+        <link href="/css/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e3af4c66c5.js" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <title>Carrito</title>
+    </head>
+
+    
+    <body>
+        <%- include('./partials/header') %> 
+    <main>
+    <div class="carrito">
+      <h2>Carrito</h2>
+    </div>
+        <section class="bolsa">
+          <div class="articulos-bolsa">
+            <article>
+              <img src="/images/producto_1.jpg" alt="Chamarra negra Bad2Bone" class="img-producto">
+              <div class="descripcion-producto">
+                <p class="descripcion">Bootique Chamarra Negra Bad2Bone</p>
+                <label class="talla">Talla:</label>
+                <select name="talla">
+                  <option value="xx-chico">xx-Chico</option>
+                  <option value="x-chico">x-chico</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+                <div class="cantidad">
+                  <input type="submit" value="-">
+                  <input type="number" value="cantidad">
+                  <input type="submit" value="+">
+                </div>
+                <p class="precio">$499</p>
+              </div>
+            </article>
+
+            <article class="producto">
+              <img src="/images/producto_2.jpg" alt="Collar Good2Go Rosa Neon" class="img-producto">
+              <div class="descripcion-producto">
+                <p class="descripcion">Collar Acojinado Reflejante Rosa Neon Good2Go</p>
+                <label class="talla">Talla:</label>
+                <select name="talla">
+                  <option value="xx-chico">xx-Chico</option>
+                  <option value="x-chico">x-chico</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+                <div class="cantidad">
+                  <input type="submit" value="-">
+                  <input type="number" value="cantidad">
+                  <input type="submit" value="+">
+                </div>
+                  <p class="precio">$325</p>
+              </div>
+            </article>
+
+            <article class="producto">
+              <img src="/images/producto_3.jpg" alt="Correa Good2Go Rosa Neon" class="img-producto">
+              <div class="descripcion-producto">
+                <p class="descripcion">Correa Acojinada Reflejante Rosa Neon Good2Go</p>
+                <label class="talla">Talla:</label>
+                <select name="talla">
+                  <option value="xx-chico">xx-Chico</option>
+                  <option value="x-chico">x-chico</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                  </select>
+                <div class="cantidad">
+                  <input type="submit" value="-">
+                  <input type="number" value="cantidad">
+                  <input type="submit" value="+">
+                </div>
+                <p class="precio">$439</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="seccion-resumen">
+          <div class="resumen">
+            <h3>Resumen de la compra</h3>
+            <p class="direccion-envio">Calle Numero CP Ciudad</p>
+            <p class="costo-envio">Gratis</p>
+            <p class="total-envio">Total con envío</p>
+            <p class="total">$1263</p>
+            <input type="submit" value="Comprar">
+          </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %> 
+    </body>
+</html>
