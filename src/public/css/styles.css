@@ -22,6 +22,10 @@ header .logo{
     max-width: 180px;
 }
 
+ul{
+    list-style-type: none;
+}
+
 .logoCentrado{
 	width: 50%;
 	height: 50%;
@@ -378,7 +382,8 @@ header .header-registro{
 
 main .datos-personales,
 main .datos-mascota,
-main .terminos{
+main .terminos
+main .edicion-producto{
 	display: flex;
 	justify-content: center;
 }
@@ -414,9 +419,88 @@ main section div.articulos-bolsa article{
 	
 }
 
-ul{
-    list-style-type: none;
+main section div.descripcion-producto{
+	width: 50%;
 }
+
+.cantidad{
+	display: flex;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 10px 2px;
+}
+
+main section div.cantidad input{
+	width: 25px;
+	height: 25px;
+}
+
+.descripcion{
+	font-weight: bold;
+	font-size: large;
+}
+
+.precio{
+	display: flex;
+	font-size: 25px;
+	font-weight: bold;
+	justify-content: flex-end;
+	margin-bottom: 0px;
+}
+
+main section div.resumen{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+
+main section div.resumen h3,
+main section p.total{
+	font-size: xx-large;
+	font-weight: bold;
+	margin-block-start: 0em;
+	margin-inline-end: 0em;
+}
+
+main section p.direccion-envio{
+	font-size: large;
+	color: rgb(2, 0, 119);
+	margin-block-start: 0em;
+	margin-inline-end: 0em;
+}
+
+main section p.costo-envio{
+	font-size: large;
+	color: rgb(230, 0, 0);
+	margin-block-start: 0em;
+	margin-inline-end: 0em;
+}
+
+main section p.total-envio{
+	font-size: large;
+	font-weight: bold;
+	margin-block-start: 0em;
+	margin-inline-end: 0em;
+}
+
+main section div.resumen input{
+	width: 8rem;
+	height: 3rem;
+	border-radius: 7px;
+	background-color: #2239b8;
+	color: white;
+}
+
+/* Estilos Edicion Producto*/
+
+
 /*--------M-A-I-N-----H-O-M-E---------------------*/
 main .top-main .mascotas-img {
 	margin: 2vw;
@@ -498,85 +582,6 @@ main .articulos article p {
 	font-size: 18px;
 	justify-content: space-between;
 	padding: 3%;
-}
-
-main section div.descripcion-producto{
-	width: 50%;
-}
-
-.cantidad{
-	display: flex;
-}
-
-button, input, optgroup, select, textarea {
-    font-family: 'Roboto', sans-serif;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 10px 2px;
-}
-
-main section div.cantidad input{
-	width: 25px;
-	height: 25px;
-}
-
-.descripcion{
-	font-weight: bold;
-	font-size: large;
-}
-
-.precio{
-	display: flex;
-	font-size: 25px;
-	font-weight: bold;
-	justify-content: flex-end;
-	margin-bottom: 0px;
-}
-
-main section div.resumen{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	align-items: flex-end;
-	margin-right: 5%;
-	margin-bottom: 5%;
-}
-
-main section div.resumen h3,
-main section p.total{
-	font-size: xx-large;
-	font-weight: bold;
-	margin-block-start: 0em;
-	margin-inline-end: 0em;
-}
-
-main section p.direccion-envio{
-	font-size: large;
-	color: rgb(2, 0, 119);
-	margin-block-start: 0em;
-	margin-inline-end: 0em;
-}
-
-main section p.costo-envio{
-	font-size: large;
-	color: rgb(230, 0, 0);
-	margin-block-start: 0em;
-	margin-inline-end: 0em;
-}
-
-main section p.total-envio{
-	font-size: large;
-	font-weight: bold;
-	margin-block-start: 0em;
-	margin-inline-end: 0em;
-}
-
-main section div.resumen input{
-	width: 8rem;
-	height: 3rem;
-	border-radius: 7px;
-	background-color: #2239b8;
-	color: white;
 }
 
 
