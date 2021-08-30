@@ -33,3 +33,4 @@ app.get('/registro', (req,res)=>{
 	let htmlPath = path.resolve(__dirname,'./views/registro.html');
 	res.sendFile(htmlPath);
 });
+
