@@ -501,7 +501,7 @@ main section div.resumen input{
 /* Estilos Edicion Producto*/
 
 main .edicion-producto h1,
-.form-edicion{
+.form-edicion, .botones-edicion{
 	display: flex;
 	justify-content: center;
 }
