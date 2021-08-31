@@ -14,7 +14,7 @@ const mainController = {
 	registro:	(req,res) =>{
 		return res.render('registro');
 	},
-	edicion:	(req,res) =>{
+	edicion: (req,res) =>{
 		return res.render('edicion');
 	}
 };
