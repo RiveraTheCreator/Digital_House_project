@@ -383,7 +383,7 @@ header .header-registro{
 main .datos-personales,
 main .datos-mascota,
 main .terminos
-main .edicion-producto{
+{
 	display: flex;
 	justify-content: center;
 }
@@ -500,6 +500,21 @@ main section div.resumen input{
 
 /* Estilos Edicion Producto*/
 
+main .edicion-producto h1,
+.form-edicion{
+	display: flex;
+	justify-content: center;
+}
+
+main .edicion-producto h1{
+	text-align: center;
+}
+
+main .form-edicion p{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
 
 /*--------M-A-I-N-----H-O-M-E---------------------*/
 main .top-main .mascotas-img {
