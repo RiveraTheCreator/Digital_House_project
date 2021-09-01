@@ -1,0 +1,54 @@
+/* Controles del formulario */
+
+main div form input[type="text"]:hover,
+main div form input[type="number"]:hover,
+main div form textarea:hover
+{
+    padding: 4px;
+    border-bottom: 2px solid #9b0800;
+    border-top: 2px solid #9b0800;
+    border-left: 2px solid #9b0800;
+    border-right: 2px solic #9b0800;
+}
+
+main div form button:hover{
+    background-color: #9b0800;
+}
+
+
+main div form input[type="file"]:hover
+{
+    color:  #9b0800;
+    font-weight: bolder;
+}
+
+main div form button{
+	padding: 5px;
+	border-radius: 5px;
+    
+}
+
+form div label,
+form div input,
+form div textarea{
+    width: 95%;
+    display: block;
+    text-align: center;
+}
+
+@media (min-width:480px){
+    form div{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    
+    form div label,
+    form div input,
+    form div textarea{
+        width: 49%;
+        display:inline;
+        text-align: center;
+        align-self: center;
+    }
+}
