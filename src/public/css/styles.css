@@ -363,31 +363,6 @@ header .header-top div{
 /*--------------------------------------------*/
 
 /*--------------------------------------------*/
-  /*Estilos del registro*/
-.logo-centrado{
-    width: 40%;
-    height: 30%;
-}
-
-header .header-registro{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	color: white;
-	text-decoration: underline;
-	padding: 5px;
-	margin: 0%;
-}
-
-main .datos-personales,
-main .datos-mascota,
-main .terminos
-{
-	display: flex;
-	justify-content: center;
-}
-
 /*Estilos carrito*/
 
 main .carrito h2{
@@ -498,15 +473,17 @@ main section div.resumen input{
 	color: white;
 }
 
-/* Estilos Editar/Crear Producto*/
+/* Estilos Formularios (Edicion/Crear/Registro*/
 
-main .edicion-producto h1,
-.form-edicion, .botones-edicion{
+main .edicion-producto h1, .form-edicion, .botones-edicion,
+main .registro h1, .datos-personales h3, .botones-registro, .terminos, .condiciones, .form-registro
+{
 	display: flex;
 	justify-content: center;
 }
 
-main .edicion-producto h1{
+main .edicion-producto h1,
+main .registro h1{
 	text-decoration: underline;
 }
 
@@ -514,10 +491,16 @@ main .edicion-producto h1{
 	text-align: center;
 }
 
-main .form-edicion p{
+main .form-edicion p
+{
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
+}
+
+.terminos p, .condiciones p{
+	margin-block-start: 0em;
+	margin-inline-end: 0em;
 }
 
 /*--------M-A-I-N-----H-O-M-E---------------------*/
