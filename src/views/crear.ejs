@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('./partials/head') %>
+    <title>Crear producto</title>
+</head>
+<body> 
+  <%- include('./partials/header') %> 
+    <main>
+        <div class="edicion-producto">
+            <h1>Crear producto</h1>
+        </div>
+        <div class="form-edicion">
+            <form action="/" method="POST">
+                <p>
+                    <label for="nombre-producto">Nombre del producto:</label>
+                    <input type="text" id="nombre-producto" name="nombre-producto" class="input-text">
+                </p>
+                <p>
+                    <label for="img-principal">Imagen principal:</label>
+                    <input type="file" id="img-principal" name="img-principal" class="input-file">
+                </p>
+                <p>
+                    <label for="img-secundaria1">Imagen secundaria 1:</label>
+                    <input type="file" id="img-secundaria1" name="img-secundaria1" class="input-file">
+                </p>
+                <p>
+                    <label for="img-secundaria2">Imagen secundaria 2:</label>
+                    <input type="file" id="img-secundaria2" name="img-secundaria2" class="input-file">
+                </p>
+                <p>
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" class="input-text">
+                </p>
+                <p>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" class="input-area"></textarea>
+                </p>
+                <p>
+                    <label for="caracteristicas">Características:</label>
+                    <textarea id="caracteristicas" name="caracteristicas" class="input-area"></textarea>
+                </p>
+                <p>
+                    <label for="especificaciones">Especificaciones:</label>
+                    <textarea id="especificaciones" name="especificaciones" class="input-area"></textarea>
+                </p>
+                <p>
+                    <label for="instrucciones">Instrucciones:</label>
+                    <textarea id="instrucciones" name="instrucciones" class="input-area"></textarea>
+                </p>
+                <div class="botones-edicion">
+                    <button type="submit">Enviar</button>
+                    <button type="button">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('./partials/footer') %> 
+</body>

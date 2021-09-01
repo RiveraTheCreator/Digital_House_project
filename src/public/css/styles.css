@@ -498,12 +498,16 @@ main section div.resumen input{
 	color: white;
 }
 
-/* Estilos Edicion Producto*/
+/* Estilos Editar/Crear Producto*/
 
 main .edicion-producto h1,
 .form-edicion, .botones-edicion{
 	display: flex;
 	justify-content: center;
+}
+
+main .edicion-producto h1{
+	text-decoration: underline;
 }
 
 main .edicion-producto h1{
