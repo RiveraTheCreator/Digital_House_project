@@ -494,19 +494,17 @@ main section div.resumen input{
 /* Estilos Formularios (Edicion/Crear/Registro)*/
 
 main .edicion-producto h1, .form-edicion, .botones-edicion,
-main .registro h1, .datos-personales h3, .botones-registro, .terminos, .condiciones, .form-registro
+main .registro h1, .datos-personales h3, .botones-registro, .terminos, .condiciones, .form-registro,
+main .login-title h1, .login, .botones-login
 {
 	display: flex;
 	justify-content: center;
 }
 
 main .edicion-producto h1,
-main .registro h1{
+main .registro h1,
+main .login-title h1{
 	text-decoration: underline;
-}
-
-main .edicion-producto h1{
-	text-align: center;
 }
 
 main .form-edicion p
@@ -526,8 +524,14 @@ main .form-edicion p
     margin-inline-end: 20%;
 }
 
+.login p{
+	margin-inline-start: 0%;
+    margin-inline-end: 0%;
+}
+
 .form-registro .elt-reg input,
-.form-registro .elt-reg select{
+.form-registro .elt-reg select,
+.login .elt-login input{
 	width : 100%;
 }
 /*--------M-A-I-N-----H-O-M-E---------------------*/
