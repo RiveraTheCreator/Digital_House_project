@@ -274,7 +274,7 @@ div .accesorios a {
   text-decoration: none;
   color: white;
   font-size: 20px;
-  padding: 15px;
+  padding: 0.9375rem;
   display:inline-block;
 }
 .accesorios ul {
@@ -379,6 +379,9 @@ header .header-top div{
 	header .header-top div{
 		font-size: 11px;
 	}
+	 header div .alimentos a,header div .accesorios a{
+		 padding: 12px;
+	 }
 }
 /*--------------------------------------------*/
 /*Estilos carrito*/
