@@ -1,6 +1,6 @@
 # Retroalimentacion
 
-## Sprint 1
+## Sprint 2
 
 ### Comenzar a hacer:
 
@@ -14,7 +14,7 @@
 - Formulario de login (login.html)
 - Enlace a tablero miro
 
-## Hacer mas
+### Hacer mas
 
 - Hacer mas reuniones
 - Agendar las reuniones con antelación
@@ -36,12 +36,13 @@
 - Uso de dispositivos locales y más de la nube de git
 - Reuniones muy largas
 
-## Dejar de hacer
+### Dejar de hacer
 
 - Revisar los archivos a entregar el ultimo día
 - Establecer la hora de las reuniones al ultimo
+-----------
 
-## Retroalimentacion 19-08-2021
+### Retroalimentacion 19-08-2021
 
 - **¿Qué problemas tuvimos?**
     - Definir estilos genéricos o responsable para revisar la homogeneidad de las paginas
@@ -57,8 +58,8 @@
     - Gestión y medición de tiempos de trabajos
     - Comunicar acerca de percances personales y técnicos
     - Expresar con claridad las dudas que surjan en el camino para corregir errores a tiempo.
-
-## Sprint 2
+----
+## Sprint 3
 
 ### Comenzar a hacer:
 
@@ -68,20 +69,54 @@
 - Aplicación Node.js + express + ejs
 - Buscar otra plantilla que se adapte mejor a las necesidades del sprint
 
-## Hacer mas
+### Hacer mas
 
 - Organizar nuestros
 - Definir bien las fechas de entregas en el tablero
 
-## Continuar haciendo
+### Continuar haciendo
 
 - Seguir teniendo una comunicación respetuosa y brindarnos apoyo en las dudas que surjan
 - Consultar entre el equipo antes de actualizar el repositorio
 
-## Hacer menos
+### Hacer menos
 
 - Hacer muchos archivos con el mismo propósito
 
-## Dejar de hacer
+### Dejar de hacer
 
 - Dejar las cosas para el ultimo
+---
+## Sprint 4
+
+
+### Comenzar a hacer:
+- La retro.md 
+- Actualizar tablero de miro
+- Hacer products.json
+- Hacer users.json
+- Administración completa de productos son:
+    - Listado
+    - Detalle
+    - Creación
+    - Edición
+    - Eliminación
+
+## Hacer mas
+- Organizar nuestros tiempos personales
+- Repasar los temas que no hayan quedado de todo claro
+- Repasar ejercicios del playground
+
+### Continuar haciendo
+
+- Seguir teniendo una comunicación respetuosa y brindarnos apoyo en las dudas que surjan
+- Consultar entre el equipo antes de actualizar el repositorio
+
+
+### Hacer menos
+- Ir a clase sin consultar material de playground
+
+### Dejar de hacer
+- Postergar el material del playground
+- No externar dudas
+
