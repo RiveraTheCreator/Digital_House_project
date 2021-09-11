@@ -9,7 +9,6 @@ const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 //Declaración de uso de EJS
-//app.set('views',path.join(__dirname, './views'));
 app.set("view engine","ejs");
 
 //Derivación a manejadores de rutas
