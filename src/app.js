@@ -4,7 +4,7 @@ const path = require('path');
 
 //Declaracion de manejadores de las rutas
 const mainRoutes = require('./routes/main.js');
-const productsRoutes = requre('./routes/productos.js')
+const productsRoutes = require('./routes/products.js')
 
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));

@@ -383,7 +383,110 @@ header .header-top div{
 		 padding: 12px;
 	 }
 }
-/*--------------------------------------------*/
+
+/*--------M-A-I-N-----H-O-M-E---------------------*/
+main .top-main .mascotas-img {
+	margin: 2vw;
+}
+main .top-main .mascotas-img img {
+	max-width: 550px;
+	width: 100%;
+}
+@media(max-width: 768px){
+	main .top-main{
+		display: flex;
+		flex-direction: column;
+	}
+	main .top-main .mascotas-img .banner{
+		text-align:center ;
+	}
+}
+main .top-main .container-intro{
+	max-width: 230px;
+	max-height: auto;
+	padding: 2vw;
+	margin-top: 8px;
+	border: solid black 1px;
+	text-align: center;
+	border-radius: 15%;
+	box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main .top-main .container-intro p{
+	margin: 0;
+	width: 100%;
+}
+main .top-main .contenido-intro {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 3%;
+	
+}
+main .top-main .contenido-intro i {
+	color: #2239b8;
+}
+main .container-intro .subtittle{
+	font-size: 1.5rem;
+	font-weight: bolder;
+	padding-bottom: 5px;
+}
+main  .titulo{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: bolder;
+}
+main .top-main {
+	display: flex;
+}
+main  .articulos article img {
+	width: 100%;
+}
+
+main .articulos {
+	display: flex;
+}
+
+main .info-gral {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+main .info-gral {
+	background-color: rgb(230, 0, 0);
+	color: white;
+	display: block;
+	text-align: center;
+	font-size: 28px;
+	padding: 1%;
+}
+main .info-gral:hover{
+	font-size: 30px;
+	transition: 300ms;
+	font-weight: bolder;
+}
+main .contenido-intro article:hover {
+	box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+/*-------A-R-T-I-C-U-L-O-S-----------------*/
+main .articulos {
+	margin: 2vw;
+}
+main .articulos article p {
+	margin-left: 4px;
+	margin-right: 4px;
+	font-size: 18px;
+	justify-content: space-between;
+	padding: 3%;
+}
+main .articulos .producto {
+	border: solid black 1px;
+}
+
+/*------------------------------------------------------------------------------*/
 /*Estilos carrito*/
 
 main .carrito h2{
@@ -537,110 +640,15 @@ main .form-edicion p
 .login .elt-login input{
 	width : 100%;
 }
-/*--------M-A-I-N-----H-O-M-E---------------------*/
-main .top-main .mascotas-img {
-	margin: 2vw;
-}
-main .top-main .mascotas-img img {
-	max-width: 550px;
-	width: 100%;
-}
-@media(max-width: 768px){
-	main .top-main{
-		display: flex;
-		flex-direction: column;
-	}
-	main .top-main .mascotas-img .banner{
-		text-align:center ;
-	}
-}
-main .top-main .container-intro{
-	max-width: 230px;
-	max-height: auto;
-	padding: 2vw;
-	margin-top: 8px;
-	border: solid black 1px;
-	text-align: center;
-	border-radius: 15%;
-	box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
 
-main .top-main .container-intro p{
-	margin: 0;
-	width: 100%;
-}
-main .top-main .contenido-intro {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 3%;
-	
-}
-main .top-main .contenido-intro i {
-	color: #2239b8;
-}
-main .container-intro .subtittle{
-	font-size: 1.5rem;
-	font-weight: bolder;
-	padding-bottom: 5px;
-}
-main  .titulo{
-	display: flex;
-	text-align: center;
-	justify-content: center;
-	font-size: 30px;
-	font-weight: bolder;
-}
-main .top-main {
-	display: flex;
-}
-main  .articulos article img {
+/*Estilos listado de productos*/
+main article .product-img{
 	width: 100%;
 }
 
-main .articulos {
-	display: flex;
+main article .product-name{
+	width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
 }
-
-main .info-gral {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-main .info-gral {
-	background-color: rgb(230, 0, 0);
-	color: white;
-	display: block;
-	text-align: center;
-	font-size: 28px;
-	padding: 1%;
-}
-main .info-gral:hover{
-	font-size: 30px;
-	transition: 300ms;
-	font-weight: bolder;
-}
-main .contenido-intro article:hover {
-	box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-/*-------A-R-T-I-C-U-L-O-S-----------------*/
-main .articulos {
-	margin: 2vw;
-}
-main .articulos article p {
-	margin-left: 4px;
-	margin-right: 4px;
-	font-size: 18px;
-	justify-content: space-between;
-	padding: 3%;
-}
-main .articulos .producto {
-	border: solid black 1px;
-}
-
-
-
-
-
 
