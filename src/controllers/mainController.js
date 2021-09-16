@@ -16,9 +16,6 @@ const mainController = {
 	},
 	edicion: (req,res) =>{
 		return res.render('edicion');
-	},
-	crear: (req,res) =>{
-		return res.render('crear');
 	}
 };
 

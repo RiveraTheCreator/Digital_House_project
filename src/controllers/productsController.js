@@ -20,6 +20,20 @@ const productsController = {
 			product,
 			toThousand
 		});
+    },
+	crear: (req,res) =>{
+		res.render('crear');
+	},
+    procesar: (req,res)=>{
+        let newProduct = req.body;
+        let productAdd = {
+            ...newProduct,
+            id: products[products.length-1].id + 1,
+        }
+        products.push(productAdd);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/');
+
     }
 }
 

@@ -14,7 +14,4 @@ router.get('/registro', mainController.registro);
 
 router.get('/edicion', mainController.edicion);
 
-router.get('/crear', mainController.crear);
-
-
 module.exports = router;
