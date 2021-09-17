@@ -193,5 +193,18 @@
   "caracteristic": "sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet vitae mattis nibh ligula nec sem duis turpis adipiscing lorem",
   "specs": "lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam",
   "price": 2792.34
+ },
+ {
+  "name": "Minino",
+  "image-p": "",
+  "image_1": "",
+  "image_2": "",
+  "animal": "Male",
+  "category": "Male",
+  "price": "150",
+  "description": "Comida para gato presentación 1 kg",
+  "caracteristic": "Comida fortificada con Calcioi",
+  "specs": "Mantengase en un lugar fresco",
+  "id": "754828439-X1"
  }
 ]
