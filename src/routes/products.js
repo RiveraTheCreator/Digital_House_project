@@ -17,6 +17,8 @@ const uploadFile = multer({storage:storage});
 //Crear producto
 router.get('/crear/', productsController.create);
 router.post('/',uploadFile.fields([{name:'image_p'},{name:'image_1'},{name:'image_2'}]),productsController.storage);
+//Eliminar producto
+router.delete('/:id',productsController.delete);
 // *** Genera la vista para mostrar todos los productos ***
 router.get('/', productsController.index);
 router.get('/detalle/:id', productsController.detail);

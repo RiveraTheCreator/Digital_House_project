@@ -41,8 +41,9 @@ const productsController = {
         }else{
             res.render('crear');
         }
-       
-
+    },
+    delete: (req,res)=>{
+        ///Logic
     }
 }
 
