@@ -13,9 +13,7 @@ const storage = multer.diskStorage({
     }
 })
 const uploadFile = multer({storage:storage});
-//RUTAS DETALLE 
-router.get('/', productsController.index);
-router.get('/detalle/:id', productsController.detail);
+
 //Crear producto
 router.get('/crear/', productsController.create);
 router.post('/',uploadFile.fields([{name:'image_p'},{name:'image_1'},{name:'image_2'}]),productsController.storage);
