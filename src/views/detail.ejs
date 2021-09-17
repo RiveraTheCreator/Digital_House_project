@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <%- include('./partials/head') %>
-    <title>Detalle</title>
+    <title>Detalle del producto</title>
 </head>
 
 <body>
@@ -11,15 +11,15 @@
 
     <main>
         <div class="titulo-detalle">
-            <h2>Detalle del Producto</h2>
+            <h2>Detalle del Producto <%= product.name %></h2>
         </div>
 
         <section class="detalle">
             <article>
-                <img src="/images/products/producto_1.jpg>" alt="producto_1" class="img-p">
+                <img src="/images/products/<%= product.image_p%>" alt="Imagen del producto <%= product.name%> " class="img-p">
                 <div class="opciones-detalle">
                     <h3>Precio</h3>
-                    <h3>$0000.00 MXN</h3>
+                    <h3><%= product.price %> MXN</h3>
                     <div class="form-opciones">
                         <form method="GET" action="/">
                             <label name="opciones" class="lab-opciones">Opcion:</label>
@@ -43,10 +43,7 @@
             <div class="detalle-descripcion">
                 <h3>Descripción:</h3>
                 <p>
-                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis duis at velit eu est congue elementum
-                    integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum
-                    duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis 
-                    diam erat fermentum justo nec condimentum neque sapien placerat donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris
+                    <%= product.description %>
                 </p>
             </div>
 
@@ -54,7 +51,7 @@
                 <nav>
                     <ul>
                         <li>Características</li>
-                        <li>Especificaciones</li>
+                        <li>Especificaciones </li>
                         <li>Instrucciones</li>
                     </ul>
                 </nav>

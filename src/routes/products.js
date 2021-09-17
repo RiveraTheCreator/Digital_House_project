@@ -19,5 +19,10 @@ router.get('/detalle/:id', productsController.detail);
 //Crear producto
 router.get('/crear/', productsController.create);
 router.post('/',uploadFile.fields([{name:'image_p'},{name:'image_1'},{name:'image_2'}]),productsController.storage);
+// *** Genera la vista para mostrar todos los productos ***
+router.get('/', productsController.index);
+router.get('/detalle/:id', productsController.detail);
+//Obtener un producto... No debes confundir con crear un producto
+router.get('/:id', productsController.detail);
 
 module.exports = router;
