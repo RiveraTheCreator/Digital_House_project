@@ -44,6 +44,9 @@ const productsController = {
     },
     delete: (req,res)=>{
         ///Logic
+    },
+    edit: (req,res)=>{
+        ///Logic
     }
 }
 
