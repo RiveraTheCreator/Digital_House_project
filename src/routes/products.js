@@ -25,10 +25,10 @@ const uploadFile = multer({storage:storage});
 /*1*/router.get('/', productsController.index);
 
 //Obtener un producto... No debes confundir con crear un producto
-/*3*/router.get('/detalle/:id', productsController.detail);
+/*3*/router.get('/:id', productsController.detail);
 
 //Editar producto
 /*5*/router.get('/:id/edit', productsController.edit);
-/*6*/router.put('/id', productsController.storage);//si no va .storage cambienlo xdxd
+/*6*/router.put('/id', productsController.storage);//si no va .storage cámbienlo xdxd
 
 module.exports = router;

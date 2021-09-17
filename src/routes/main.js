@@ -6,7 +6,7 @@ router.get('/', mainController.index);
 
 router.get('/carrito',  mainController.carrito);
 
-router.get('/detalle',  mainController.detalle);
+router.get('/detail',  mainController.detalle);
 
 router.get('/login',    mainController.login);
 

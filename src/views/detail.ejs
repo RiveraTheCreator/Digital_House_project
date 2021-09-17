@@ -11,7 +11,7 @@
 
     <main>
         <div class="titulo-detalle">
-            <h2>Detalle del Producto <%= product.name %></h2>
+            <h2><%= product.name %></h2>
         </div>
 
         <section class="detalle">
@@ -19,7 +19,7 @@
                 <img src="/images/products/<%= product.image_p%>" alt="Imagen del producto <%= product.name%> " class="img-p">
                 <div class="opciones-detalle">
                     <h3>Precio</h3>
-                    <h3><%= product.price %> MXN</h3>
+                    <h3>$<%= product.price %> MXN</h3>
                     <div class="form-opciones">
                         <form method="GET" action="/">
                             <label name="opciones" class="lab-opciones">Opcion:</label>

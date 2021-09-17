@@ -6,7 +6,7 @@ const mainController = {
 		return res.render('carrito');
 	},
 	detalle:	(req,res) =>{
-		return res.render('detalle'); 
+		return res.render('detail'); 
 	},
 	login:		(req,res) =>{
 		return res.render('login');

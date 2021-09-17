@@ -15,8 +15,9 @@ const productsController = {
     },
     detail: (req, res) => {
         let id = req.params.id;
-		let product = products.find(product=> product.id == id)
-		res.render('detail',{
+		let product = products.find(product => product.id == id)
+		console.log(product);
+        res.render('detail',{
 			product,
 			toThousand
 		});
