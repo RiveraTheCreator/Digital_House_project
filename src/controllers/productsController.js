@@ -21,18 +21,27 @@ const productsController = {
 			toThousand
 		});
     },
-	crear: (req,res) =>{
+	create: (req,res) =>{
 		res.render('crear');
 	},
-    procesar: (req,res)=>{
-        let newProduct = req.body;
-        let productAdd = {
-            ...newProduct,
-            id: products[products.length-1].id + 1,
+    storage: (req,res)=>{
+        if(req.files){
+            let newProduct = req.body;
+            let arrayImages = req.files;
+            let productAdd = {
+                ...newProduct,
+                id: products[products.length-1].id + 1,
+                image_p: req.files.image_p ? req.files.image_p[0].filename: 'default.png',
+                image_1: req.files.image_1 ? req.files.image_1[0].filename: 'default.png',
+                image_2: req.files.image_2 ? req.files.image_2[0].filename: 'default.png',
+            }
+            products.push(productAdd);
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+            res.redirect('/');
+        }else{
+            res.render('crear');
         }
-        products.push(productAdd);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/');
+       
 
     }
 }

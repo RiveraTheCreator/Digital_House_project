@@ -12,7 +12,7 @@
             <h1>Crear producto</h1>
         </div>
         <div class="form-edicion">
-            <form action="/productos/" method="POST" >
+            <form action="/productos/" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="name">Nombre del producto:</label>
                     <input type="text" id="name" name="name" class="input-text">
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <label for="image-p">Imagen principal:</label>
-                    <input type="file" id="image-p" name="image-p" class="input-file">
+                    <input type="file" id="image-p" name="image_p" class="input-file">
                 </div>
                 <div>
                     <label for="image_1">Imagen secundaria 1:</label>
