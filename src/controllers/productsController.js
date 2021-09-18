@@ -44,10 +44,10 @@ const productsController = {
         }
     },
     delete: (req,res)=>{
-        ///Logic
+        res.send("Página de borrado en construccion");
     },
     edit: (req,res)=>{
-        ///Logic
+        res.render('edicion');
     }
 }
 

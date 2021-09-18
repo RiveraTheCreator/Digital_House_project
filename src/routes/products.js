@@ -19,7 +19,7 @@ const uploadFile = multer({storage:storage});
 /*4*/router.post('/',uploadFile.fields([{name:'image_p'},{name:'image_1'},{name:'image_2'}]),productsController.storage);
 
 //Eliminar producto
-/*7*/router.delete('/:id',productsController.delete);
+/*7*/router.delete('/delete/:id',productsController.delete);
 
 // *** Genera la vista para mostrar todos los productos ***
 /*1*/router.get('/', productsController.index);

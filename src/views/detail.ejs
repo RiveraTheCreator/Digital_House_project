@@ -11,7 +11,7 @@
 
     <main>
         <div class="titulo-detalle">
-            <h2><%= product.name %></h2>
+            <h2> <%= product.name %> </h2>
         </div>
 
         <section class="detalle">
@@ -64,9 +64,13 @@
             </div>
         </section>
 
-
+        <a href="/productos/<%= product.id %>/edit/">
+            Editar producto
+        </a>
+            <!-- Ver minuto 1:47:10 para agregar el botón eliminar-->
+       
     </main>
-
+    
     <!--FOOTER--> 
     <%- include('./partials/footer') %> 
 </body>
