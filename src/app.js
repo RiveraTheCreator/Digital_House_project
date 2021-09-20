@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
+const methodOverride = require('method-override');
 //Declaracion de manejadores de las rutas
 const mainRoutes = require('./routes/main.js');
 const productsRoutes = require('./routes/products.js')
@@ -12,6 +12,7 @@ app.use(express.static(publicPath));
 //Declaración de uso de EJS
 app.set("view engine","ejs");
 //MiddleWares
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 

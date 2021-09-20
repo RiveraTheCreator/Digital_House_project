@@ -16,7 +16,7 @@
                 <p>
                     <label for="nombre-producto">Nombre del producto:</label>
                     <input type="text" id="nombre-producto" name="nombre-producto" class="input-text"
-                    value= <%= productToEdit.name %>
+                    value= <%= productToEdit.name %>>
                 </p>
                 <p> Imagen principal del producto </p>
                 <p><img src="/images/products/<%=productToEdit.image_p%>" style="width: 100px;"> </p>
@@ -55,7 +55,10 @@
                 <div class="botones-edicion">
                     <button type="submit">Enviar</button>
                     <button type="reset">Cancelar</button>
-                    <button type="button">Eliminar</button>
+                    <form action="/productos/:id?_method=DELETE" method="POST">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                    
                 </div>
             </form>
         </div>

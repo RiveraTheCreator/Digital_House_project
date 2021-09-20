@@ -28,7 +28,6 @@ const productsController = {
     storage: (req,res)=>{
         if(req.files){
             let newProduct = req.body;
-            let arrayImages = req.files;
             let productAdd = {
                 ...newProduct,
                 id: products[products.length-1].id + 1,
@@ -44,7 +43,10 @@ const productsController = {
         }
     },
     delete: (req,res)=>{
-        res.send("Página de borrado en construccion");
+        let id = req.params.id;
+		let finalProducts = products.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect('/');
     },
     edit: (req,res)=>{
         let id = req.params.id;
