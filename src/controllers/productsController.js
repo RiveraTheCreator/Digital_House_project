@@ -47,7 +47,13 @@ const productsController = {
         res.send("Página de borrado en construccion");
     },
     edit: (req,res)=>{
-        res.render('edicion');
+        let id = req.params.id;
+        let productToEdit = products.find(product=> product.id == id);
+        res.render('edicion',{productToEdit});
+    },
+
+    update: (req, res) => {
+        res.send("Aquí va bien");
     }
 }
 

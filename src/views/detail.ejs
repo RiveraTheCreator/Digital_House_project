@@ -64,10 +64,16 @@
             </div>
         </section>
 
-        <a href="/productos/<%= product.id %>/edit/">
+        <a href="/productos/<%= product.id %>/edit/" class="buttonEnviar">
             Editar producto
         </a>
-            <!-- Ver minuto 1:47:10 para agregar el botón eliminar-->
+
+        <!--
+        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+            <button type="submit" class="action-button delete">ELIMINAR</button>
+        </form>
+        -->
+        <!-- Ver minuto 1:47:10 para agregar el botón eliminar-->
        
     </main>
     

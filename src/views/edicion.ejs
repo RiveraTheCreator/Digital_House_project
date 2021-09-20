@@ -8,16 +8,19 @@
   <%- include('./partials/header') %> 
     <main>
         <div class="edicion-producto">
-            <h1>Editar producto</h1>
         </div>
+        <h1>Editar producto <%=productToEdit.name%> cuyo numero es <%=productToEdit.id%></h1>
         <div class="form-edicion">
-            <form action="/" method="POST">
+            
+            <form action="/products/<%=productToEdit.id%>/edit?_method=PATCH" method="POST" enctype="multipart/form-data">
                 <p>
                     <label for="nombre-producto">Nombre del producto:</label>
-                    <input type="text" id="nombre-producto" name="nombre-producto" class="input-text">
+                    <input type="text" id="nombre-producto" name="nombre-producto" class="input-text"
+                    value= <%= productToEdit.name %>
                 </p>
-                <p>
-                    <label for="img-principal">Imagen principal:</label>
+                <p> Imagen principal del producto </p>
+                <p><img src="/images/products/<%=productToEdit.image_p%>" style="width: 100px;"> </p>
+                    <label for="img-principal">Seleccionar otra imagen</label>                                      
                     <input type="file" id="img-principal" name="img-principal" class="input-file">
                 </p>
                 <p>
@@ -30,27 +33,28 @@
                 </p>
                 <p>
                     <label for="precio">Precio:</label>
-                    <input type="number" id="precio" name="precio" class="input-text">
+                    <input type="number" id="precio" name="precio" class="input-text"
+                        value="<%= productToEdit.price %>"
+                    >
                 </p>
                 <p>
                     <label for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" class="input-area"></textarea>
+                    <textarea id="descripcion" name="descripcion" class="input-area"><%= productToEdit.description %>
+                    </textarea>
                 </p>
                 <p>
                     <label for="caracteristicas">Características:</label>
-                    <textarea id="caracteristicas" name="caracteristicas" class="input-area"></textarea>
+                    <textarea id="caracteristicas" name="caracteristicas" class="input-area"><%= productToEdit.caracteristic %>
+                    </textarea>
                 </p>
                 <p>
-                    <label for="especificaciones">Especificaciones:</label>
-                    <textarea id="especificaciones" name="especificaciones" class="input-area"></textarea>
-                </p>
-                <p>
-                    <label for="instrucciones">Instrucciones:</label>
-                    <textarea id="instrucciones" name="instrucciones" class="input-area"></textarea>
+                    <label for="instrucciones">Especificaciones:</label>
+                    <textarea id="instrucciones" name="instrucciones" class="input-area"><%= productToEdit.specs %>
+                    </textarea>
                 </p>
                 <div class="botones-edicion">
                     <button type="submit">Enviar</button>
-                    <button type="button">Cancelar</button>
+                    <button type="reset">Cancelar</button>
                     <button type="button">Eliminar</button>
                 </div>
             </form>
