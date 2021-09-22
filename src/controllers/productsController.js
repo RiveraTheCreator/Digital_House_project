@@ -15,7 +15,7 @@ const productsController = {
     },
     detail: (req, res) => {
         let id = req.params.id;
-		let product = products.find(product => product.id == id)
+		let product = products.find(product => product.id == id);
 		console.log(product);
         res.render('detail',{
 			product,
@@ -45,6 +45,7 @@ const productsController = {
     delete: (req,res)=>{
         let id = req.params.id;
 		let finalProducts = products.filter(product => product.id != id);
+        console.log(finalProducts);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
 		res.redirect('/');
     },
