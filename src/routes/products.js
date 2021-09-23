@@ -29,6 +29,6 @@ const uploadFile = multer({storage:storage});
 
 //Editar producto
 /*5*/router.get('/edit/:id', productsController.edit);
-/*6*/router.patch('edit/:id', uploadFile.any(), productsController.update);//si no va .storage cámbienlo xdxd
+/*6*/router.patch('/edit/:id', uploadFile.any(), productsController.update);//si no va .storage cámbienlo xdxd
 
 module.exports = router;

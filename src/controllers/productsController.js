@@ -56,7 +56,26 @@ const productsController = {
     },
 
     update: (req, res) => {
-        res.send("Aquí va bien");
+        let id = req.params.id;
+        let productToEdit = products.find(product=> product.id == id);
+
+        productToEdit = {
+            id: productToEdit.id,
+            ...req.body,
+            image: productToEdit.image_p
+        };
+
+        let newProducts = products.map(product => {
+            if(product.id == productToEdit.id){
+                return product = {...productToEdit}
+            }
+            return product
+        });
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+
+        res.redirect('/');
+
+
     }
 }
 
