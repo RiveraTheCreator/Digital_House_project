@@ -9,8 +9,7 @@
     <main>
         <div class="edicion-producto">
         </div>
-        <h2 style="text-align: center;">Editar producto <em><%=productToEdit.name%> </em> </h2>
-        <h3 style="text-align: center;">Id número <%=productToEdit.id%></h3>
+        <h1>Editar producto <%=productToEdit.name%> cuyo numero es <%=productToEdit.id%></h1>
         <div class="form-edicion">
       <!--
               <form action="/productos/<%=productToEdit.id%>?_method=DELETE" method="POST" class="botones-edicion" style="display: inline-block; text-align: center;" >
@@ -29,86 +28,29 @@
                 </p>
 
                 <p>
-                    <label for="animal">Tipo de animal</label>
-                    <select name="animal">
-                        <option value="<%= productToEdit.animal %>">
-                            <%= productToEdit.animal %>
-                        </option>
-                    <!-- El siguiente EJS tendrá que cambiar por database-->
-                    <%
-                        let animales = [
-                        {animal: "Perros"},
-                        {animal: "Gatos"},
-                        {animal: "Reptiles"},
-                        {animal: "Roedores"},
-                        {animal: "Aves"},
-                        {animal: "Peces"}
-                        ];
-
-                        animales.forEach(ani => {
-                            if(ani.animal != productToEdit.animal){ %>
-                                <option value="<%=ani.animal %>">
-                                    <%=ani.animal%>
-                                </option>
-                            <%}
-                        })
-                    %>
-                    </select>
+                    <label for="price">Precio:</label>
+                    <input type="number" id="price" name="price" class="input-text"
+                        value="<%= productToEdit.price %>"
+                    >
                 </p>
-
-                 <!-- El siguiente EJS tendrá que cambiar por database-->
-                <p>
-                    <label for="category">Categoría</label>
-                    <select name="category">
-                        <option value="<%= productToEdit.category %>">
-                            <%= productToEdit.category %>
-                        </option>
-                        <%
-                        let categorias = [
-                        {category: "Alimento"},
-                        {category: "Correas y Collares"},
-                        {category: "Vivienda"}
-                        ];
-
-                        categorias.forEach(cate => {
-                            if(cate.category != productToEdit.category){ %>
-                                <option value="<%=cate.category %>">
-                                    <%=cate.category%>
-                                </option>
-                            <%}
-                        })
-                    %>
-
-                    </select>
-                </p>
-
                 <p>
                     <label for="description">Descripción:</label>
                     <textarea id="description" name="description" class="input-area">
                         <%= productToEdit.description %>
                     </textarea>
                 </p>
-
                 <p>
                     <label for="caracteristic">Características:</label>
                     <textarea id="caracteristic" name="caracteristic" class="input-area">
                         <%= productToEdit.caracteristic %>
                     </textarea>
                 </p>
-
                 <p>
                     <label for="specs">Especificaciones:</label>
                     <textarea id="specs" name="specs" class="input-area">
                         <%= productToEdit.specs %>
                     </textarea>
                 </p>
-
-                <p>
-                    <label for="price">Precio:</label>
-                    <input type="number" id="price" name="price" class="input-text"
-                        value="<%= productToEdit.price %>">
-                </p>
-
                 <div>
                     <div class="botones-edicion">
                         <button type="submit">Enviar</button>
