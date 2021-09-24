@@ -659,6 +659,11 @@ main article .product-name{
 	margin: 4%
 }
 
+.products-products a{
+	text-decoration: none;
+	color: black;
+}
+
 div.products-products article{
 	margin: 10% 5%;
 	box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.44);
