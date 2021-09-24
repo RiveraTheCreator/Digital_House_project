@@ -32,8 +32,6 @@ const productsController = {
                 ...newProduct,
                 id: products[products.length-1].id + 1,
                 image_p: req.files.image_p ? req.files.image_p[0].filename: 'default.png',
-                image_1: req.files.image_1 ? req.files.image_1[0].filename: 'default.png',
-                image_2: req.files.image_2 ? req.files.image_2[0].filename: 'default.png',
             }
             products.push(productAdd);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
@@ -62,7 +60,7 @@ const productsController = {
         productToEdit = {
             id: productToEdit.id,
             ...req.body,
-            image: productToEdit.image_p
+            image_p: productToEdit.image_p
         };
 
         let newProducts = products.map(product => {
