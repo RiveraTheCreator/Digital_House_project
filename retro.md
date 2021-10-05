@@ -120,3 +120,33 @@
 - Postergar el material del playground
 - No externar dudas
 
+----
+## Sprint 5
+
+### Comenzar a hacer:
+
+- Que nuestro sistema :
+    - Permita el flujo de registro, login y logout de usuarios
+    - Permita recordar al usuario para que pueda ingresar sin volverse a loguear.
+    - Tenga rutas accesibles solo por huéspedes (visitantes sin login).
+    - Tenga rutas accesible solo por usuarios (que hicieron login).
+
+### Hacer mas
+
+- Cada que se trabaje en el mismo archivo comunicar que cambios se haran
+- Comunicar en que nos estamos atrasando para ponernos de acuerdo
+- Hacer mas daily
+
+### Continuar haciendo
+
+- Despues de finalizar el Sprint en conjunto revisar del proyecto
+- Seguir teniendo una comunicación respetuosa y brindarnos apoyo en las dudas que surjan
+
+### Hacer menos
+
+- Dejar las lecciones del playground para después
+
+### Dejar de hacer
+
+- Postergar el material del playground
+- No externar dudas
