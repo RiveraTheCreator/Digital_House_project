@@ -13,7 +13,7 @@ const usersController = {
        return res.render('registro');
     },
     processRegister: (req,res)=>{
-        
+        //logica 
         res.redirect('');
     }
 

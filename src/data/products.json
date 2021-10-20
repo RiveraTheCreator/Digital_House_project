@@ -1,14 +1,14 @@
 [
  {
   "id": 1,
-  "name": "Booti",
-  "price": "1008.72",
-  "description": "¡Bad to the Bone! Esta divertida chamarra estilo piel, es el complemento ideal para disfrazar tu mejor amigo de un chico malo. Esta chamarra no sólo la podrá usar en Halloween, también podrás agregarla a su colección de ropa para cualquier temporada.\r\n ",
-  "caracteristic": "Agrega a su guardarropa una clásica chamarra de piel. Fabricado en piel sintética. Incluye gráfico Bad to the Bone\r\n ",
-  "specs": "https://www.petco.com.mx/petco/en/PRODUCTOS/Perro/Ropa-y-Accesorios/Disfraces/Bootique-Chamarra-Negra-Bad2Bone%2C-XX-Chica/p/134871\r\n ",
   "image_p": "producto_1.jpg",
+  "name": "Booti",
   "animal": "Gatos",
-  "category": "Alimento"
+  "category": "Alimento",
+  "description": "                                                                                                                                                                                                ¡Bad to the Bone! Esta divertida chamarra estilo piel, es el complemento ideal para disfrazar tu mejor amigo de un chico malo. Esta chamarra no sólo la podrá usar en Halloween, también podrás agregarla a su colección de ropa para cualquier temporada.\r\n \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ",
+  "caracteristic": "                                                                                                                                                                                                Agrega a su guardarropa una clásica chamarra de piel. Fabricado en piel sintética. Incluye gráfico Bad to the Bone\r\n \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ",
+  "specs": "                                                                                                                                                                                                https://www.petco.com.mx/petco/en/PRODUCTOS/Perro/Ropa-y-Accesorios/Disfraces/Bootique-Chamarra-Negra-Bad2Bone%2C-XX-Chica/p/134871\r\n \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ",
+  "price": "1008.72"
  },
  {
   "id": 2,
@@ -31,6 +31,17 @@
   "caracteristic": "Los detalles reflejan la luz para una mayor visibilidad. Mango acojinado para un agarre cómodo. Engancha fácilmente el mosquetón en collares o arneses.",
   "specs": "https://www.petco.com.mx/petco/en/MARCAS/Good2Go/Good2Go-Correa-Acojinada-Reflejante-Color-Rosa-Neon-con-Herraje-Met%C3%A1lico-para-Perro%2C-1-8m/p/123599",
   "price": 3977.82
+ },
+ {
+  "id": 4,
+  "name": "Pro Plan Optistart Alimento Seco para Cachorro Raza Grande Receta Pollo y Arroz",
+  "image_p": "producto_4.jpg",
+  "animal": "Perros",
+  "category": "Alimento",
+  "description": "Pro Plan Optistart para cachorro raza grande es el alimento para perro que le brindará una nutrición completa con altos niveles de energía y una concentración de nutrientes en partículas más pequeñas. Con croquetas adecuadas a sus mandíbulas para sus primeros meses de vida . Contiene anticuerpos naturales del calostro y proteínas de alta calidad que extienden la protección del cachorro en su primer año formativo. Nosotros compartimos tu pasión y siempre buscaremos nuevas formas de mejorar la vida de tu mascota.",
+  "caracteristic": "Contiene calostro que ayuda a fortalecer el sistema inmunológico. Para cachorros de hasta 24 meses de edad. Optimiza la absorción de nutrientes. Niveles óptimos de calcio y fósforo para huesos fuertes. Ácidos grasos Omega 3 para el desarrollo de la visión y el cerebro. Croquetas de mayor tamaño para satisfacer las necesidades de la raza y promover la masticación.",
+  "specs": "https://www.petco.com.mx/petco/en/MARCAS/Pro-Plan/Pro-Plan-Optistart-Alimento-Seco-para-Cachorro-Raza-Grande-Receta-Pollo-y-Arroz%2C-3-5-kg/p/104574",
+  "price": 3170.57
  },
  {
   "id": 5,

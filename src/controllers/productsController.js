@@ -2,12 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 const productsController = {
     index: (req, res) => {
+        products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
         res.render('productos', {
             products,
             toThousand
@@ -56,11 +57,11 @@ const productsController = {
     update: (req, res) => {
         let id = req.params.id;
         let productToEdit = products.find(product=> product.id == id);
-
+        
         productToEdit = {
             id: productToEdit.id,
-            ...req.body,
-            image_p: productToEdit.image_p
+            image_p: req.file.filename,
+            ...req.body
         };
 
         let newProducts = products.map(product => {
@@ -69,9 +70,9 @@ const productsController = {
             }
             return product
         });
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+   		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
 
-        res.redirect('/');
+        res.redirect('/productos');
 
 
     }
