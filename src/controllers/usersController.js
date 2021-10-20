@@ -14,7 +14,7 @@ const usersController = {
     },
     processRegister: (req,res)=>{
         //logica 
-        res.redirect('');
+        res.redirect('/');
     }
 
 
