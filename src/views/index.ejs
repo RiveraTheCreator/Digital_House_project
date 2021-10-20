@@ -42,24 +42,19 @@
         </section>
         <section class="articulos">
             <!--Aqui el link de cada detalle de producto-->
-            <a href="/productos/291751066-8">
-            <article class="producto">
-                <img src="../images/croquetas.jfif"alt="producto-1" class="producto-img">
-                <p class="product-detail">Alimento Pro Plan OptiDerma Sensitive Skin Adult para perro adulto de raza mediana/grande 13kg</p>
-            </article>
-            </a>
-            
-
-             <article>
-                <img src="../images/croquetas2.jfif" alt="producto 2">
-                <p>Alimento Pro Plan OptiDerma Sensitive Skin Adult para perro adulto de raza mediana/grande 13kg</p>
-            </article>
-
-            <article>
-            </article>
-            <article>
-                
-            </article>
+            <% for(let i=1; i <= 6;i++){ %> 
+                <article class="articulo-home">
+                <a href="/productos/<%= producto[i].id %>">
+                    <img src="/images/products/<%= producto[i].image_p %>" alt="<%= producto[i].name %>" class="product-img">
+                </a>
+                    <div class="product-name">
+                        <a href="/productos/<%= producto[i].id %>">
+                            <h2><%= producto[i].name %></h2>
+                        </a>
+                        <h4>$<%= toThousand(producto[i].price) %> MXN</h4>
+                    </div>
+                </article>
+            <% } %>     
         </section>
 
         <section class="new-products">
