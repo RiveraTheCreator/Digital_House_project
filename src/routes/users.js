@@ -9,7 +9,7 @@ router.post('/login',usersController.ingresar);
 
 
 //Vista de login & validacion por post
-router.get('/registro',usersController.register);
-router.post('/registro',usersController.processData);
+router.get('/registro',usersController.registrar);
+router.post('/registro',usersController.processRegister);
 
 module.exports = router;
