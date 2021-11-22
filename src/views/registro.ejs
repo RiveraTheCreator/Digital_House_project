@@ -7,7 +7,15 @@
     
     <body class="body-registro">
         <%- include('./partials/header') %>
-    
+        <% if (locals.errors) { %>
+
+            <% for( let errorForm in errors ) { %>
+                <p>
+                    <%- errors[errorForm].msg  %> 
+                </p>
+            <% } %>
+         
+        <% } %>
         <main>
         <section class="registro">
             <h1>Crear Cuenta</h1>
@@ -15,144 +23,94 @@
                 <h3>Datos Personales</h3>
             </div>
             <div class="form-registro">
-            <form action="/" method="POST">
+            <form action="/usuarios/registrar" method="POST" enctype="multipart/form-data">
                     <p class="elt-reg">
-                        <label for="nombre">Nombre (s):</label>
+                        <label for="firstName">Nombre (s):</label>
                         <br>
-                        <input type="text" id="nombre" name="nombre" required>
+                        <input type="text" id="firstName" name="firstName" value="<%= locals.oldData ? oldData.firstName : null %> ">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <div style="color: red; text-align: center;"><%= errors.firstName.msg %> </div>
+                        <% } %>
                     </p>
                     
                     <p class="elt-reg">
-                        <label for="apellidos">Apellidos:</label>
+                        <label for="lastName">Apellidos:</label>
                         <br>
-                        <input type="text" id="apellidos" name="apellidos" required>
+                        <input type="text" id="lastName" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %> " >
+                        <% if (locals.errors && errors.lastName) { %>
+                            <div style="color: red; text-align: center;"><%= errors.lastName.msg %> </div>
+                        <% } %>
                     </p>
 
-                    <p class="elt-reg">
-                        <label for="nacimiento">Fecha de nacimiento:</label>
-                        <br>
-                        <input type="date" id="nacimiento" name="nacimiento" min="2003-01-01" required>
-                    </p>
-                    
                     <p class="elt-reg">
                         <label for="email">e-mail:</label>
                         <br>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %> ">
+                        <% if (locals.errors && errors.email) { %>
+                            <div style="color: red; text-align: center;"><%= errors.email.msg %> </div>
+                        <% } %>
                     </p>
 
                     <p class="elt-reg">
-                        <label for="set-password">Contraseña:</label>
+                        <label for="picture">Foto de usuario:</label>
                         <br>
-                        <input type="password" id="set-password" name="setpassword" required>
+                        <input type="file" id="picture" name="picture">
+                    </p>
+
+                    <p class="elt-reg">
+                        <label for="phone">Teléfono:</label>
+                        <br>
+                        <input type="tel" id="phone" name="phone" value="<%= locals.oldData ? oldData.phone : null %> ">
+                        <% if (locals.errors && errors.phone) { %>
+                            <div style="color: red; text-align: center;"><%= errors.phone.msg %> </div>
+                        <% } %>
+                    </p>
+
+                    <p class="elt-reg">
+                        <label for="streetNumber">Calle y número:</label>
+                        <br>
+                        <input type="text" id="streetNumber" name="streetNumber" value="<%= locals.oldData ? oldData.streetNumber : null %> ">
+                        <% if (locals.errors && errors.streetNumber) { %>
+                            <div style="color: red; text-align: center;"><%= errors.streetNumber.msg %> </div>
+                        <% } %>
+                    </p>
+
+                    <p class="elt-reg">
+                        <label for="postalCode">Código postal:</label>
+                        <br>
+                        <input type="text" id="postalCode" name="postalCode" value="<%= locals.oldData ? oldData.postalCode : null %> ">
+                        <% if (locals.errors && errors.postalCode) { %>
+                            <div style="color: red;  text-align: center;"><%= errors.postalCode.msg %> </div>
+                        <% } %>
+                    </p>
+
+                    <p class="elt-reg">
+                        <label>País:</label>
+                        <br>
+                        <% let countries = ['Mexico','Guatemala','Belice','Salvador','Honduras','Nicaragua','Panama','Ecuador','Colombia','Venezuela','Otro']; %> 
+                        <select name="country" required> <!--Agregar aquí una lista dinamica-->
+                            <% for (let country of countries){ %> 
+                            <option value=<%= country %>><%= country  %> 
+                            <% } %> 
+                        </select>
+                    </p>
+                    
+                    <p class="elt-reg">
+                        <label for="password">Contraseña:</label>
+                        <br>
+                        <input type="password" id="password" name="password" required>
+                        <% if (locals.errors && errors.password) { %>
+                            <div style="color: red; text-align: center;"><%= errors.password.msg %> </div>
+                        <% } %>
                     </p>
 
                     <p class="elt-reg">
                         <label for="confirm-pass">Confirmar contraseña:</label>
                         <br>
                         <input type="password" id="confirm-pass" name="confirm-pass" required>
-                    </p>
-
-                    <p class="elt-reg">
-                        <label for="telefono">Teléfono:</label>
-                        <br>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </p>
-
-                    <p class="elt-reg">
-                        <label for="calle">Calle y número:</label>
-                        <br>
-                        <input type="text" id="calle" name="calle" required>
-                    </p>
-
-                    <p class="elt-reg">
-                        <label for="colonia">Colonia</label>
-                        <br>
-                        <input type="text" id="colonia" name="colonia" required>
-                    </p>
-
-                    <p class="elt-reg">
-                        <label for="cp">Código postal:</label>
-                        <br>
-                        <input type="text" id="cp" name="cp" required>
-                    </p>
-
-                    <p class="elt-reg">
-                        <label>País:</label>
-                        <br>
-                        <select name="pais" required> <!--Agregar aquí una lista dinamica-->
-                            <option value="mexico">México</option>
-                            <option value="guatemala">Guatemala</option>
-                            <option value="belice">Belice</option>
-                            <option value="salvador">Salvador</option>
-                            <option value="honduras">Honduras</option>
-                            <option value="nicaragua">Nicaragua</option>
-                            <option value="costa-rica">Costa Rica</option>
-                            <option value="panama">Panamá</option>
-                            <option value="Ecuador">Ecuador</option>
-                            <option value="colombia">Colombia</option>
-                            <option value="venezuela">Venezuela</option>
-                        </select>
-                    </p>
-
-                    <p class="elt-reg">
-                        <label>Estado:</label>
-                        <br>
-                        <select name="estado" required> <!--Agregar aquí una lista dinamica-->
-                            <option value="aguascalientes">Aguascalientes</option>
-                            <option value="bcn">Baja California Norte</option>
-                            <option value="bcs">Baja California Sur</option>
-                            <option value="campeche">Campeche</option>
-                            <option value="coahuila">Coahuila</option>
-                            <option value="colima">Colima</option>
-                            <option value="chiapas">Chiapas</option>
-                            <option value="chihuahua">Chihuahua</option>
-                            <option value="durango">Durango</option>
-                            <option value="df">Distrito Federal</option>
-                            <option value="guanajuato">Guanajuato</option>
-                            <option value="guerrero">Guerrero</option>
-                            <option value="hidalgo">Hidalgo</option>
-                            <option value="jalisco">Jalisco</option>
-                            <option value="cdmx">CDMX</option>
-                            <option value="morelos">Morelos</option>
-                            <option value="nayarit">Nayarit</option>
-                            <option value="nl">Nuevo León</option>
-                            <option value="oaxaca">Oaxaca</option>
-                            <option value="puebla">Puebla</option>
-                            <option value="queretaro">Querétaro</option>
-                            <option value="quintantaroo">Quintana Roo</option>
-                            <option value="slp">San Luis Potosí</option>
-                            <option value="sonora">Sonora</option>
-                            <option value="tabasco">Tabasco</option>
-                            <option value="tamaulipas">Tamaulipas</option>
-                            <option value="tlaxcala">Tlaxcala</option>
-                            <option value="veracruz">Veracruz</option>
-                            <option value="yucatan">Yucatán</option>
-                            <option value="zacatecas">Zacatecas</option>
-                        </select>
-                    </p>
-
-                    <p class="elt-reg">
-                        <label>Municipio:</label>
-                        <br>
-                        <select name="municipio" required> <!--Agregar aquí una lista dinamica-->
-                            <option value="amealco">Amealco de Bonfil</option>
-                            <option value="arroyo">Arroyo Seco</option>
-                            <option value="cadereyta">Cadereyta de Montes</option>
-                            <option value="colon">Colón</option>
-                            <option value="corregidora">Corregidora</option>
-                            <option value="marques">El Marqués</option>
-                            <option value="ezequiel">Ezequiel Montes</option>
-                            <option value="humilpan">Huimilpan</option>
-                            <option value="jalpan">Jalpan de Serra</option>
-                            <option value="escobedo">Pedro Escobedo</option>
-                            <option value="penamiller">Peñamiller</option>
-                            <option value="pinal">Pinal de Amoles</option>
-                            <option value="san-joaquin">San Joaquin</option>
-                            <option value="sjr">San Juan del Río</option>
-                            <option value="tequisquiapan">Tequisquiapan</option>
-                            <option value="toliman">Tolimán</option>
-                        </select>
-                    </p>
+                    
+                    </p>                    
+    
                 <div class="terminos">
                     <p>
                         <label>
@@ -175,61 +133,6 @@
             </form> 
         </div>
         </section>
-    <!--    
-        <section>
-            <h3>Datos de tu Mascota</h3>
-            <div class="datos-mascota">
-                <form>
-                    <p>
-                        <label>Especie:</label>
-                        <br>
-                        <select name="especie">
-                            <option value="canino">Canino</option>
-                            <option value="felino">Felino</option>
-                            <option value="ave">Ave</option>
-                            <option value="reptil">Reptil</option>
-                            <option value="roedor">Roedor</option>
-                        </select>
-                    </p>
-
-                    <p>
-                        <label>Raza:</label>
-                        <br>
-                        <select name="raza">
-                            <option value="pastor-aleman">Pastor Alemán</option>
-                            <option value="labrador-retriever">Labrador Retirever</option>
-                            <option value="pomerania">Pomerania</option>
-                            <option value="husky">Husky Siberiano</option>
-                            <option value="golden">Golden Retriever</option>
-                            <option value="poodle">Poodle</option>
-                            <option value="chihuahua">Chihuahua</option>
-                            <option value="pug">Pug</option>
-                            <option value="dachshund">Dachshund</option>
-                        </select>
-                    </p>
-
-                    <p>
-                        <label for="nombre-mascota">Nombre:</label>
-                        <br>
-                        <input type="text" id="nombre-mascota" name="nombre-mascota">
-                    </p>
-
-                    <p>
-                        <label for="nacimiento-mascota">Fecha de nacimiento:</label>
-                        <br>
-                        <input type="date" id="nacimiento-mascota" name="nacimiento-mascota">
-                    </p>
-                </form>
-            </div>
-        </section>
-
-        <section>
-            
-                <input type="submit" value="Enviar">
-            </div> 
-            </form>
-        </section>
-    -->
         
     </main>
     <%- include('./partials/footer') %> 
