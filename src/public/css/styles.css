@@ -778,6 +778,9 @@ section.detalle article {
 }
 /*-ESTILOS--LISTA-DE-ARTICULOS-HOME-*/
 main .articulo-home{
-	min-width: 300px;
-	border:red 10px;
+	width: 100vw;
+}
+main .articulo-home img{
+	width: 100%;
+	
 }
