@@ -42,18 +42,18 @@
         </section>
         <section class="articulos">
             <!--Aqui el link de cada detalle de producto-->
-            <% for(let i=1; i <= 6;i++){ %> 
-                <article class="articulo-home">
-                <a href="/productos/<%= producto[i].id %>">
-                    <img src="/images/products/<%= producto[i].image_p %>" alt="<%= producto[i].name %>" class="product-img">
+            <% for(let articulo of producto){ %> 
+                <div class="articulo-home">
+                <a href="/productos/<%= articulo.id %>">
+                    <img src="/images/products/<%= articulo.image_p %>" alt="<%= articulo.name %>" class="product-img">
                 </a>
                     <div class="product-name">
-                        <a href="/productos/<%= producto[i].id %>">
-                            <h2><%= producto[i].name %></h2>
+                        <a href="/productos/<%= articulo.id %>">
+                            <h2><%= articulo.name %></h2>
                         </a>
-                        <h4>$<%= toThousand(producto[i].price) %> MXN</h4>
+                        <h4>$<%= toThousand(articulo.price) %> MXN</h4>
                     </div>
-                </article>
+                </div>
             <% } %>     
         </section>
 
