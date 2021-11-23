@@ -7,15 +7,6 @@
     
     <body class="body-registro">
         <%- include('./partials/header') %>
-        <% if (locals.errors) { %>
-
-            <% for( let errorForm in errors ) { %>
-                <p>
-                    <%- errors[errorForm].msg  %> 
-                </p>
-            <% } %>
-         
-        <% } %>
         <main>
         <section class="registro">
             <h1>Crear Cuenta</h1>
