@@ -79,7 +79,7 @@
                         <label>País:</label>
                         <br>
                         <% let countries = ['Mexico','Guatemala','Belice','Salvador','Honduras','Nicaragua','Panama','Ecuador','Colombia','Venezuela','Otro']; %> 
-                        <select name="country" required> <!--Agregar aquí una lista dinamica-->
+                        <select name="country" required> 
                             <% for (let country of countries){ %> 
                             <option value=<%= country %>><%= country  %> 
                             <% } %> 
@@ -89,22 +89,27 @@
                     <p class="elt-reg">
                         <label for="password">Contraseña:</label>
                         <br>
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password" name="password" >
                         <% if (locals.errors && errors.password) { %>
                             <div style="color: red; text-align: center;"><%= errors.password.msg %> </div>
                         <% } %>
                     </p>
 
                     <p class="elt-reg">
-                        <label for="confirm-pass">Confirmar contraseña:</label>
+                        <label for="confirmPass">Confirmar contraseña:</label>
                         <br>
-                        <input type="password" id="confirm-pass" name="confirm-pass" required>
+                        <input type="password" id="confirmPass" name="confirmPass" >
                     </p>                    
-    
+                    <% if (locals.passValidate) { %>
+                        <div style="color: red; text-align: center;"><%= passValidate %> </div>
+                    <% } %>
+                    <% if (locals.errors && errors.confirmPass) { %>
+                        <div style="color: red; text-align: center;"><%= errors.confirmPass.msg %> </div>
+                    <% } %>
                 <div class="terminos">
                     <p>
                         <label>
-                            <input type="radio" name="terminos" value="acepta-terminos" required>
+                            <input type="radio" name="terminos" value="acepta-terminos" >
                             Acepto los términos y condiciones
                         </label>
                     </p>
@@ -112,7 +117,7 @@
                 <div class="condiciones">
                     <p>
                         <label>
-                            <input type="checkbox" name="publicidad" value="acepta-publicidad">
+                            <input type="checkbox" >
                             Deseo recibir ofertas y publicidad a mi correo electrónico
                         </label>
                     </p>
