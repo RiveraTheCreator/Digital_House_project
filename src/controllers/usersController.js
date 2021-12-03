@@ -16,6 +16,9 @@ const usersController = {
         
         res.redirect('/');
     },
+           //He aqui como validar la contraseña
+       //bcrypt.compareSync(password,resultadoHash); <-----------
+    //-----------------C-O-M-P-L-E-T-E------------------------------------
     registrar: (req,res)=>{
        return res.render('registro');
     },
@@ -30,11 +33,6 @@ const usersController = {
                 passValidate: req.body.password !== req.body.confirmPass?'Las contraseñas no coinciden':undefined});
         }
          User.create(req.body,res);
-
-       //return res.send(resultsValidations);
-       //He aqui como validar la contraseña
-       //bcrypt.compareSync(password,resultadoHash); <-----------
-      // return res.redirect('/');
     }
 }
 
