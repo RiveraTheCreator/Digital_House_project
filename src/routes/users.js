@@ -34,11 +34,12 @@ const uploadFile = multer({storage});
 
 //Vista de login & validacion por post
 router.get('/login',usersController.login);
-router.post('/login',usersController.ingresar);
+router.post('/login',usersController.loginProcess);
 
 
 //Vista de login & validacion por post
 router.get('/registrar',usersController.registrar);
 router.post('/registrar',uploadFile.single('picture'),validaciones,usersController.processRegister);
 
+router.get('/usuarioPerfil',usersController.sendProfile);
 module.exports = router;

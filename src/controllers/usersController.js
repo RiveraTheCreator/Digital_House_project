@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const User = require('../models/Users');
+const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -11,10 +12,19 @@ const usersController = {
         return res.render('login');
     },
 
-    ingresar: (req,res)=>{
+    loginProcess: (req,res)=>{
         //logica de validacion de login
+        let userToLogin = User.findByField('email',req.body.email);
+        //console.log(req.body.email); console.log('\t  ____   ' + userToLogin);
+        if(userToLogin){
+            let passwordCheck = bcrypt.compareSync(req.body.password,userToLogin.password);
+            if(passwordCheck){
+                return res.redirect('/usuarios/usuarioPerfil')
+            }
+            return res.render('login',{errors:{password:{msg:'Email o Contraseña incorrecta'}}});
+        }
+        return res.render('login',{errors:{email:{msg: 'No se encuentra el email '}}})
         
-        res.redirect('/');
     },
            //He aqui como validar la contraseña
        //bcrypt.compareSync(password,resultadoHash); <-----------
@@ -44,6 +54,9 @@ const usersController = {
     
         let userCreated = User.create(req.body,res);
         return res.redirect('/usuarios/login');
+    },
+    sendProfile:(req,res)=>{
+        return res.render('usuarioPerfil');
     }
 }
 
