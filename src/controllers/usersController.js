@@ -24,7 +24,6 @@ const usersController = {
     },
     processRegister: (req,res)=>{
         let resultsValidations = validationResult(req);
-
         if((resultsValidations.errors.length > 0) ||  (req.body.password !== req.body.confirmPass) ){
             console.log(resultsValidations);
             return res.render('registro',{
@@ -32,7 +31,19 @@ const usersController = {
                 oldData: req.body, 
                 passValidate: req.body.password !== req.body.confirmPass?'Las contraseñas no coinciden':undefined});
         }
-         User.create(req.body,res);
+
+        let userInDb = User.findByField('email',req.body.email);
+        if(userInDb){
+            console.log(resultsValidations);
+            return res.render('registro',{
+                errors: {email:{msg: 'Email ya registrado'}},
+                oldData: req.body
+            });
+
+        }
+    
+        let userCreated = User.create(req.body,res);
+        return res.redirect('/usuarios/login');
     }
 }
 

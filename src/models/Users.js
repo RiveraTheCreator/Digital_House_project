@@ -39,7 +39,6 @@ const User =  {
         allUsers.push(userAdd);
         fs.writeFileSync(usersFilePath, JSON.stringify(allUsers, null, ' '));
         console.log('redirigiendo----------');
-        return res.redirect('/');
     //}else{
     },
     generateId: function(){
