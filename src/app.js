@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express();
+const session = require('express-session');
 const path = require('path');
 const methodOverride = require('method-override');
 //Declaracion de manejadores de las rutas
@@ -8,7 +8,14 @@ const productsRoutes = require('./routes/products.js');
 const usersRoutes = require('./routes/users.js');
 
 const publicPath = path.resolve(__dirname, './public');
+const app = express();
 app.use(express.static(publicPath));
+//Middleware session
+app.use(session({
+    secret: 'Little secret',
+    resave: false,
+    saveUninitialized: false
+}))
 
 //Declaración de uso de EJS
 app.set("view engine","ejs");

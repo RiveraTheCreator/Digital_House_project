@@ -12,8 +12,11 @@
         <div class="login-title">
             <h1>Usuario</h1>
         </div>
-        <div class="login">
-            <p style="border:green; border-radius: 30%; background-color: seagreen;">Usuario</p>
+        <div >
+            <h1>Hola <%= user.firstName %> </h1>
+            <p style="text-align: center;display: block;">Bienvenido a nuestro sitio estos son tus datos de usuario:</p>
+            <img src="/images/users/<%= user.picture %> "  style="max-width: 300px; max-height: 300px;" alt="FotoPerfil" >
+            </br><div style="display: block;">Email: <%= user.email %> </div></br>
         </div>
     </main>
 

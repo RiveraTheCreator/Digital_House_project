@@ -12,6 +12,7 @@ const usersController = {
         return res.render('login');
     },
 
+    //log
     loginProcess: (req,res)=>{
         //logica de validacion de login
         let resultsValidations = validationResult(req);
@@ -27,7 +28,13 @@ const usersController = {
         if(userToLogin){
             let passwordCheck = bcrypt.compareSync(req.body.password,userToLogin.password);
             if(passwordCheck){
-                return res.redirect('/usuarios/usuarioPerfil')
+                delete userToLogin.password;
+                req.session.userLogget = userToLogin;
+                console.log(req.session);
+                return res.render('usuarioPerfil',{
+                    user:req.session.userLogget
+                })
+                //return res.redirect('/usuarios/usuarioPerfil')
             }
             return res.render('login',{errors:{password:{msg:'Email o Contraseña incorrecta'}}});
         }
@@ -36,6 +43,11 @@ const usersController = {
 
 
 
+    },
+    profile:(req,res)=>{
+        return res.render('usuarioPerfil',{
+            user:req.session.userLogget
+        })
     },
     //-----------------C-O-M-P-L-E-T-E------------------------------------
     registrar: (req,res)=>{

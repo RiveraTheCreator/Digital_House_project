@@ -296,5 +296,17 @@
   "postalCode": "3800-766",
   "country": "Portugal",
   "picture": "https://robohash.org/inciduntharumpariatur.png?size=50x50&set=set1"
+ },
+ {
+  "firstName": "Isaac Alejandro",
+  "lastName": "Barron",
+  "email": "isaac.alejandro@outlook.es",
+  "phone": "+525517707897",
+  "streetNumber": "Mexico, Ciudad de Mexico, Tlahuac,Colonia del Mar, Gitana #331 Edificio 7 Departamento 101",
+  "postalCode": "13270",
+  "country": "Mexico",
+  "password": "$2a$10$l5VXtuRwL.ZYgfoWyIUVS.LrKDmOBMAEuWZlxmrQz5T8K4Mg0F.eO",
+  "id": 26,
+  "picture": "profile-default.png"
  }
 ]

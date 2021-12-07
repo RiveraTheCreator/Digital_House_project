@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "develop": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
     "tienda",
     "mascota"
   ],
-  "author": "Cereceres Vidales Diana, Rivera Barrón Isaac Alejandro, García Soria Mondragón Josué Raúl",
+  "authors": "Cereceres Vidales Diana, Rivera Barrón Isaac Alejandro, García Soria Mondragón Josué Raúl",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RiveraTheCreator/grupo_4_Animalandia/issues"
@@ -31,6 +32,7 @@
     "express-validator": "^6.12.1",
     "json-schema": "^0.4.0",
     "method-override": "^3.0.0",
-    "multer": "^1.4.3"
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.15"
   }
 }
