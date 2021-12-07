@@ -6,6 +6,7 @@ const model = require('../models/Users')
 const usersController = require(path.join(__dirname,'../controllers/usersController.js'));
 const {body} =  require('express-validator');
 //Express-Validator
+//Validacion de registro
 let validaciones = [
     body('email').notEmpty().withMessage('Ingresa un correo').bail().isEmail().withMessage('Inserta un email valido'),
     body('firstName').notEmpty().withMessage('Inserta un nombre'), 
@@ -17,6 +18,11 @@ let validaciones = [
     body('country').notEmpty().withMessage('No puedes dejar el campo vacio'),
     body('confirmPass').notEmpty().withMessage('Llenar ambos campos')
 ];
+//validacion de login
+let validacionesLogin = [
+    body('email').notEmpty().withMessage('Ingresa un correo').bail().isEmail().withMessage('Inserta un email valido'),
+    body('password').notEmpty().withMessage('Llenar campo')
+]
 
 //Se configura multer
 const storage = multer.diskStorage({
@@ -34,10 +40,10 @@ const uploadFile = multer({storage});
 
 //Vista de login & validacion por post
 router.get('/login',usersController.login);
-router.post('/login',usersController.loginProcess);
+router.post('/login',validacionesLogin,usersController.loginProcess);
 
 
-//Vista de login & validacion por post
+//Vista de registrar y validacion por post
 router.get('/registrar',usersController.registrar);
 router.post('/registrar',uploadFile.single('picture'),validaciones,usersController.processRegister);
 

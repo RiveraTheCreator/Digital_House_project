@@ -14,8 +14,16 @@ const usersController = {
 
     loginProcess: (req,res)=>{
         //logica de validacion de login
+        let resultsValidations = validationResult(req);
+        if((resultsValidations.errors.length > 0) ){
+            console.log(resultsValidations);
+            return res.render('registro',{
+                errors: resultsValidations.mapped(),
+                oldData: req.body, 
+               });
+        }
+        
         let userToLogin = User.findByField('email',req.body.email);
-        //console.log(req.body.email); console.log('\t  ____   ' + userToLogin);
         if(userToLogin){
             let passwordCheck = bcrypt.compareSync(req.body.password,userToLogin.password);
             if(passwordCheck){
@@ -25,9 +33,10 @@ const usersController = {
         }
         return res.render('login',{errors:{email:{msg: 'No se encuentra el email '}}})
         
+
+
+
     },
-           //He aqui como validar la contraseña
-       //bcrypt.compareSync(password,resultadoHash); <-----------
     //-----------------C-O-M-P-L-E-T-E------------------------------------
     registrar: (req,res)=>{
        return res.render('registro');
