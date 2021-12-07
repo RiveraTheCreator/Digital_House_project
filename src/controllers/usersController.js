@@ -18,7 +18,7 @@ const usersController = {
         let resultsValidations = validationResult(req);
         if((resultsValidations.errors.length > 0) ){
             console.log(resultsValidations);
-            return res.render('registro',{
+            return res.render('login',{
                 errors: resultsValidations.mapped(),
                 oldData: req.body, 
                });
@@ -30,24 +30,24 @@ const usersController = {
             if(passwordCheck){
                 delete userToLogin.password;
                 req.session.userLogget = userToLogin;
-                //console.log(req.session);
-                return res.redirect('/usuarios/usuarioPerfil');
+                req.session.onLine = true;
+                return res.redirect('/');
             }
             return res.render('login',{errors:{password:{msg:'Email o Contraseña incorrecta'}}});
         }
         return res.render('login',{errors:{email:{msg: 'No se encuentra el email '}}})
         
-
-
-
     },
     profile:(req,res)=>{
+        console.log('Aqui en profile del Controler se logroooo');
         return res.render('usuarioPerfil',{
             user:req.session.userLogget
         })
     },
-    sendProfile:(req,res)=>{
-        return res.render('usuarioPerfil');
+    logout:(req,res)=>{
+        req.session.onLine = false;
+        req.session.destroy();
+        return res.redirect('/');
     },
     //-----------------C-O-M-P-L-E-T-E------------------------------------
     registrar: (req,res)=>{

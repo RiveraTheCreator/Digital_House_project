@@ -19,7 +19,6 @@ const User =  {
     findByField: function(field,txt){
         let allUsers = this.findAll();
         let userFound = allUsers.find((oneUser)=>oneUser[field] === txt);
-        console.log(userFound);
         return userFound;
     },
     create:function(userData,res){

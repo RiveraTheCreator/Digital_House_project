@@ -5,12 +5,12 @@ const multer =  require('multer');
 const model = require('../models/Users')
 const usersController = require(path.join(__dirname,'../controllers/usersController.js'));
 const {body} =  require('express-validator');
+
 //Middlewares
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
-//Express-Validator
-//Validacion de registro
+//Validacion de registro con Express-Validator
 let validaciones = [
     body('email').notEmpty().withMessage('Ingresa un correo').bail().isEmail().withMessage('Inserta un email valido'),
     body('firstName').notEmpty().withMessage('Inserta un nombre'), 
@@ -42,17 +42,21 @@ const storage = multer.diskStorage({
 //Se declara el midleWare
 const uploadFile = multer({storage});
 
-//Vista de login & validacion por post
-router.get('/login',guestMiddleware,usersController.login);
-router.post('/login',validacionesLogin,usersController.loginProcess);
-
-
 //Vista de registrar y validacion por post
 router.get('/registrar',guestMiddleware,usersController.registrar);
 router.post('/registrar',uploadFile.single('picture'),validaciones,usersController.processRegister);
 
-//Perfil de usuario
 
+
+//Vista de login & validacion por post
+router.get('/login',guestMiddleware,usersController.login);
+router.post('/login',validacionesLogin,usersController.loginProcess);
+
+//Logout
+router.get('/logout',usersController.logout)
+
+//Perfil de usuario
 router.get('/usuarioPerfil',authMiddleware,usersController.profile);
+
 
 module.exports = router;
