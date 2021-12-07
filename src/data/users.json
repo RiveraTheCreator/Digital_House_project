@@ -308,5 +308,17 @@
   "password": "$2a$10$l5VXtuRwL.ZYgfoWyIUVS.LrKDmOBMAEuWZlxmrQz5T8K4Mg0F.eO",
   "id": 26,
   "picture": "profile-default.png"
+ },
+ {
+  "firstName": " Juanillo",
+  "lastName": "Perez",
+  "email": "isaac.alejandrorb@gmail.com",
+  "phone": "+525517707896",
+  "streetNumber": "Mexico, Ciudad de Mexico, Tlahuac,Colonia del Mar, Gitana #331 Edificio 7 Departamento 101",
+  "postalCode": "13270",
+  "country": "Mexico",
+  "password": "$2a$10$2qn1Q/uGJRkxWxSCZ7DPhO71ad1SY5HibxlZBD6.2VFgc0i8yZVHS",
+  "id": 27,
+  "picture": "profile-default.png"
  }
 ]

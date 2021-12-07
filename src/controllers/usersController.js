@@ -30,11 +30,8 @@ const usersController = {
             if(passwordCheck){
                 delete userToLogin.password;
                 req.session.userLogget = userToLogin;
-                console.log(req.session);
-                return res.render('usuarioPerfil',{
-                    user:req.session.userLogget
-                })
-                //return res.redirect('/usuarios/usuarioPerfil')
+                //console.log(req.session);
+                return res.redirect('/usuarios/usuarioPerfil');
             }
             return res.render('login',{errors:{password:{msg:'Email o Contraseña incorrecta'}}});
         }
@@ -48,6 +45,9 @@ const usersController = {
         return res.render('usuarioPerfil',{
             user:req.session.userLogget
         })
+    },
+    sendProfile:(req,res)=>{
+        return res.render('usuarioPerfil');
     },
     //-----------------C-O-M-P-L-E-T-E------------------------------------
     registrar: (req,res)=>{
@@ -76,9 +76,6 @@ const usersController = {
         let userCreated = User.create(req.body,res);
         return res.redirect('/usuarios/login');
     },
-    sendProfile:(req,res)=>{
-        return res.render('usuarioPerfil');
-    }
 }
 
 module.exports = usersController;
