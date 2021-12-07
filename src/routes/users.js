@@ -5,7 +5,10 @@ const multer =  require('multer');
 const model = require('../models/Users')
 const usersController = require(path.join(__dirname,'../controllers/usersController.js'));
 const {body} =  require('express-validator');
+//Middlewares
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
 //Express-Validator
 //Validacion de registro
 let validaciones = [
@@ -50,6 +53,6 @@ router.post('/registrar',uploadFile.single('picture'),validaciones,usersControll
 
 //Perfil de usuario
 
-router.get('/usuarioPerfil',usersController.profile);
+router.get('/usuarioPerfil',authMiddleware,usersController.profile);
 
 module.exports = router;
