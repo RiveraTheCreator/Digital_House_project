@@ -153,21 +153,16 @@
 
 ----
 
-## Sprint 5
+## Sprint 6
 
 ### Comenzar a hacer:
 
-- Que nuestro sistema :
-    - Permita el flujo de registro, login y logout de usuarios
-    - Permita recordar al usuario para que pueda ingresar sin volverse a loguear.
-    - Tenga rutas accesibles solo por huéspedes (visitantes sin login).
-    - Tenga rutas accesible solo por usuarios (que hicieron login).
+- 2 Sprints restantes
 
 ### Hacer mas
 
-- Cada que se trabaje en el mismo archivo comunicar que cambios se haran
 - Comunicar en que nos estamos atrasando para ponernos de acuerdo
-- Hacer mas daily
+
 
 ### Continuar haciendo
 
