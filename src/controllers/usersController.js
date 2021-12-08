@@ -30,7 +30,7 @@ const usersController = {
             if(passwordCheck){
                 delete userToLogin.password;
                 req.session.userLogget = userToLogin;
-                req.session.onLine = true;
+                req.session.isOnLine = true;
                 return res.redirect('/');
             }
             return res.render('login',{errors:{password:{msg:'Email o Contraseña incorrecta'}}});
@@ -45,7 +45,7 @@ const usersController = {
         })
     },
     logout:(req,res)=>{
-        req.session.onLine = false;
+        req.session.isOnLine = false;
         req.session.destroy();
         return res.redirect('/');
     },

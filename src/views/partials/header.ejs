@@ -4,15 +4,19 @@
             <a href="/"><img src="../images/logo.png" class="logo" alt="Logo"></a>
         </section>
         <div class="alimentos">
-            <ul>
-              <li>
-                <a href="#"> Usuario  <i class="fas fa-caret-up"></i></a>
-                <ul>
-                  <li><a href="/usuarios/usuarioPerfil">Profile</a></li>
-                  <li><a href="/usuarios/logout">LogOut</a></li>
-                </ul>
-              </li>
-            </ul>
+            
+              <% if (locals.isLogged) { %>
+              <ul>
+                <li>
+                  <a href="#"><b>Usuario</b><i class="fas fa-caret-up"></i></a>
+                  <ul>
+                    <li><a href="/usuarios/usuarioPerfil">Profile</a></li>
+                    <li><a href="/usuarios/logout">LogOut</a></li>
+                  </ul>
+                </li>
+              </ul>
+                <% } %> 
+            
           </div>
           <div class="accesorios">
             <ul>

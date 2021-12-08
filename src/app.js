@@ -6,16 +6,23 @@ const methodOverride = require('method-override');
 const mainRoutes = require('./routes/main.js');
 const productsRoutes = require('./routes/products.js');
 const usersRoutes = require('./routes/users.js');
+const cookies = require('cookie-parser');
 
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const publicPath = path.resolve(__dirname, './public');
 const app = express();
 app.use(express.static(publicPath));
-//Middleware session
+//Middlewares
+    //Middleware session
 app.use(session({
     secret: 'Little secret',
     resave: false,
     saveUninitialized: false
 }))
+    //Middleware de aplicacion locals
+app.use(userLoggedMiddleware);
+    //Middleware cookie-parser
+app.use(cookies());
 
 //Declaración de uso de EJS
 app.set("view engine","ejs");
