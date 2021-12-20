@@ -404,7 +404,64 @@ main .top-main .mascotas-img img {
 		text-align:center ;
 	}
 }
+main .grid-container{
+	display: grid;
+	grid-template-columns: 32% 32% 32%;
+	grid-auto-rows: auto;
+	margin: 15px;
+}
+@media(max-width: 768px){
+	main .grid-container{
+		display: grid;
+		grid-template-columns: 45% 45%;
+		grid-auto-rows: auto;
+		margin: 15px;
+		}
+	}
+	@media(max-width: 540px){
+		main .grid-container{
+			display: grid;
+			grid-template-columns: 94%;
+			grid-auto-rows: auto;
+			margin: 15px;
+			}
+		}
+main .grid-container .articulo{
+	border: black 3px solid;
+	margin: 5%;
+	min-width: 200px;
+}
+main .grid-container .articulo .content-article{
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+main .grid-container .caption{
+	max-width: 60%;
+	text-align: center;
+}
+main .grid-container .caption p{
+	text-align: center;
+}
+
+main .top-grid {
+	display: grid;
+	margin: 15px;
+	grid-template-columns: 50% 50%;
+	grid-auto-rows: auto;
+
+}
+
+main .top-grid .inside-grid{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-auto-rows: auto;
+
+}
 main .top-main .container-intro{
+	
 	max-width: 230px;
 	max-height: auto;
 	padding: 2vw;

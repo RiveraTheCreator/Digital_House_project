@@ -3,16 +3,20 @@
 <head>
     <%- include('./partials/head') %>
     <title>Animalandia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 </head>
 <body> 
     <%- include('./partials/header') %>
     <main>
         <p class="titulo">La mejor tienda de mascotas</p>
         <section class="top-main">
+        <div class="top-grid">
             <div class="mascotas-img">
                 <img src="../images/PortadaMascotas.png" alt="PortadaMascotas" class="banner">
             </div>
-            <div class="contenido-intro">
+            <div class="inside-grid">
                 <div class="container-intro">
                     <i class="fas fa-heartbeat fa-6x"></i>
                     <p class="subtittle">Nuestra preocupación</p>
@@ -34,27 +38,35 @@
                     <p class="info">La calidad de los productos es primordial para tu satisfacción y la de tu mascota.</p>
                 </div>
             </div>
+        </div>
         </section>
         <section class="info-gral">
             <div class="separador">
                 <p> Principales productos</p>
             </div>
         </section>
-        <section class="articulos">
+        <section class="">
             <!--Aqui el link de cada detalle de producto-->
+            <div class="grid-container">
             <% for(let articulo of producto){ %> 
-                <div class="articulo-home">
-                <a href="/productos/<%= articulo.id %>">
-                    <img src="/images/products/<%= articulo.image_p %>" alt="<%= articulo.name %>" class="product-img">
-                </a>
-                    <div class="product-name">
-                        <a href="/productos/<%= articulo.id %>">
-                            <h2><%= articulo.name %></h2>
-                        </a>
-                        <h4>$<%= toThousand(articulo.price) %> MXN</h4>
+                <!--<div class="articulo-home">-->
+
+                   <div class="articulo">
+                        <article>
+                            <div class="content-article">
+                            <a href="/productos/<%= articulo.id %>">
+                                <img src="images/products/<%= articulo.image_p %> " alt="" style="max-height: 200px; max-width: 300px;"/>
+                            </a>
+                            <div class="caption">
+                                <p style="font-weight: bolder;"><%= articulo.name %></p>
+                                <p>$<%= toThousand(articulo.price) %> MXN</p>
+                            </div>
+                            </div>
+                        </article>
                     </div>
-                </div>
-            <% } %>     
+               <!-- </div>-->
+            <% } %>  
+        </div>   
         </section>
 
         <section class="new-products">
