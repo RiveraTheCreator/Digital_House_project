@@ -75,7 +75,11 @@ const usersController = {
     
         let userCreated = User.create(req.body,res);
         return res.redirect('/usuarios/login');
-    },
+    }
+//------------CONTROLADOR--BASE--DE--DATOS----CRUD---------
+    ,crear:(req,res)=>{},
+    editar:(req,res)=>{},
+    detallar:(req,res)=>{}
 }
 
 module.exports = usersController;

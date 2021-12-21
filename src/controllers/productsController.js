@@ -74,8 +74,16 @@ const productsController = {
 
         res.redirect('/productos');
 
-
     }
+    //------------CONTROLADOR--BASE--DE--DATOS----CRUD---------
+    ,crear:(req,res)=>{},
+    editar:(req,res)=>{},
+    eliminar:(req,res)=>{},
+    listar:(req,res)=>{},
+    detallar:(req,res)=>{},
+
+    buscar:(req,res)=>{}
+
 }
 
 module.exports = productsController;
