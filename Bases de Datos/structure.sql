@@ -2,50 +2,62 @@ CREATE DATABASE bd_animalandia DEFAULT CHARACTER SET utf8mb4;
 
 USE bd_animalandia;
 
-CREATE TABLE users (
+create table users (
 	user_id INT UNSIGNED PRIMARY KEY auto_increment,
-	firstName VARCHAR(15),
-	lastName VARCHAR(30),
-	email VARCHAR(30),
-	u_password VARCHAR(12),
-	phone VARCHAR(10),
-	streetName VARCHAR(20),
+	firstName VARCHAR(50),
+	lastName VARCHAR(50),
+	email VARCHAR(50),
+	u_password VARCHAR(50),
+	phone VARCHAR(50),
+	streetName VARCHAR(50),
 	postalCode VARCHAR(5),
-	country VARCHAR(30),
+	country VARCHAR(50),
 	picture VARCHAR(50)
 );
 
-CREATE TABLE products (
+create table products (
 	product_id INT UNSIGNED PRIMARY KEY auto_increment,
+	animal_id INT unsigned,
+	category_id INT unsigned,
 	image_p VARCHAR(50),
 	p_name VARCHAR(50),
-	animal VARCHAR(50),
-	category VARCHAR(50),
 	p_description TEXT,
 	caracteristic TEXT,
 	specs TEXT,
 	price float
 );
 
-CREATE TABLE carrito (
-	order_id INT UNSIGNED PRIMARY KEY auto_increment,
-	customer_id INT UNSIGNED,
-	detail_id INT UNSIGNED,
+create table carrito (
+	carrito_id INT UNSIGNED PRIMARY KEY auto_increment,
+	user_id INT unsigned,
 	total_items INT,
-	total_amount float
+	total_amount INT,
+	carrito_date datetime
 );
 
-CREATE TABLE detail_carrito (
-	detail_id INT UNSIGNED PRIMARY KEY auto_increment,
-	order_id INT UNSIGNED,
-	product_id INT UNSIGNED,
-	product_name VARCHAR(50),
-	quantity INT,
-	total_price float
+create table orderDetail (
+	order_id INT UNSIGNED PRIMARY KEY auto_increment,
+	carrito_id INT unsigned,
+	product_id INT unsigned,
+	product_quantity INT
 );
 
-ALTER TABLE carrito ADD CONSTRAINT customer_id FOREIGN KEY (customer_id) REFERENCES users(user_id);
-ALTER TABLE carrito ADD CONSTRAINT detail_id FOREIGN KEY (detail_id) REFERENCES detail_carrito(detail_id);
+create table categories (
+	category_id INT UNSIGNED PRIMARY KEY auto_increment,
+	category_name VARCHAR(50)
+);
 
-ALTER TABLE detail_carrito ADD CONSTRAINT order_id FOREIGN KEY (order_id) REFERENCES carrito(order_id);
-ALTER TABLE detail_carrito ADD CONSTRAINT product_id FOREIGN KEY (product_id) REFERENCES products(product_id);
+create table animals (
+	animal_id INT UNSIGNED PRIMARY KEY auto_increment,
+	animal_name VARCHAR(50)
+);
+
+ALTER TABLE carrito ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES users(user_id);
+
+ALTER TABLE orderDetail ADD CONSTRAINT carrito_id FOREIGN KEY (carrito_id) REFERENCES carrito(carrito_id);
+ALTER TABLE orderDetail ADD CONSTRAINT product_id FOREIGN KEY (product_id) REFERENCES products(product_id);
+
+ALTER TABLE products ADD CONSTRAINT animal_id FOREIGN KEY (animal_id) REFERENCES animals(animal_id);
+ALTER TABLE products ADD CONSTRAINT category_id FOREIGN KEY (category_id) REFERENCES categories(category_id);
+
+
