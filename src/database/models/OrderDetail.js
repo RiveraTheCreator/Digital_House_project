@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Carrito";
+    let alias = "OrderDetail";
     
     let cols = {
         order_id:{
@@ -7,27 +7,24 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        user_id: {
+        carrito_id: {
             type: dataTypes.INTEGER.UNSIGNED
         },
-        total_items: {
+        product_id: {
+            type: dataTypes.INTEGER.UNSIGNED
+        },
+        product_quantity: {
             type: dataTypes.INTEGER
-        },
-        total_amount: {
-            type: dataTypes.FLOAT
-        },
-        carrito_date: {
-            type: dataTypes.DATE
         }
     };
     
     let config = {
-        tableName: "carrito",
+        tableName: "animals",
         timestamps: false
     }
     
-    const Carrito = sequelize.define(alias, cols, config);
+    const OrderDetail = sequelize.define(alias, cols, config);
 
 
-    return Carrito;
+    return OrderDetail;
 }

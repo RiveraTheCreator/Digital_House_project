@@ -60,4 +60,5 @@ ALTER TABLE orderDetail ADD CONSTRAINT product_id FOREIGN KEY (product_id) REFER
 ALTER TABLE products ADD CONSTRAINT animal_id FOREIGN KEY (animal_id) REFERENCES animals(animal_id);
 ALTER TABLE products ADD CONSTRAINT category_id FOREIGN KEY (category_id) REFERENCES categories(category_id);
 
+ALTER TABLE users MODIFY COLUMN phone VARCHAR(10);
 

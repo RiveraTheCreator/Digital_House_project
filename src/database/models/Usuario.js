@@ -1,49 +1,49 @@
 
 
-module.exports = function(sequealize,dataTypes){
+module.exports = (sequealize,dataTypes) => {
     let alias = "Usuario";
     
     let cols = {
         user_id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         firstName: {
-            type:dataTypes.STRING
+            type:dataTypes.STRING(50)
         },
         lastName: {
-            type :dataTypes.STRING
+            type :dataTypes.STRING(50)
         },
         email: {
-            type : dataTypes.STRING
+            type : dataTypes.STRING(50)
         },
         u_password:{
-            type : dataTypes.STRING
+            type : dataTypes.STRING(50)
         },
         phone:{
-            type : dataTypes.STRING
+            type : dataTypes.STRING(10)
         },
-        streetNumber:{
-            type: dataTypes.STRING
+        streetName:{
+            type: dataTypes.STRING(50)
         },
         postalCode:{
-            type: dataTypes.STRING
+            type: dataTypes.STRING(5)
         },
         country:{
-            type:dataTypes.STRING
+            type:dataTypes.STRING(50)
         },
         picture:{
-            type: dataTypes.STRING
+            type: dataTypes.STRING(50)
         }
+    };
 
-    }
     let config = {
         tableName: "users",
         timestamps: false 
     }
 
-    let Usuario = sequealize.define(alias,cols,config);
+    const Usuario = sequealize.define(alias,cols,config);
 
     Usuario.associate = function(models){
         Usuario
