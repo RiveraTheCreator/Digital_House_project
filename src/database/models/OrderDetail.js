@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "OrderDetail";
+    let alias = "OrderDetails";
     
     let cols = {
         order_id:{
@@ -7,24 +7,33 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        carrito_id: {
-            type: dataTypes.INTEGER.UNSIGNED
-        },
-        product_id: {
-            type: dataTypes.INTEGER.UNSIGNED
-        },
         product_quantity: {
             type: dataTypes.INTEGER
         }
     };
     
     let config = {
-        tableName: "animals",
+        tableName: "orderdetail",
         timestamps: false
     }
     
     const OrderDetail = sequelize.define(alias, cols, config);
 
+ ///Llaves foráneas de la tabla de unión
+
+    OrderDetail.associate = function(models) {
+        OrderDetail.belongsTo(models.Carritos, {
+            as: "carrito",
+            foreignKey: "carrito_id"
+        })
+    }
+
+    OrderDetail.associate = function(models) {
+        OrderDetail.belongsTo(models.Products, {
+            as: "product",
+            foreignKey: "product_id"
+        })
+    }
 
     return OrderDetail;
 }

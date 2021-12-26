@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Animal";
+    let alias = "Animals";
     
     let cols = {
         animal_id:{
@@ -19,6 +19,13 @@ module.exports = (sequelize, dataTypes) => {
     
     const Animal = sequelize.define(alias, cols, config);
 
+    //Un animal tiene muchos productos
+    Animal.associate = function(models) {
+        Animal.hasMany(models.Products, {
+            as: "product",
+            foreignKey: "animal_id"
+        })
+    }
 
     return Animal;
 }

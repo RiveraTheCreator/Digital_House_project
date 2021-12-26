@@ -1,7 +1,7 @@
 
 
 module.exports = (sequealize,dataTypes) => {
-    let alias = "Usuario";
+    let alias = "Users";
     
     let cols = {
         user_id: {
@@ -43,12 +43,16 @@ module.exports = (sequealize,dataTypes) => {
         timestamps: false 
     }
 
-    const Usuario = sequealize.define(alias,cols,config);
+    const User = sequealize.define(alias,cols,config);
 
-    Usuario.associate = function(models){
-        Usuario
+    //Un usuario puede tener muchos carritos
+    User.associate = function(models) {
+        User.hasMany(models.Carritos, {
+            as: "carrito",
+            foreignKey: "user_id"
+        })
     }
 
 
-    return Producto;
+    return User;
 }
