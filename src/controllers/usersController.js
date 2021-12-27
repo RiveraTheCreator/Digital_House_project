@@ -6,6 +6,9 @@ const { validationResult } = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+//BASES DE DATOS
+const DB = require('../database/models');
+const Op = DB.Sequelize.Op;
 
 const usersController = {
     login:(req,res)=>{
@@ -79,7 +82,20 @@ const usersController = {
 //------------CONTROLADOR--BASE--DE--DATOS----CRUD---------
     crear:(req,res)=>{},
     editar:(req,res)=>{},
-    detallar:(req,res)=>{}
+    detallar:(req,res)=>{},
+
+    //API
+    list: (req,res) => {
+        DB.User
+        .findAll()
+        .then(users => {
+            return res.status(200).json({
+                total: users.length,
+                data: users,
+                status: 200
+            })
+        })
+    }
 }
 
 module.exports = usersController;
