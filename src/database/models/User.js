@@ -1,5 +1,3 @@
-
-
 module.exports = (sequealize,dataTypes) => {
     let alias = "Users";
     
