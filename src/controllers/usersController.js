@@ -84,9 +84,10 @@ const usersController = {
     editar:(req,res)=>{},
     detallar:(req,res)=>{},
 
-    //API
+//-----------------------------Endpoints API----------------------------
+    //Método consulta todos los usuarios
     list: (req,res) => {
-        DB.User
+        DB.Users
         .findAll()
         .then(users => {
             return res.status(200).json({
@@ -95,7 +96,56 @@ const usersController = {
                 status: 200
             })
         })
+    },
+    //Método consulta un usuario
+    show: (req, res) => {
+        DB.Users
+        .findByPk(req.params.id)
+        .then(user => {
+            return res.status(200).json({
+                data: user,
+                status: 200
+            })
+        })
+    },
+    //Método tipo POST para crear un usuario
+    store: (req, res) => {
+        DB.Users
+        .create(req.body)
+        .then(user => {
+            return res.status(200).json({
+                data: user,
+                status: 200,
+                created: 'ok'
+            })
+        })
+    },
+    //Método tipo Delete para eliminar un usuario
+    delete: (req, res) => {
+        DB.Users
+        .destroy({
+            where: {
+                user_id: req.params.id
+            }
+        })
+        .then(response => {
+            return res.json(response)
+        })
+    },
+    //Método de búsqueda de usuario
+    search: (req, res) => {
+        DB.Users
+        .findAll({
+            where: {
+                lastName: { [Op.like]: '%'+req.query.keyword+'%'}
+            }
+        })
+        .then(users => {
+            return res.status(200).json(users);
+        })
     }
+    //Método Patch para modificar
+
 }
 
 module.exports = usersController;

@@ -58,5 +58,11 @@ router.get('/logout',usersController.logout)
 //Perfil de usuario
 router.get('/usuarioPerfil',authMiddleware,usersController.profile);
 
+//-------------------Prueba API--------------------
+router.get('/', usersController.list);
+router.get('/:id', usersController.show);
+router.get('/search', usersController.search)
+router.post('/', usersController.store);
+router.delete('/:id', usersController.delete);
 
 module.exports = router;
