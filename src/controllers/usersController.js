@@ -132,7 +132,7 @@ const usersController = {
             return res.json(response)
         })
     },
-    //Método de búsqueda de usuario
+    //Método de búsqueda de usuario *No sirve el LIKE :'v*
     search: (req, res) => {
         DB.Users
         .findAll({
