@@ -16,10 +16,10 @@ const uploadFile = multer({storage:storage});
 
 //Crear producto
 /*2*/router.get('/crear', productsController.create);
-/*4*/router.post('/',uploadFile.fields([{name:'image_p'},{name:'image_1'},{name:'image_2'}]),productsController.storage);
+/*4*/router.post('/',uploadFile.fields([{name:'image_p'}]),productsController.guardar);
 
 //Eliminar producto
-/*7*/router.delete('/:id',productsController.delete);
+/*7*/router.delete('/:id',productsController.eliminar);
 
 // *** Genera la vista para mostrar todos los productos ***
 /*1*/router.get('/', productsController.index);
@@ -28,7 +28,7 @@ const uploadFile = multer({storage:storage});
 /*3*/router.get('/:id', productsController.detail);
 
 //Editar producto
-/*5*/router.get('/edit/:id', productsController.edit);
+/*5*/router.get('/edit/:id', productsController.editar);
 /*6*/router.patch('/edit/:id', uploadFile.single('image_p'), productsController.update);//si no va .storage cámbienlo xdxd
 
 module.exports = router;

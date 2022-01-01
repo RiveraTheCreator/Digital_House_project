@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const DB = require('../database/models');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -77,20 +78,18 @@ const productsController = {
     }
     //------------CONTROLADOR--BASE--DE--DATOS----CRUD---------
     ,crear:(req,res)=>{
-        DB.Products.create({
-            p_name: req.body.name,
-            category: req.body.category,
-            p_description: req.body,
-            caracteristic: req.body.caracteristic,
-            specs: req.body.description,
-            price: req.body.price,
-        })
     },
     guardar:(req,res)=>{
         if(req.files){
-            let newProduct = req.body;
             let productAdd = {
-                ...newProduct,
+                p_name: req.body.name,
+                category: req.body.category,
+                p_description: req.body.description,
+                caracteristic: req.body.caracteristic,
+                specs: req.body.specs,
+                price: req.body.price,
+                animal: req.body.animal,
+                category: req.body.category,
                 image_p: req.files.image_p ? req.files.image_p[0].filename: 'default.png', 
             }
             DB.Products.create({...productAdd});
@@ -100,28 +99,26 @@ const productsController = {
         }
     },
     editar:(req,res)=>{
-        let pedidoProduct = DB.Products.findByPk(req.params.id);
-        pedidoProduct.then((producto)=>{
-            return res.render('edicion',{producto});
+         DB.Products.findByPk(req.params.id,
+            {association:'category'},
+            {association: 'orderdetail'},
+            {association: 'animal'})
+        .then((producto)=>{
+            console.log('***************************');
+            return res.render('edicion',{productToEdit:producto});
         }).catch();
     },
     eliminar:(req,res)=>{
-        DB.Users
-        .findAll({
-            where: {
-                p_name: { [Op.like]: '%'+req.query.keyword+'%'}
-            }
-        })
-        .then(producto => {
-            return res.redirect(`/productos/${producto.id}`)
-        }).catch();
+        DB.Products.destroy(
+            {where:{id:req.params.id}}
+        )
+        return res.redirect("/");
     },
 
     listar:(req,res)=>{
         DB.Products.findAll()
         .then((productos)=>{ 
            return res.render('productos',{productos:productos});
-
         //------Api
             // return res.status(200).json({
             //     total: productos.length,
@@ -137,13 +134,20 @@ const productsController = {
             {association: 'animal'}
         )
         .then((producto)=>{
-            return res.render('detail',{product:producto});
+            return res.render('detail',{product:producto,toThousand});
         }).catch()
     },
 
     buscar:(req,res)=>{
-        DB.Products.findOne()
-        .then().catch()
+        DB.Products
+        .findAll({
+            where: {
+                p_name: { [Op.like]: '%'+req.query.keyword+'%'}
+            }
+        })
+        .then(producto => {
+            return res.redirect(`/productos/${producto.id}`)
+        }).catch();
     }
 
 }
