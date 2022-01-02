@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "Root",
     "database": "bd_animalandia",
     "host": "localhost",
     "dialect": "mysql"
