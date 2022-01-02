@@ -8,8 +8,8 @@ const validationEmailBDMiddleware = function(req,res,next){
         console.log('\n\n');
 
         if(user.dataValues.email){
-            console.log('***********************');
-            return res.render('registro',{
+            //console.log('***********************');
+             res.render('registro',{
                 errors: {email:{msg: 'Email ya registrado'}},
                 oldData: req.body
             });

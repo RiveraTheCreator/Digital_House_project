@@ -47,11 +47,9 @@ const validateLogin = require('../middlewares/validationErrLogin');
 const { route } = require('express/lib/application');
 
 
-
 //Vista de registrar y validacion por post
 router.get('/registrar',guestMiddleware,usersController.registrar);
 router.post('/registrar',uploadFile.single('picture'),validaciones,validateErrors,validateEmail,usersController.crear);
-
 
 
 //Vista de login & validacion por post
@@ -63,7 +61,7 @@ router.get('/logout',usersController.logout)
 
 //Perfil de usuario
 router.get('/usuarioPerfil',authMiddleware,usersController.detallar);
-router.get('/edit',usersController.edit);
+router.get('/edit',authMiddleware,usersController.edit);
 router.post('/edit',usersController.editar);
 
 //-------------------Prueba API--------------------

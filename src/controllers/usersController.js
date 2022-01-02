@@ -120,7 +120,6 @@ const usersController = {
     },
     editar:(req,res)=>{
         let idActual =req.session.userLogget.user_id;
-        console.log(idActual);
         let updateUser = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -128,14 +127,13 @@ const usersController = {
             streetName: req.body.streetNumber,
             postalCode: req.body.postalCode,
             country: req.body.country,
-            //picture: req.files ? req.files[0].fileName : 'profile-default.png',
         }
+    console.log(req.body);
       DB.Users.update({...updateUser},{where:{user_id: idActual}}); 
-
       DB.Users.findOne({where:{user_id:idActual}})
       .then(user=>{
           //console.log(user);
-          return req.session.userLogget = user.dataValues;
+           req.session.userLogget = user.dataValues;
       })
 
       return res.redirect('/usuarios/usuarioPerfil'); 

@@ -37,6 +37,7 @@ app.use(express.json());
 app.use('/', mainRoutes);
 app.use('/productos', productsRoutes);
 app.use('/usuarios',usersRoutes);
+
 //------------APIS-------------------
 app.get('/api/users', (req, res) => {
     DB.Users
