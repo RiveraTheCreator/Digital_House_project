@@ -81,7 +81,7 @@ const productsController = {
     guardar:(req,res)=>{
         let filename = undefined;
         if(req.files){
-            console.log(req.files);
+           // console.log(req.files);
             let productAdd = {
                 p_name: req.body.name,
                 category: req.body.category,

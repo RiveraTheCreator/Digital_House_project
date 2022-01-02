@@ -3,6 +3,8 @@ const router = express.Router();
 const productsController = require('../controllers/productsController.js');
 const multer = require('multer');
 const path = require('path');
+//Middlewares
+const validateId = require('../middlewares/validateIDProduct');
 
 //Configuracion de multer
 const storage = multer.diskStorage({
@@ -25,10 +27,10 @@ const uploadFile = multer({storage:storage});
 /*1*/router.get('/', productsController.listar);
 
 //Obtener un producto... No debes confundir con crear un producto
-/*3*/router.get('/:id', productsController.detallar);
+/*3*/router.get('/:id',validateId, productsController.detallar);
 
 //Editar producto
-/*5*/router.get('/edit/:id', productsController.editar);
+/*5*/router.get('/edit/:id',validateId ,productsController.editar);
 /*6*/router.patch('/edit/:id', uploadFile.single('image_p'), productsController.actualizar);//si no va .storage cámbienlo xdxd
 
 module.exports = router;
