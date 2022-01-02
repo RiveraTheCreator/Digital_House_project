@@ -7,6 +7,9 @@ const mainRoutes = require('./routes/main.js');
 const productsRoutes = require('./routes/products.js');
 const usersRoutes = require('./routes/users.js');
 
+//Bases de datos
+const DB = require('./database/models');
+const OP = DB.Sequelize.Op;
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const publicPath = path.resolve(__dirname, './public');
@@ -34,10 +37,59 @@ app.use(express.json());
 app.use('/', mainRoutes);
 app.use('/productos', productsRoutes);
 app.use('/usuarios',usersRoutes);
+//------------APIS-------------------
+app.get('/api/users', (req, res) => {
+    DB.Users
+    .findAll()
+    .then(users => {
+        return res.status(200).json({
+            total: users.length,
+            data: users,
+            status: 200
+        })
+    })
+});
+
+app.get('/api/users/:id', (req, res) => {
+    DB.Users
+    .findByPk(req.params.id)
+    .then(user => {
+        return res.status(200).json({
+            data: user,
+            status: 200
+        })
+    })
+});
+
+app.get('/api/products', (req, res) => {
+    DB.Products
+    .findAll()
+    .then(products => {
+        return res.status(200).json({
+            total: products.length,
+            data: products,
+            status: 200
+        })
+        
+    })
+});
+
+app.get('/api/products/:id', (req, res) => {
+    DB.Products
+    .findByPk(req.params.id)
+    .then(product => {
+        return res.status(200).json({
+            data: product,
+            status: 200
+        })
+    })
+});
+
 //Error 404
 app.use((req,res,next)=>{
     res.status(404).send('ERROR 404 Ruta no encontrada');
     next();
-})
+});
+
 //Montar el servidor
 app.listen(3000, ()=>{console.log('Server Arriba');});
