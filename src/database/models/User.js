@@ -17,7 +17,7 @@ module.exports = (sequealize,dataTypes) => {
             type : dataTypes.STRING(50)
         },
         u_password:{
-            type : dataTypes.STRING(50)
+            type : dataTypes.STRING(200)
         },
         phone:{
             type : dataTypes.STRING(10)

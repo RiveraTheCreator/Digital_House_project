@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 
+
 const User =  {
     getName: undefined,
     getData: function(){
@@ -37,8 +38,7 @@ const User =  {
         }
         allUsers.push(userAdd);
         fs.writeFileSync(usersFilePath, JSON.stringify(allUsers, null, ' '));
-        console.log('redirigiendo----------');
-    //}else{
+      
     },
     generateId: function(){
         let allUsers = this.findAll();

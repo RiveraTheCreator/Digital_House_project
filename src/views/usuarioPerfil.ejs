@@ -17,14 +17,14 @@
             <h1>Hola <%= user.firstName %> </h1>
             <p style="text-align: center;display: block;">Bienvenido a nuestro sitio estos son tus datos de usuario:</p>
             <img 
-            <% if (user.id > 25) { %>
                 src="/images/users/<%= user.picture %> "  style="max-width: 300px; max-height: 300px;" alt="FotoPerfil" 
-            <% } else {%>
-                src= "<%= user.picture %>"  style="max-width: 300px; max-height: 300px;" alt="FotoPerfil"
-           <% }%>
             >
             </br><div style="display: block;">Email: <%= user.email %> </div></br>
         </div>
+        <br>
+        <form action="/usuarios/edit" method="get" >
+            <button type="submit" class="botones-edicion">Editar</button>
+        </form>
     </main>
 
     <%- include('./partials/footer') %> 

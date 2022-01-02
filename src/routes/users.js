@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer =  require('multer');
-const model = require('../models/Users')
+const model = require('../models/Users');
 const usersController = require(path.join(__dirname,'../controllers/usersController.js'));
 const {body} =  require('express-validator');
 
@@ -39,24 +39,32 @@ const storage = multer.diskStorage({
         file?model.catchName(fileName):undefined;
     }
 })
-//Se declara el midleWare
+//Se declaran los midleWares
 const uploadFile = multer({storage});
+const validateEmail = require('../middlewares/validationEmailBDMiddleware');
+const validateErrors = require('../middlewares/validationMiddleware');
+const validateLogin = require('../middlewares/validationErrLogin');
+const { route } = require('express/lib/application');
+
+
 
 //Vista de registrar y validacion por post
 router.get('/registrar',guestMiddleware,usersController.registrar);
-router.post('/registrar',uploadFile.single('picture'),validaciones,usersController.processRegister);
+router.post('/registrar',uploadFile.single('picture'),validaciones,validateErrors,validateEmail,usersController.crear);
 
 
 
 //Vista de login & validacion por post
 router.get('/login',guestMiddleware,usersController.login);
-router.post('/login',validacionesLogin,usersController.loginProcess);
+router.post('/login',validacionesLogin,validateLogin,usersController.logear);
 
 //Logout
 router.get('/logout',usersController.logout)
 
 //Perfil de usuario
-router.get('/usuarioPerfil',authMiddleware,usersController.profile);
+router.get('/usuarioPerfil',authMiddleware,usersController.detallar);
+router.get('/edit',usersController.edit);
+router.post('/edit',usersController.editar);
 
 //-------------------Prueba API--------------------
 router.get('/', usersController.list);

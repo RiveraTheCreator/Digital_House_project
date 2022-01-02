@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head') %>
+        <title>Usuario</title>
+    </head>
+    
+    <body class="body-registro">
+        <%- include('./partials/header') %>
+        <main>
+        <section class="registro">
+            <h1>Editar datos de usuario</h1>
+            <div class="datos-personales">
+                <h3>Datos Personales</h3>
+            </div>
+            <div class="form-registro">
+            <form action="/usuarios/edit" method="POST" enctype="multipart/form-data">
+                    <p class="elt-reg">
+                        <label for="firstName">Nombre (s):</label>
+                        <br>
+                        <input type="text" id="firstName" name="firstName" value="<%= user.firstName ? user.firstName : null %> ">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <div style="color: red; text-align: center;"><%= errors.firstName.msg %> </div>
+                        <% } %>
+                    </p>
+                    
+                    <p class="elt-reg">
+                        <label for="lastName">Apellidos:</label>
+                        <br>
+                        <input type="text" id="lastName" name="lastName" value="<%= user.lastName ? user.lastName : '' %> " >
+                        <% if (locals.errors && errors.lastName) { %>
+                            <div style="color: red; text-align: center;"><%= errors.lastName.msg %> </div>
+                        <% } %>
+                    </p>
+
+                
+
+                    <p class="elt-reg">
+                        <label for="picture">Foto de usuario:</label>
+                        <br>
+                        <input type="file" id="picture" name="picture">
+                    </p>
+
+                    <p class="elt-reg">
+                        <label for="phone">Teléfono:</label>
+                        <br>
+                        <input type="tel" id="phone" name="phone" value="<%= user.phone ? user.phone : '' %> ">
+                        <% if (locals.errors && errors.phone) { %>
+                            <div style="color: red; text-align: center;"><%= errors.phone.msg %> </div>
+                        <% } %>
+                    </p>
+
+                    <p class="elt-reg">
+                        <label for="streetNumber">Calle y número:</label>
+                        <br>
+                        <input type="text" id="streetNumber" name="streetNumber" value="<%= user.streetName ? user.streetName : '' %> ">
+                        <% if (locals.errors && errors.streetNumber) { %>
+                            <div style="color: red; text-align: center;"><%= errors.streetNumber.msg %> </div>
+                        <% } %>
+                    </p>
+
+                    <p class="elt-reg">
+                        <label for="postalCode">Código postal:</label>
+                        <br>
+                        <input type="text" id="postalCode" name="postalCode" value="<%= user.postalCode  ? user.postalCode : null %> ">
+                        <% if (locals.errors && errors.postalCode) { %>
+                            <div style="color: red;  text-align: center;"><%= errors.postalCode.msg %> </div>
+                        <% } %>
+                    </p>
+
+                    <p class="elt-reg">
+                        <label>País:</label>
+                        <br>
+                        <% let countries = ['Mexico','Guatemala','Belice','Salvador','Honduras','Nicaragua','Panama','Ecuador','Colombia','Venezuela','Otro']; %> 
+                        <select name="country" required> 
+                            <% for (let country of countries){ %> 
+                            <option value=<%= country %>><%= country  %> 
+                            <% } %> 
+                        </select>
+                    </p>
+                    
+                  
+                <div class="botones-registro">
+                    <button type="submit">Enviar mis datos</button>
+                </div>
+            </form> 
+        </div>
+        </section>
+        
+    </main>
+    <%- include('./partials/footer') %> 
+    </body>
+
+</html>

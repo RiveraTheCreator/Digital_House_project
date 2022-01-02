@@ -4,8 +4,7 @@ const User = require('../models/Users');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
+const model = require('../models/Users');
 
 //BASES DE DATOS
 const DB = require('../database/models');
@@ -43,7 +42,6 @@ const usersController = {
         
     },
     profile:(req,res)=>{
-        console.log('Aqui en profile del Controler se logroooo');
         return res.render('usuarioPerfil',{
             user:req.session.userLogget
         })
@@ -64,7 +62,7 @@ const usersController = {
             return res.render('registro',{
                 errors: resultsValidations.mapped(),
                 oldData: req.body, 
-                passValidate: req.body.password !== req.body.confirmPass?'Las contraseñas no coinciden':undefined});
+                passValidate: req.body.password !== req.body.confirmPass ?'Las contraseñas no coinciden':undefined});
         }
 
         let userInDb = User.findByField('email',req.body.email);
@@ -91,17 +89,61 @@ const usersController = {
             streetName: req.body.streetNumber,
             postalCode: req.body.postalCode,
             country: req.body.country,
-            picture: req.files.picture ? '':'',
+            picture: model.getName ? model.getName : 'profile-default.png',
         }
 
         DB.Users.create({...newUser});
-        return res.redirect('/');
+        return res.redirect('/usuarios/login');
+    },
+    logear:(req,res)=>{
+       // let userToLogin = User.findByField('email',req.body.email);
+       DB.Users.findOne({where:{email: req.body.email}})
+       .then((userToLogin)=>{
+        if(userToLogin){
+            let passwordCheck = bcrypt.compareSync(req.body.password,userToLogin.u_password);
+            console.log(bcrypt.compareSync(req.body.password,userToLogin.u_password));
+            if(passwordCheck){
+                //delete userToLogin.password;
+                req.session.userLogget = userToLogin;
+                req.session.isOnLine = true;
+                return res.redirect('/usuarios/usuarioPerfil');
+            }
+            return res.render('login',{errors:{password:{msg:'Email o Contraseña incorrecta'}}});
+        }
+        return res.render('login',{errors:{email:{msg: 'No se encuentra el email '}}})
+       })
+        
+    },
+    edit:(req,res)=>{
+        let usuario =req.session.userLogget;
+        return res.render('edicionUser',{user: usuario});
     },
     editar:(req,res)=>{
+        let idActual =req.session.userLogget.user_id;
+        console.log(idActual);
+        let updateUser = {
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            phone: req.body.phone,
+            streetName: req.body.streetNumber,
+            postalCode: req.body.postalCode,
+            country: req.body.country,
+            //picture: req.files ? req.files[0].fileName : 'profile-default.png',
+        }
+      DB.Users.update({...updateUser},{where:{user_id: idActual}}); 
 
+      DB.Users.findOne({where:{user_id:idActual}})
+      .then(user=>{
+          //console.log(user);
+          return req.session.userLogget = user.dataValues;
+      })
+
+      return res.redirect('/usuarios/usuarioPerfil'); 
     },
     detallar:(req,res)=>{
-
+        return res.render('usuarioPerfil',{
+            user:req.session.userLogget
+        })
     },
 
 //-----------------------------Endpoints API----------------------------
