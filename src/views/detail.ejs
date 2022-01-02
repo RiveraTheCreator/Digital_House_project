@@ -16,7 +16,7 @@
 
         <section class="detalle">
             <article>
-                <img src="/images/products/<%= product.image_p%>" alt="Imagen del producto <%= product.name%> " class="img-p">
+                <img src="/images/products/<%= product.image_p%>" alt="Imagen del producto <%= product.p_name%> " class="img-p">
                 <div class="opciones-detalle">
                     <h3>Precio</h3>
                     <h3>$<%= product.price %> MXN</h3>
@@ -56,23 +56,21 @@
                     </ul>
                 </nav>
                 <p>
-                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis duis at velit eu est congue elementum
-                    integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum
-                    duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis 
-                    diam erat fermentum justo nec condimentum neque sapien placerat donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris
-                </p>
+                   <%= product.specs %> 
+                </p><br>
+                <p><%= product.caracteristic %> </p>
             </div>
         </section>
-
-        <a href="/productos/edit/<%= product.id %>" class="buttonEnviar">
+<!--
+        <a href="/productos/edit/<%=product.product_id %>" class="buttonEnviar">
             Editar producto
         </a>
-
-        <!--
-        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-            <button type="submit" class="action-button delete">ELIMINAR</button>
+-->
+        
+        <form action="/productos/edit/<%=product.product_id %>" method="GET" style="display: inline-flex">
+            <button type="submit" class="buttonEnviar">EDITAR</button>
         </form>
-        -->
+        
         <!-- Ver minuto 1:47:10 para agregar el botón eliminar-->
        
     </main>

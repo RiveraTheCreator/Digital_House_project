@@ -13,13 +13,18 @@
         <div class="products-products">
             <% products.forEach(producto => { %>
             <article>
-            <a href="/productos/<%= producto.id %>"><img src="/images/products/<%= producto.image_p %>" alt="<%= producto.name %>" class="product-img"></a>
+                <form action="/productos/<%= producto.product_id %> " method="get">
+                <button type="submit">
+                <img src="/images/products/<%= producto.image_p %>" alt="<%= producto.p_name %>" class="product-img">
                 <div class="product-name">
-                    <a href="/productos/<%= producto.id %>"><h2><%= producto.name %></h2></a>
+                    <h2><%= producto.p_name %></h2>
                     <h4>$<%= toThousand(producto.price) %> MXN</h4>
                 </div>
+                </button>
+                </form>
             </article>
             <% }) %>
+
         </div>
 
     </main>

@@ -75,12 +75,13 @@ const productsController = {
 
         res.redirect('/productos');
 
-    }
-    //------------CONTROLADOR--BASE--DE--DATOS----CRUD---------
-    ,crear:(req,res)=>{
     },
+    //------------CONTROLADOR--BASE--DE--DATOS----CRUD---------
+    
     guardar:(req,res)=>{
+        let filename = undefined;
         if(req.files){
+            console.log(req.files);
             let productAdd = {
                 p_name: req.body.name,
                 category: req.body.category,
@@ -92,25 +93,42 @@ const productsController = {
                 category: req.body.category,
                 image_p: req.files.image_p ? req.files.image_p[0].filename: 'default.png', 
             }
+            console.log(req.body);
             DB.Products.create({...productAdd});
-            return res.redirect('/');
+            return res.redirect('/productos/');
         }else{
             return res.render('crear');
         }
     },
     editar:(req,res)=>{
          DB.Products.findByPk(req.params.id,
-            {association:'category'},
+            {association:'category_id'},
             {association: 'orderdetail'},
-            {association: 'animal'})
+            {association: 'animal_id'})
         .then((producto)=>{
-            console.log('***************************');
+            console.log(`\n\n${producto}\n\n`);
             return res.render('edicion',{productToEdit:producto});
-        }).catch();
+        }).catch(error => { 
+            console.log(error);
+            return res.send('Opss!! ocurrio un error');});
+    },
+    actualizar:(req,res)=>{
+        let productAdd = {
+            p_name: req.body.p_name,
+            category: req.body.category,
+            p_description: req.body.p_description,
+            caracteristic: req.body.caracteristic,
+            specs: req.body.specs,
+            price: req.body.price,
+            animal: req.body.animal,
+            category: req.body.category,
+            }
+        DB.Products.update({...productAdd},{where: {product_id:req.params.id}});
+        return res.redirect(`/productos/${req.params.id}`);
     },
     eliminar:(req,res)=>{
         DB.Products.destroy(
-            {where:{id:req.params.id}}
+            {where:{product_id:req.params.id}}
         )
         return res.redirect("/");
     },
@@ -118,7 +136,7 @@ const productsController = {
     listar:(req,res)=>{
         DB.Products.findAll()
         .then((productos)=>{ 
-           return res.render('productos',{productos:productos});
+           return res.render('productos',{products:productos,toThousand});
         //------Api
             // return res.status(200).json({
             //     total: productos.length,
@@ -135,7 +153,7 @@ const productsController = {
         )
         .then((producto)=>{
             return res.render('detail',{product:producto,toThousand});
-        }).catch()
+        }).catch(error=>console.log(console.log(error)))
     },
 
     buscar:(req,res)=>{

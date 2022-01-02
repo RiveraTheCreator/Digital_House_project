@@ -22,13 +22,13 @@ const uploadFile = multer({storage:storage});
 /*7*/router.delete('/:id',productsController.eliminar);
 
 // *** Genera la vista para mostrar todos los productos ***
-/*1*/router.get('/', productsController.index);
+/*1*/router.get('/', productsController.listar);
 
 //Obtener un producto... No debes confundir con crear un producto
-/*3*/router.get('/:id', productsController.detail);
+/*3*/router.get('/:id', productsController.detallar);
 
 //Editar producto
 /*5*/router.get('/edit/:id', productsController.editar);
-/*6*/router.patch('/edit/:id', uploadFile.single('image_p'), productsController.update);//si no va .storage cámbienlo xdxd
+/*6*/router.patch('/edit/:id', uploadFile.single('image_p'), productsController.actualizar);//si no va .storage cámbienlo xdxd
 
 module.exports = router;
