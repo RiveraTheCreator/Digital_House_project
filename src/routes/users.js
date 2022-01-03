@@ -13,9 +13,9 @@ const authMiddleware = require('../middlewares/authMiddleware');
 //Validacion de registro con Express-Validator
 let validaciones = [
     body('email').notEmpty().withMessage('Ingresa un correo').bail().isEmail().withMessage('Inserta un email valido'),
-    body('firstName').notEmpty().withMessage('Inserta un nombre'), 
-    body('lastName').notEmpty().withMessage('Inserta un nombre'),
-    body('password').notEmpty().withMessage('Introduce una contraseña'),//.bail().isStrongPassword().withMessage('El password debera incluir 8 caracteres con Mayusculas minusculas y caracteres alfanumericos'),
+    body('firstName').notEmpty().withMessage('Inserta un nombre').bail().isLength({min:2,max:undefined}).withMessage('Introduce un nombre valido'), 
+    body('lastName').notEmpty().withMessage('Inserta un nombre').bail().isLength({min:2,max:undefined}).withMessage('Introduce un nombre valido'),
+    body('password').notEmpty().withMessage('Introduce una contraseña').bail().isLength({min:8,max:undefined}),
     body('phone').notEmpty().withMessage('Introduce tu numero'),//.bail().isNumeric().withMessage('Ingresa un numero valido'),
     body('streetNumber').notEmpty().withMessage('No puedes dejar el campo vacio'),
     body('postalCode').notEmpty().withMessage('Ingresa un CP'),
@@ -39,8 +39,16 @@ const storage = multer.diskStorage({
         file?model.catchName(fileName):undefined;
     }
 })
+//image filter
+const imageFilter = function (req, file, cb) {
+    // accept image only
+    if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
+        return cb(new Error('Only image files are allowed!'), false);
+    }
+    cb(null, true);
+};
 //Se declaran los midleWares
-const uploadFile = multer({storage});
+const uploadFile = multer({storage, fileFilter:imageFilter});
 const validateEmail = require('../middlewares/validationEmailBDMiddleware');
 const validateErrors = require('../middlewares/validationMiddleware');
 const validateLogin = require('../middlewares/validationErrLogin');

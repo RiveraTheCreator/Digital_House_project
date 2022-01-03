@@ -9,22 +9,20 @@
     <main>
         <div class="edicion-producto">
         </div>
-        <h2 style="text-align: center;">Editar producto <em><%=productToEdit.name%> </em> </h2>
-        <h3 style="text-align: center;">Id número <%=productToEdit.id%></h3>
+        <h2 style="text-align: center;">Editar producto <em><%=productToEdit.p_name%> </em> </h2>
+        <h3 style="text-align: center;">Id número <%=productToEdit.product_id%></h3>
         <div class="form-edicion">
-      <!--
-              <form action="/productos/<%=productToEdit.product_id%>?_method=DELETE" method="POST" class="botones-edicion" style="display: inline-block; text-align: center;" >
-                        <button type="submit">Eliminar</button>
-      -->
+
             <form action="/productos/edit/<%=productToEdit.product_id%>?_method=PATCH" method="POST" enctype="multipart/form-data">
                 <p>
-                    <label for="p_name">Nombre del producto:</label>
-                    <input type="text" id="p_name" name="p_name" class="input-text"
-                    value= <%= productToEdit.p_name %>>
+                    <label for="name">Nombre del producto:</label>
+                    <input type="text" id="name" name="name" class="input-text" value= <%= productToEdit.p_name %>>
+                    <% if (locals.errors && errors.name) { %>
+                        <div style="color: red; text-align: center;"><%= errors.name.msg %> </div>
+                    <% } %>
                 </p>
                 <p> Imagen principal del producto </p>
                 <p><img src="/images/products/<%=productToEdit.image_p%>" style="width: 100px;"> </p>
-                </p>
 
                 <p>
                     <label for="animal">Tipo de animal</label>
@@ -32,7 +30,7 @@
                         <option value="<%= productToEdit.animal %>">
                             <%= productToEdit.animal %>
                         </option>
-                    <!-- El siguiente EJS tendrá que cambiar por database-->
+                    El siguiente EJS tendrá que cambiar por database
                     <%
                         let animales = [
                         {animal: "Perros"},
@@ -41,18 +39,19 @@
                         {animal: "Roedores"},
                         {animal: "Aves"},
                         {animal: "Peces"}
-                        ];
+                        ];%>
 
-                        animales.forEach(ani => {
-                            if(ani.animal != productToEdit.animal){ %>
+                        <%animales.forEach(ani => {%>
+                            <%if(ani.animal != productToEdit.animal){ %>
                                 <option value="<%=ani.animal %>">
                                     <%=ani.animal%>
                                 </option>
-                            <%}
-                        })
-                    %>
+                            <%}%>
+                        <%})%>
+                    
                     </select>
-                </p>
+                    
+                </p> 
 
                  <!-- El siguiente EJS tendrá que cambiar por database-->
                 <p>
@@ -61,30 +60,31 @@
                         <option value="<%= productToEdit.category %>">
                             <%= productToEdit.category %>
                         </option>
-                        <%
-                        let categorias = [
+                    <%let categorias = [
                         {category: "Alimento"},
                         {category: "Correas y Collares"},
                         {category: "Vivienda"}
-                        ];
+                        ];%>
 
-                        categorias.forEach(cate => {
-                            if(cate.category != productToEdit.category){ %>
+                        <%categorias.forEach(cate => {%>
+                            <%if(cate.category != productToEdit.category){ %>
                                 <option value="<%=cate.category %>">
                                     <%=cate.category%>
                                 </option>
-                            <%}
-                        })
-                    %>
+                            <%}%>
+                        <%})%>
 
                     </select>
                 </p>
 
                 <p>
-                    <label for="p_description">Descripción:</label>
-                    <textarea id="p_description" name="p_description" class="input-area">
+                    <label for="description">Descripción:</label>
+                    <textarea id="description" name="description" class="input-area">
                         <%= productToEdit.p_description %>
                     </textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div style="color: red; text-align: center;"><%= errors.description.msg %> </div>
+                    <% } %>
                 </p>
 
                 <p>

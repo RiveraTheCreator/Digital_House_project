@@ -15,8 +15,10 @@
             <form action="/productos/" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="name">Nombre del producto:</label>
-                    <input type="text" id="name" name="name" class="input-text">
-                    
+                    <input type="text" id="name" name="name" class="input-text" value="<%= locals.oldData ? oldData.name : null %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <div style="color: red; text-align: center;"><%= errors.name.msg %> </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="image-p">Imagen principal:</label>
@@ -49,7 +51,10 @@
                 </div>
                 <div>
                     <label for="description">Descripción:</label>
-                    <textarea id="description" name="description" class="input-area"></textarea>
+                    <textarea id="description" name="description" class="input-area" value="<%= locals.oldData ? oldData.firstName : null %>"></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div style="color: red; text-align: center;"><%= errors.description.msg %> </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="caracteristic">Características:</label>

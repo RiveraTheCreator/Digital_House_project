@@ -3,8 +3,11 @@ const router = express.Router();
 const productsController = require('../controllers/productsController.js');
 const multer = require('multer');
 const path = require('path');
+const {body} =  require('express-validator');
 //Middlewares
 const validateId = require('../middlewares/validateIDProduct');
+const validateCreateProduct = require('../middlewares/validateCreateProduct');
+const validateUpdateProduct = require('../middlewares/validateUpdateProduct');
 
 //Configuracion de multer
 const storage = multer.diskStorage({
@@ -14,11 +17,26 @@ const storage = multer.diskStorage({
         cb(null, newFileName);
     }
 })
-const uploadFile = multer({storage:storage});
+//image filter
+const imageFilter = function (req, file, cb) {
+    // accept image only
+    if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
+        return cb(new Error('Only image files are allowed!'), false);
+    }
+    cb(null, true);
+};
+const uploadFile = multer({storage:storage,fileFilter:imageFilter});
+//Validaciones
+
+    const validaciones = [
+        body('name').isLength({min:5,max:undefined}).withMessage('Introduce un nombre valido'),
+        body('description').isLength({min:20,max:undefined}).withMessage('Introduce mas de 20 caracteres'),
+    ]
+
 
 //Crear producto
 /*2*/router.get('/crear', productsController.create);
-/*4*/router.post('/',uploadFile.fields([{name:'image_p'}]),productsController.guardar);
+/*4*/router.post('/',uploadFile.fields([{name:'image_p'}]),validaciones,validateCreateProduct,productsController.guardar);
 
 //Eliminar producto
 /*7*/router.delete('/:id',productsController.eliminar);
@@ -31,6 +49,6 @@ const uploadFile = multer({storage:storage});
 
 //Editar producto
 /*5*/router.get('/edit/:id',validateId ,productsController.editar);
-/*6*/router.patch('/edit/:id', uploadFile.single('image_p'), productsController.actualizar);//si no va .storage cámbienlo xdxd
+/*6*/router.patch('/edit/:id', uploadFile.single('image_p'),validaciones,validateUpdateProduct,productsController.actualizar);
 
 module.exports = router;
