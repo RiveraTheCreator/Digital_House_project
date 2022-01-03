@@ -177,3 +177,55 @@
 
 - Postergar el material del playground
 - No externar dudas
+
+---
+## Sprint 7
+
+
+### Comenzar a hacer:
+
+-  Sprint 8 y validaciones del Front
+
+### Hacer mas
+
+- Comunicar cuando se realice cambios para evitar conflictos en los commits
+
+
+### Continuar haciendo
+
+- Despues de finalizar el Sprint en conjunto revisar del proyecto
+- Seguir teniendo una comunicación respetuosa y brindarnos apoyo en las dudas que surjan
+
+### Hacer menos
+
+- Dejar al ultimo las implementaciones
+
+### Dejar de hacer
+
+- Postergar el material del playground
+- No externar dudas
+
+---
+
+## Sprint 8
+
+
+
+### Comenzar a hacer:
+
+
+### Hacer mas
+
+
+
+### Continuar haciendo
+
+
+### Hacer menos
+
+
+### Dejar de hacer
+
+
+
+

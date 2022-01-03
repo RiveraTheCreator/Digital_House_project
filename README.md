@@ -5,40 +5,15 @@ Nuestra pasión: el buen trato a los animales
 <!--- Ver punto 2, viñeta 1, p. 4 del sprint 1 -->
 Este sitio contiene una propuesta de tienda de productos para  mascotas: alimentos, juguetes, accesorios, limpieza y consejos para hacer de la estancia en casa de nuestros compañeros de vida una experiencia hermosa y agradable.
 
-Dentro de las secciones de la página web encontraremos:
-1. Perros
+Dentro de las secciones de la página web encontraremos artículos para mascotas como:
+
    - Alimento
    - Accesorios
    - Higiene
    - Viviendas
    - Juguetes
    - Suplementos
-2. Gatos
-   - Alimento
-   - Accesorios
-   - Higiene
-   - Viviendas
-   - Juguetes
-   - Suplementos
-4. Aves
-   - Alimento
-   - Accesorios
-   - Viviendas
-   - Suplementos
-6. Reptiles
-   - Alimento
-   - Accesorios
-   - Viviendas
-8. Roedores
-   - Alimento
-   - Accesorios
-   - Viviendas
-9. Peces
-   - Alimento
-   - Accesorios
-   - Viviendas
-   - Salud
- 10. Blog con artículos sobre el cuidado de las mascotas
+
 
 ## Descripción de los integrantes del equipo
 <!--- Ver punto 2, viñeta 2, p. 4 del sprint 1 -->

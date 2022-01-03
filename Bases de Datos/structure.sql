@@ -7,7 +7,7 @@ create table users (
 	firstName VARCHAR(50),
 	lastName VARCHAR(50),
 	email VARCHAR(50),
-	u_password VARCHAR(50),
+	u_password VARCHAR(200),
 	phone VARCHAR(50),
 	streetName VARCHAR(50),
 	postalCode VARCHAR(5),
