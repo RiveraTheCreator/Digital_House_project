@@ -16,7 +16,7 @@
             <form action="/productos/" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="name">Nombre del producto:</label>
-                    <input type="text" id="name" name="name" class="input-text" value="<%= locals.oldData ? oldData.name : null %>">
+                    <input type="text" id="name" name="name" class="input-text" required value="<%= locals.oldData ? oldData.name : null %>">
                     <% if (locals.errors && errors.name) { %>
                         <div style="color: red; text-align: center;"><%= errors.name.msg %> </div>
                     <% } %>

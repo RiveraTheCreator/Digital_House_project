@@ -16,7 +16,7 @@
             <form action="/productos/edit/<%=productToEdit.product_id%>?_method=PATCH" method="POST" enctype="multipart/form-data">
                 <p>
                     <label for="name">Nombre del producto:</label>
-                    <input type="text" id="name" name="name" class="input-text" value= <%= productToEdit.p_name %>>
+                    <input type="text" id="name" name="name" class="input-text" required value= <%= productToEdit.p_name %> >
                     <% if (locals.errors && errors.name) { %>
                         <div style="color: red; text-align: center;"><%= errors.name.msg %> </div>
                     <% } %>

@@ -11,14 +11,14 @@ window.addEventListener('load',function(){
             
         }else  if(nombre.value.length < 2){
             erroresFront.push('Introduce un nombre valido');
-        }
+        }else{erroresFront=[]}
 
         let apellido = document.querySelector('input.lastName');
         if(apellido.value.trim() == ''){
             erroresFront.push('Introduce el apellido');
         } else if(nombre.value.length < 2){
             erroresFront.push('Introduce un apellido valido');
-        }
+        }else{erroresFront=[]}
 
         //Validacion email
         // let email = document.querySelector('input.email');
@@ -28,7 +28,7 @@ window.addEventListener('load',function(){
         // }else
         // if(email.value.match(mailformat)){
         //     erroresFront.push('Email con el formato incorrecto');
-        // }
+        // }else{erroresFront=[]}
 
          //validacion imagenes
          var formData = new FormData();
@@ -49,7 +49,7 @@ window.addEventListener('load',function(){
         } else
         if(password.value.length < 8){
             erroresFront.push('Introduce al menos 8 caracteres en la contraseña');
-        }
+        }else{erroresFront=[]}
 
        
         if(erroresFront.length > 0){

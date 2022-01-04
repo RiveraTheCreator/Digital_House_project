@@ -8,12 +8,13 @@ window.addEventListener('load',function(){
             erroresFront.push('El nombre es Obligatorio')
         }else if(nombre.value.length < 5){
             erroresFront.push('Introduce un nombre valido');
-        }
+        }else{erroresFront = []}
+        
         //validacion de descripcion
         let descripcion = document.getElementById('description');
         if(descripcion.value.length < 20){
             erroresFront.push('La descripcion debe tener por lo menos 20 caracteres');
-        }
+        }else{erroresFront=[]}
 
         //validacion de imagen
              

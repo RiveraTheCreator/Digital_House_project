@@ -12,14 +12,14 @@ window.addEventListener('load',function(){
         }else
         if(inputText.value.match(mailformat)){
             erroresFront.push('Email con el formato incorrecto');
-        }
+        }else{erroresFront=[]}
 
         //Validacion password
         let password = document.querySelector('input.password');
         if(password.value === ''){
             erroresFront.push('Introduce una contraseña');
-        }else
-        
+        }else{erroresFront=[]}
+
         if(erroresFront.length > 0){
             e.preventDefault();
             let ulErrores = document.querySelector('div.errorsFront ul')
