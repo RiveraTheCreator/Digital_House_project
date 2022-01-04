@@ -2,7 +2,6 @@ window.addEventListener('load',function(){
     let formulario = document.querySelector('form');
     let erroresFront = [];
     let charCount = 0;
-    let c = 0;
     formulario.addEventListener('submit',function(e){
 
         //Validacion email
@@ -17,15 +16,14 @@ window.addEventListener('load',function(){
 
         //Validacion password
         let password = document.querySelector('input.password');
-        if(password.value == ''){
+        if(password.value === ''){
             erroresFront.push('Introduce una contraseña');
-        }
+        }else
         
         if(erroresFront.length > 0){
             e.preventDefault();
             let ulErrores = document.querySelector('div.errorsFront ul')
             for (let i = 0; i < erroresFront.length ; i++) {
-                console.log(c);
                 if(charCount > 55 ){
                     console.log('Borrando del DOM');
                     let itemDelete = document.querySelectorAll('li.err');

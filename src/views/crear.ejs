@@ -3,7 +3,8 @@
 <head>
     <%- include('./partials/head') %>
     <title>Crear producto</title>
-    <link rel="stylesheet" href="/css/stylesCrear.css"> 
+    <link rel="stylesheet" href="/css/stylesCrear.css">
+    <script type="text/javascript" src="/scripts/crearProductos.js"></script>
 </head>
 <body> 
   <%- include('./partials/header') %> 
@@ -22,7 +23,7 @@
                 </div>
                 <div>
                     <label for="image-p">Imagen principal:</label>
-                    <input type="file" id="image-p" name="image_p" class="input-file">
+                    <input type="file" id="image_p" name="image_p" class="input-file">
                 </div>
                 <div>
                     <label for="animal">Animal:</label>
@@ -64,6 +65,12 @@
                     <label for="specs">Especificaciones:</label>
                     <textarea id="specs" name="specs" class="input-area"></textarea>
                 </div>
+
+                <div class="errorsFront" style="color: red; text-align: center;">
+                    <ul></ul>
+                </div>
+
+
                 <div class="botones-edicion">
                     <button type="submit">Enviar</button>
                     <button type="button">Cancelar</button>

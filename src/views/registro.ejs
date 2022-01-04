@@ -3,7 +3,7 @@
     <head>
         <%- include('./partials/head') %>
         <title>Registro</title>
-        <script type="text/javascript" src="/scripts/registro.js"></script>
+       <!-- <script type="text/javascript" src="/scripts/registro.js"></script>-->
     </head>
 
     <body class="body-registro">
@@ -38,7 +38,7 @@
                     <p class="elt-reg">
                         <label for="email">e-mail:</label>
                         <br>
-                        <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>" class="email">
+                        <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>" class="email" required>
                         <% if (locals.errors && errors.email) { %>
                             <div style="color: red; text-align: center;"><%= errors.email.msg %> </div>
                         <% } %>
@@ -108,9 +108,11 @@
                     <% if (locals.errors && errors.confirmPass) { %>
                         <div style="color: red; text-align: center;"><%= errors.confirmPass.msg %> </div>
                     <% } %>
+
                     <div class="errorsFront" style="color: red; text-align: center;">
                         <ul></ul>
                     </div>
+
                 <div class="terminos">
                     <p>
                         <label>

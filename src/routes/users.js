@@ -39,11 +39,12 @@ const storage = multer.diskStorage({
         file?model.catchName(fileName):undefined;
     }
 })
+new Error('Only image files are allowed!')
 //image filter
 const imageFilter = function (req, file, cb) {
     // accept image only
     if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
-        return cb(new Error('Only image files are allowed!'), false);
+        return cb('Inserta una imagen en formato jpg|jpeg|png|gif ', false);
     }
     cb(null, true);
 };
