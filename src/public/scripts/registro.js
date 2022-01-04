@@ -64,21 +64,5 @@ window.addEventListener('load',function(){
 
 })
 
-    //Validacion picture en
-    // function validateImage() {
-    //     console.log('*****************************************')
-    //     var formData = new FormData();
-    //     var file = document.getElementById("picture").files[0];
-    //     formData.append("Filedata", file);
-    //     var t = file.type.split('/').pop().toLowerCase();
-    //     if (t != "jpeg" && t != "jpg" && t != "png"  && t != "gif") {
-    //         //erroresFront.push('Introduce una imagen valida (jpg jpeg png gif)');
-    //         alert('Please select a valid image file');
-    //         document.getElementById("picture").value = '';
-    //         return false;
-    //     }
-    //     return true;
-    // }
-
 
 
