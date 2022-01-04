@@ -3,8 +3,9 @@
     <head>
         <%- include('./partials/head') %>
         <title>Registro</title>
+        <script type="text/javascript" src="/scripts/registro.js"></script>
     </head>
-    
+
     <body class="body-registro">
         <%- include('./partials/header') %>
         <main>
@@ -14,11 +15,12 @@
                 <h3>Datos Personales</h3>
             </div>
             <div class="form-registro">
+
             <form action="/usuarios/registrar" method="POST" enctype="multipart/form-data">
                     <p class="elt-reg">
                         <label for="firstName">Nombre (s):</label>
                         <br>
-                        <input type="text" id="firstName" name="firstName" value="<%= locals.oldData ? oldData.firstName : null %> ">
+                        <input type="text" id="firstName" name="firstName" value="<%= locals.oldData ? oldData.firstName : null %>" class="firstName">
                         <% if (locals.errors && errors.firstName) { %>
                             <div style="color: red; text-align: center;"><%= errors.firstName.msg %> </div>
                         <% } %>
@@ -27,7 +29,7 @@
                     <p class="elt-reg">
                         <label for="lastName">Apellidos:</label>
                         <br>
-                        <input type="text" id="lastName" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %> " >
+                        <input type="text" id="lastName" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>" class="lastName" >
                         <% if (locals.errors && errors.lastName) { %>
                             <div style="color: red; text-align: center;"><%= errors.lastName.msg %> </div>
                         <% } %>
@@ -36,7 +38,7 @@
                     <p class="elt-reg">
                         <label for="email">e-mail:</label>
                         <br>
-                        <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %> ">
+                        <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>" class="email">
                         <% if (locals.errors && errors.email) { %>
                             <div style="color: red; text-align: center;"><%= errors.email.msg %> </div>
                         <% } %>
@@ -45,13 +47,13 @@
                     <p class="elt-reg">
                         <label for="picture">Foto de usuario:</label>
                         <br>
-                        <input type="file" id="picture" name="picture">
+                        <input type="file" id="picture" name="picture" class="picture" id="picture"  accept="image/png,image/jpeg,image/bmp,image/gif" >
                     </p>
 
                     <p class="elt-reg">
                         <label for="phone">Teléfono:</label>
                         <br>
-                        <input type="tel" id="phone" name="phone" value="<%= locals.oldData ? oldData.phone : null %> ">
+                        <input type="tel" id="phone" name="phone" value="<%= locals.oldData ? oldData.phone : null %>" class="phone">
                         <% if (locals.errors && errors.phone) { %>
                             <div style="color: red; text-align: center;"><%= errors.phone.msg %> </div>
                         <% } %>
@@ -60,7 +62,7 @@
                     <p class="elt-reg">
                         <label for="streetNumber">Calle y número:</label>
                         <br>
-                        <input type="text" id="streetNumber" name="streetNumber" value="<%= locals.oldData ? oldData.streetNumber : null %> ">
+                        <input type="text" id="streetNumber" name="streetNumber" value="<%= locals.oldData ? oldData.streetNumber : null %>" class="streetNumber">
                         <% if (locals.errors && errors.streetNumber) { %>
                             <div style="color: red; text-align: center;"><%= errors.streetNumber.msg %> </div>
                         <% } %>
@@ -69,7 +71,7 @@
                     <p class="elt-reg">
                         <label for="postalCode">Código postal:</label>
                         <br>
-                        <input type="text" id="postalCode" name="postalCode" value="<%= locals.oldData ? oldData.postalCode : null %> ">
+                        <input type="text" id="postalCode" name="postalCode" value="<%= locals.oldData ? oldData.postalCode : null %>" class="postalCode">
                         <% if (locals.errors && errors.postalCode) { %>
                             <div style="color: red;  text-align: center;"><%= errors.postalCode.msg %> </div>
                         <% } %>
@@ -89,7 +91,7 @@
                     <p class="elt-reg">
                         <label for="password">Contraseña:</label>
                         <br>
-                        <input type="password" id="password" name="password" >
+                        <input type="password" id="password" name="password" class="password">
                         <% if (locals.errors && errors.password) { %>
                             <div style="color: red; text-align: center;"><%= errors.password.msg %> </div>
                         <% } %>
@@ -98,7 +100,7 @@
                     <p class="elt-reg">
                         <label for="confirmPass">Confirmar contraseña:</label>
                         <br>
-                        <input type="password" id="confirmPass" name="confirmPass" >
+                        <input type="password" id="confirmPass" name="confirmPass" class="password" >
                     </p>                    
                     <% if (locals.passValidate) { %>
                         <div style="color: red; text-align: center;"><%= passValidate %> </div>
@@ -106,6 +108,9 @@
                     <% if (locals.errors && errors.confirmPass) { %>
                         <div style="color: red; text-align: center;"><%= errors.confirmPass.msg %> </div>
                     <% } %>
+                    <div class="errorsFront" style="color: red; text-align: center;">
+                        <ul></ul>
+                    </div>
                 <div class="terminos">
                     <p>
                         <label>
@@ -115,7 +120,7 @@
                     </p>
                 </div>
                 <div class="botones-registro">
-                    <button type="submit">Enviar mis datos</button>
+                    <button type="submit" class="botonSubmit">Enviar mis datos</button>
                 </div>
             </form> 
         </div>
@@ -124,5 +129,6 @@
     </main>
     <%- include('./partials/footer') %> 
     </body>
+
 
 </html>
