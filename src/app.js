@@ -45,12 +45,15 @@ app.get('/api/users', (req, res) => {
     .then(users => {
         //console.log(users);
        let newData =  users.map(user=>{
-            delete user.dataValues.u_password
+            delete user.dataValues.u_password;
             delete user.dataValues.picture;
+            delete user.dataValues.phone;
+            delete user.dataValues.streetName;
+            delete user.dataValues.country;
+            delete user.dataValues.postalCode;
             return {
                 ...user.dataValues, 
-                detail:`/api/users/${user.dataValues.user_id}`,
-                picture:'https://www.thepeakid.com/wp-content/uploads/2016/03/default-profile-picture.jpg'
+                detail:`/api/users/${user.dataValues.user_id}`
             }
         })
         console.log(newData);
