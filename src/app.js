@@ -55,8 +55,14 @@ app.get('/api/users/:id', (req, res) => {
     DB.Users
     .findByPk(req.params.id)
     .then(user => {
+        delete user.dataValues.u_password;
+        delete user.dataValues.picture;
+        console.log(user);
         return res.status(200).json({
-            data: user,
+            data: {
+                ...user.dataValues,
+                picture:'https://www.thepeakid.com/wp-content/uploads/2016/03/default-profile-picture.jpg'
+            },
             status: 200
         })
     })
@@ -79,6 +85,7 @@ app.get('/api/products/:id', (req, res) => {
     DB.Products
     .findByPk(req.params.id)
     .then(product => {
+        
         return res.status(200).json({
             data: product,
             status: 200
