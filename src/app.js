@@ -43,9 +43,20 @@ app.get('/api/users', (req, res) => {
     DB.Users
     .findAll()
     .then(users => {
+        //console.log(users);
+       let newData =  users.map(user=>{
+            delete user.dataValues.u_password
+            delete user.dataValues.picture;
+            return {
+                ...user.dataValues, 
+                detail:`/api/users/${user.dataValues.user_id}`,
+                picture:'https://www.thepeakid.com/wp-content/uploads/2016/03/default-profile-picture.jpg'
+            }
+        })
+        console.log(newData);
         return res.status(200).json({
             total: users.length,
-            data: users,
+            data: newData,
             status: 200
         })
     })
