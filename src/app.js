@@ -99,9 +99,13 @@ app.get('/api/products/:id', (req, res) => {
     DB.Products
     .findByPk(req.params.id)
     .then(product => {
-        
+        delete product.dataValues.image_p;
+        let newData = product.dataValues;
         return res.status(200).json({
-            data: product,
+            data: {
+                ...newData,
+                picture:'http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png',
+            },
             status: 200
         })
     })
