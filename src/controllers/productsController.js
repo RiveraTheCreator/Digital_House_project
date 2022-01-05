@@ -91,6 +91,8 @@ const productsController = {
                 price: req.body.price,
                 animal: req.body.animal,
                 category: req.body.category,
+                animal_id: req.body.animal,
+                category_id: req.body.category,
                 image_p: req.files.image_p ? req.files.image_p[0].filename: 'default.png', 
             }
             console.log(req.body);
