@@ -46,22 +46,22 @@
             </div>
         </section>
         <section class="">
-            <!--Aqui el link de cada detalle de producto-->
+            <!--Aqui el link de cada detalle de producto -->
             <div class="grid-container">
-            <% for(let articulo of producto){ %> 
+            <% for(let i = 0; i < 6 ; i++){ %> 
                 <!--<div class="articulo-home">-->
-
-                   <div class="articulo">
+                   <div class="articulo" id="articuloIndex">
                         <article>
+                        <a href="/productos/<%= producto[i].product_id %>">
+
                             <div class="content-article">
-                            <a href="/productos/<%= articulo.id %>">
-                                <img src="images/products/<%= articulo.image_p %> " alt="" style="max-height: 200px; max-width: 300px;"/>
-                            </a>
-                            <div class="caption">
-                                <p style="font-weight: bolder;"><%= articulo.name %></p>
-                                <p>$<%= toThousand(articulo.price) %> MXN</p>
+                                <img src="images/products/<%= producto[i].image_p %> " alt="" style="max-height: 200px; max-width: 300px;"/>
+                                <div class="caption">
+                                    <p style="font-weight: bolder;"><%= producto[i].p_name%></p>
+                                    <p>$<%= toThousand(producto[i].price) %> MXN</p>
+                                </div>
                             </div>
-                            </div>
+                        </a>
                         </article>
                     </div>
                <!-- </div>-->
