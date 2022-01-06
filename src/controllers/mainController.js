@@ -14,9 +14,10 @@ const mainController = {
 			product.map(producto=>{
 				return productsArray.push(producto.dataValues);
 			})
-			return console.log(productsArray);
-		}).catch(e=>res.send('Ups!! Ocurrio un error'));
-		return res.render('index',{producto:productsArray,toThousand});
+			return res.render('index',{producto:productsArray,toThousand});
+		}).catch(e=>{
+			console.error(e);
+			res.send('Ups!! Ocurrio un error')})
 	},
 	carrito:	(req,res) =>{
 		return res.render('carrito');

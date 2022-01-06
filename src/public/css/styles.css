@@ -13,10 +13,16 @@
  * {
      box-sizing: border-box;
  }
-
+ body{
+	overflow-x: hidden;
+ }
 body {
     font-family: 'Roboto', sans-serif;
 }
+header{
+	position: static;
+}
+
 
 header .logo{
     max-width: 180px;
@@ -372,6 +378,9 @@ header .header-top div{
 	header .header-top div.viviendas{
 		display: none;
 	}
+	header nav{
+		position: static;
+	}
 	header nav ul {
 		display: flex;
 		flex-direction: column;
@@ -383,11 +392,20 @@ header .header-top div{
 		font-size: 11px;
 	}
 	 header div .alimentos a,header div .accesorios a{
-		 padding: 12px;
+		 padding: 10px;
 	 }
 }
 
+@media (max-width:768px) {
+	header div.otros{
+		display: none;
+	}
+	
+}
 /*--------M-A-I-N-----H-O-M-E---------------------*/
+main {
+	margin-top: 30px;
+}
 main .top-main .mascotas-img {
 	margin: 2vw;
 }
@@ -890,3 +908,9 @@ main div div.back-banner{
 	transform: translate(-50%, -50%);
 	text-align: center;
   }
+
+  header ul{
+	position: absolute;
+	z-index: 1;
+}
+
