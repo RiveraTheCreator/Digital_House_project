@@ -841,3 +841,8 @@ main .articulo-home img{
 	width: 100%;
 	
 }
+
+main div#articuloIndex:hover{
+	background-color: #b4b4b4;
+	transition: 200ms;
+}
