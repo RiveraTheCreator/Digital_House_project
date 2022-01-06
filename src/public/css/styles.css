@@ -430,6 +430,7 @@ main .grid-container .articulo{
 	border: black 3px solid;
 	margin: 5%;
 	min-width: 200px;
+	border-radius: 5%;
 }
 main .grid-container .articulo .content-article{
 	display: flex;
@@ -466,7 +467,7 @@ main .top-main .container-intro{
 	max-height: auto;
 	padding: 2vw;
 	margin-top: 8px;
-	border: solid black 1px;
+	border: solid black 0.5px;
 	text-align: center;
 	border-radius: 15%;
 	box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -526,9 +527,6 @@ main .info-gral:hover{
 	font-size: 30px;
 	transition: 300ms;
 	font-weight: bolder;
-}
-main .contenido-intro article:hover {
-	box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 /*-------A-R-T-I-C-U-L-O-S-----------------*/
@@ -846,3 +844,49 @@ main div#articuloIndex:hover{
 	background-color: #b4b4b4;
 	transition: 200ms;
 }
+
+main section.banner-top img {
+	width: 100vw;
+	height: auto;
+	display: block;
+}
+
+/**
+main div div.back-banner{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(3, 14, 63);
+	position: absolute;
+	z-index:1;
+	opacity: 0%;
+}*/
+.container {
+	position: relative;
+	width: 100%;
+  }
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: hsla(249, 93%, 32%, 0.829);
+  }
+  .container:hover .overlay {
+	opacity: 1;
+  }
+  .text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
