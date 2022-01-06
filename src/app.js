@@ -118,4 +118,4 @@ app.use((req,res,next)=>{
 });
 
 //Montar el servidor
-app.listen(3000, ()=>{console.log('Server Arriba');});
+app.listen(3002, ()=>{console.log('Server Arriba');});
