@@ -111,6 +111,18 @@ app.get('/api/products/:id', (req, res) => {
     })
 });
 
+app.get('/api/categories', (req, res) => {
+    DB.Categories
+    .findAll()
+    .then(categories => {
+        return res.status(200).json({
+            total: categories.length,
+            data: categories,
+            status: 200
+        })
+    })
+});
+
 //Error 404
 app.use((req,res,next)=>{
     res.status(404).send('ERROR 404 Ruta no encontrada');

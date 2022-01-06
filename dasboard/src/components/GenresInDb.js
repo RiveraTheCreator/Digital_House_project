@@ -9,19 +9,19 @@ class GenresInDb extends Component{
     constructor(){
         super()
         this.state ={
-            genresList : []
+            categoriesList : []
         }
     }
     //Compomentes Ciclo de vida - Montar - Actualizar - Desmontar
     //Montaje
     componentDidMount(){
-        fetch('/api/genres')
+        fetch('/api/categories')
         .then(respuesta =>{
             return respuesta.json()
         })
-        .then(genres =>{
-            //console.log(genres)
-            this.setState({genresList: genres.data})
+        .then(categories =>{
+            console.log(categories.data)
+            this.setState({categoriesList: categories.data})
         })
         .catch(error => console.log(error))
 
@@ -47,8 +47,8 @@ class GenresInDb extends Component{
                             <div  className="row">
                                 {
                                     //console.log(this.state.genresList)
-                                    this.state.genresList.map((genre,index)=>{
-                                        return  <Genre  {...genre}  key={index} />
+                                    this.state.categoriesList.map((categories,index)=>{
+                                        return  <Genre  {...categories}  key={index} />
                                     })
                                 }
                             </div>
