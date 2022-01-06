@@ -68,6 +68,8 @@
 
             <!--Aqui el link de cada detalle de producto -->
             <div class="grid-container">
+            <% if (producto.length > 6) { %>
+               
             <% for(let i = 0; i < 6 ; i++){ %> 
                 <!--<div class="articulo-home">-->
                    <div class="articulo" id="articuloIndex">
@@ -85,7 +87,8 @@
                         </article>
                     </div>
                <!-- </div>-->
-            <% } %>  
+            <% } %>
+        <% } %>      
         </div>   
         </section>
 
