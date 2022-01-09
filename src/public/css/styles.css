@@ -884,6 +884,7 @@ main div div.back-banner{
   }
 .overlay {
 	position: absolute;
+	z-index: 2;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -898,6 +899,7 @@ main div div.back-banner{
 	opacity: 1;
   }
   .text {
+	  z-index: 3;
 	color: white;
 	font-size: 20px;
 	position: absolute;
@@ -909,8 +911,5 @@ main div div.back-banner{
 	text-align: center;
   }
 
-  header ul{
-	position: absolute;
-	z-index: 1;
-}
+
 
